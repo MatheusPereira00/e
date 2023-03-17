@@ -1,0 +1,131 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 99px;
+  padding: 0 3% 0 2%;
+  background-color: #00cbdd;
+}
+
+h1 {
+  color: #0052dd;
+}
+
+.search-bar input {
+  height: 1.5em;
+  width: 500px;
+  background-color: #f0f0fa;
+  border-radius: 60px;
+  border: none;
+}
+
+input::placeholder {
+  padding-left: 4px;
+}
+
+.icon-search {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.3%;
+  margin-left: -3%;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icons-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+}
+
+.icon-local_grocery_store {
+  display: inline-block;
+  width: 15px;
+  height: 20px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.icon-bell {
+  color: #ba1a1a;
+  display: inline-block;
+  width: 13px;
+  height: 20px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.icon-person {
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+// .icons {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     gap: 10px;
+//     cursor: pointer;
+
+//     .icons-actions {
+//         padding-right: 10px;
+//     }
+
+//     .icon {
+//         display: inline-block;
+//         width: 1em;
+//         height: 1em;
+//         stroke-width: 0;
+//         stroke: currentColor;
+//         fill: currentColor;
+//       }
+
+//       .icon-local_grocery_store {
+//         display: inline-block;
+//         width: 1.8em;
+//         height: 1.8em;
+//         stroke-width: 0;
+//         stroke: currentColor;
+//         fill: currentColor;
+//     }
+
+//     .bell {
+//         color: red;
+//     }
+// }
+
+// .login {
+//     display: flex;
+//     align-items: center;
+
+//     .icon-person {
+//         width: 2.4em;
+//         height: 2.6em;
+//         left: 2.5px;
+//         top: 3px;
+//         border-radius: 0px ;
+//     }
+//     p {
+//         font-size: 14px;
+//         font-weight: 500;
+//         line-height: 20px;
+//     }
+// }
