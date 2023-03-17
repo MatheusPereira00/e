@@ -1,0 +1,63 @@
+.sidenav {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    width: 280px;
+    position: fixed;
+    z-index: 1;
+    top: 99px;
+    left: 0;
+    background: #3855c1;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+
+  
+* {
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  .btn {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 230px;
+    height: 48px;
+    top: 98px;
+    left: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #3855c1;
+    border: none;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #002979;
+  }
+  
+  .content {
+    margin-left: 200px;
+  }
+  
+  svg {
+    fill: currentColor;
+    color: #ffff;
+    height: 25px;
+    width: 30px;
+    text-align: left;
+  }
+
+  .icon-books {
+    height: 25px;
+    padding-left: 5px;
+  }
+  p {
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 30px;
+    letter-spacing: 0em;
+  }
