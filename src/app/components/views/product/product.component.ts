@@ -5,4 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss'],
 })
-export class ProductComponent {}
+export class ProductComponent {
+  public product: Product[] = [];
+
+  //INSERIR METODO GET
+}
