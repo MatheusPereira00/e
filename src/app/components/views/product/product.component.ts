@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./product.component.scss'],
 })
 export class ProductComponent {
-  public product: Product[] = [];
+  //public product: Product[] = [];
 
   //INSERIR METODO GET
 }
