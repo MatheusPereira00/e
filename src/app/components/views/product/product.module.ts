@@ -5,9 +5,7 @@ import { ProductRoutingModule } from './product-routing.module';
 import { CardComponent } from './card/card.component';
 
 @NgModule({
-  declarations: [
-    CardComponent
-  ],
+  declarations: [CardComponent],
   imports: [CommonModule, ProductRoutingModule],
 })
 export class ProductModule {}

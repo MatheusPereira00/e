@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServiceService } from '../../service/service.service';
 
 @Component({
   selector: 'app-product',
@@ -6,7 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./product.component.scss'],
 })
 export class ProductComponent {
-  //public product: Product[] = [];
-
+  public product: Product[] = [];
   //INSERIR METODO GET
+
+  constructor(private serviveService: ServiceService){}
+
+  public getProduct(): void {
+    this.serviveService.getProduct().subscribe(this.product => {
+      this.product = this.product;
+    })
+  }
 }
