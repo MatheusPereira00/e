@@ -4,20 +4,22 @@
       <img src=" {{ product.image }} " alt="Book" />
     </div>
 
-    <div class="card-body">
-      <p class="subtitle">
-        {{ product.stock }}
-      </p>
+    <div class="card-stock">
+      <p class="subtitle">Estoque: {{ product.stock }}</p>
     </div>
 
-    <div class="card-title">
+    <div class="card-name">
       <p class="title">
         {{ product.name }}
       </p>
     </div>
-
     <div class="card-value">
       <p class="value">R$ {{ product.value }}</p>
+      <button class="button-card">
+        <svg class="icon icon-add">
+          <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-add"></use>
+        </svg>
+      </button>
     </div>
   </div>
 </div>

@@ -20,5 +20,220 @@
       "value": 29.99,
       "name": "Boook 3",
       "category": "books"
+    },
+    {
+      "image": "assets/images/products/books/book-luv2code-1003.png",
+      "stock": 45,
+      "value": 127.55,
+      "name": "Boook 4",
+      "category": "books"
     }
-]}
+  ],
+  "coffeemugs": [
+    {
+      "image": "assets/images/products/coffeemugs/coffeemug-luv2code-1000.png",
+      "stock": 14,
+      "value": 78.57,
+      "name": "coffeemug 1",
+      "category": "coffeemug"
+    },
+    {
+      "image": "assets/images/products/coffeemugs/coffeemug-luv2code-1001.png",
+      "stock": 1,
+      "value": 42.01,
+      "name": "coffeemug 2",
+      "category": "coffeemug"
+    },
+    {
+      "image": "assets/images/products/coffeemugs/coffeemug-luv2code-1002.png",
+      "stock": 22,
+      "value": 29.99,
+      "name": "coffeemug 3",
+      "category": "coffeemug"
+    },
+    {
+      "image": "assets/images/products/coffeemugs/coffeemug-luv2code-1003.png",
+      "stock": 45,
+      "value": 127.55,
+      "name": "coffeemug 4",
+      "category": "coffeemug"
+    }
+  ],
+
+  "luggagetags": [
+    {
+      "image": "assets/images/products/luggagetags/luggagetag-luv2code-1000.png",
+      "stock": 14,
+      "value": 78.57,
+      "name": "luggagetags 1",
+      "category": "luggagetags"
+    },
+    {
+      "image": "assets/images/products/luggagetags/luggagetag-luv2code-1001.png",
+      "stock": 1,
+      "value": 42.01,
+      "name": "luggagetags 2",
+      "category": "luggagetags"
+    },
+    {
+      "image": "assets/images/products/luggagetags/luggagetag-luv2code-1002.png",
+      "stock": 22,
+      "value": 29.99,
+      "name": "luggagetags 3",
+      "category": "luggagetags"
+    },
+    {
+      "image": "assets/images/products/luggagetags/luggagetag-luv2code-1003.png",
+      "stock": 45,
+      "value": 127.55,
+      "name": "luggagetags 4",
+      "category": "luggagetags"
+    }
+  ],
+
+  "mousepads": [
+    {
+      "image": "assets/images/products/mousepads/mousepad-luv2code-1000.png",
+      "stock": 14,
+      "value": 78.57,
+      "name": "mousepads 1",
+      "category": "mousepads"
+    },
+    {
+      "image": "assets/images/products/mousepads/mousepad-luv2code-1001.png",
+      "stock": 1,
+      "value": 42.01,
+      "name": "mousepads 2",
+      "category": "mousepads"
+    },
+    {
+      "image": "assets/images/products/mousepads/mousepad-luv2code-1002.png",
+      "stock": 22,
+      "value": 29.99,
+      "name": "mousepads 3",
+      "category": "mousepads"
+    },
+    {
+      "image": "assets/images/products/mousepads/mousepad-luv2code-1003.png",
+      "stock": 45,
+      "value": 127.55,
+      "name": "mousepads 4",
+      "category": "mousepads"
+    }
+  ],
+
+  "products": [
+    {
+      "image": "assets/images/products/coffeemugs/coffeemug-luv2code-1000.png",
+      "stock": 14,
+      "value": 78.57,
+      "name": "coffeemug 1",
+      "category": "coffeemug"
+    },
+    {
+      "image": "assets/images/products/coffeemugs/coffeemug-luv2code-1001.png",
+      "stock": 1,
+      "value": 42.01,
+      "name": "coffeemug 2",
+      "category": "coffeemug"
+    },
+    {
+      "image": "assets/images/products/coffeemugs/coffeemug-luv2code-1002.png",
+      "stock": 22,
+      "value": 29.99,
+      "name": "coffeemug 3",
+      "category": "coffeemug"
+    },
+    {
+      "image": "assets/images/products/coffeemugs/coffeemug-luv2code-1003.png",
+      "stock": 45,
+      "value": 127.55,
+      "name": "coffeemug 4",
+      "category": "coffeemug"
+    },
+    {
+      "image": "assets/images/products/books/book-luv2code-1000.png",
+      "stock": 14,
+      "value": 78.57,
+      "name": "Boook 1",
+      "category": "books"
+    },
+    {
+      "image": "assets/images/products/books/book-luv2code-1001.png",
+      "stock": 1,
+      "value": 42.01,
+      "name": "Boook 2",
+      "category": "books"
+    },
+    {
+      "image": "assets/images/products/books/book-luv2code-1002.png",
+      "stock": 22,
+      "value": 29.99,
+      "name": "Boook 3",
+      "category": "books"
+    },
+    {
+      "image": "assets/images/products/books/book-luv2code-1003.png",
+      "stock": 45,
+      "value": 127.55,
+      "name": "Boook 4",
+      "category": "books"
+    },
+    {
+      "image": "assets/images/products/mousepads/mousepad-luv2code-1000.png",
+      "stock": 14,
+      "value": 78.57,
+      "name": "mousepads 1",
+      "category": "mousepads"
+    },
+    {
+      "image": "assets/images/products/mousepads/mousepad-luv2code-1001.png",
+      "stock": 1,
+      "value": 42.01,
+      "name": "mousepads 2",
+      "category": "mousepads"
+    },
+    {
+      "image": "assets/images/products/mousepads/mousepad-luv2code-1002.png",
+      "stock": 22,
+      "value": 29.99,
+      "name": "mousepads 3",
+      "category": "mousepads"
+    },
+    {
+      "image": "assets/images/products/mousepads/mousepad-luv2code-1003.png",
+      "stock": 45,
+      "value": 127.55,
+      "name": "mousepads 4",
+      "category": "mousepads"
+    },
+    {
+      "image": "assets/images/products/luggagetags/luggagetag-luv2code-1000.png",
+      "stock": 14,
+      "value": 78.57,
+      "name": "luggagetags 1",
+      "category": "luggagetags"
+    },
+    {
+      "image": "assets/images/products/luggagetags/luggagetag-luv2code-1001.png",
+      "stock": 1,
+      "value": 42.01,
+      "name": "luggagetags 2",
+      "category": "luggagetags"
+    },
+    {
+      "image": "assets/images/products/luggagetags/luggagetag-luv2code-1002.png",
+      "stock": 22,
+      "value": 29.99,
+      "name": "luggagetags 3",
+      "category": "luggagetags"
+    },
+    {
+      "image": "assets/images/products/luggagetags/luggagetag-luv2code-1003.png",
+      "stock": 45,
+      "value": 127.55,
+      "name": "luggagetags 4",
+      "category": "luggagetags"
+    }
+  ]
+}

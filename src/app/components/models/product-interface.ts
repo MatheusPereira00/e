@@ -1,7 +1,7 @@
-export class product {
+export interface Product {
   stock: string;
   value: number;
   name: string;
   //category: string;
-  imageUrl: string;
+  image: string;
 }
