@@ -1,51 +1,58 @@
 .card {
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    max-width: 180px;
-    margin: 10px;
-  }
-  
-  .card img {
-    flex-basis: 40%;
-    max-width: 100%;
-    margin-right: 10px;
-  }
-  
-  .card-content {
-    flex-grow: 1;
-  }
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 150px;
+  margin: 10px;
+}
 
+.card img {
+  flex-basis: 40%;
+  max-width: 100%;
+  margin-right: 10px;
+}
 
+.card-content {
+  flex-grow: 1;
+}
 
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
 
-  .icon {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    stroke-width: 0;
-    stroke: currentColor;
-    fill: currentColor;
-  }
+.icon-local_grocery_store {
+  display: flex;
+  align-items: center;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
 
+.button-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0052dd;
+  color: white;
+  height: 30px;
+  width: 50px;
+  border-radius: 8px;
+  border: none;
+}
 
-  .button-card {
-    display: flex;
-    text-align: end;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
+.card-value {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
 
 // .container {
 //   position: absolute;

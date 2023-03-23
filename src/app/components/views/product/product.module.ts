@@ -6,9 +6,10 @@ import { CardComponent } from './card/card.component';
 import { ProductComponent } from './product.component';
 import { ServiceService } from '../../service/service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { DialogComponent } from '../../shared/dialog/dialog.component';
 
 @NgModule({
-  declarations: [ProductComponent, CardComponent],
+  declarations: [ProductComponent, CardComponent, DialogComponent],
   imports: [CommonModule, ProductRoutingModule, HttpClientModule],
   exports: [ProductComponent, CardComponent],
   providers: [ServiceService],

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../../service/service.service';
 import { Product } from '../../models/product-interface';
 
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',

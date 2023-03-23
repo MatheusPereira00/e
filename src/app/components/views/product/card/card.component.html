@@ -14,12 +14,17 @@
       </p>
     </div>
     <div class="card-value">
-      <p class="value">R$ {{ product.value }}</p>
-      <button class="button-card">
+      <p class="value">R${{ product.value }}</p>
+      <button class="button-card" (click)="onclick()">
         <svg class="icon icon-add">
           <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-add"></use>
+        </svg>
+        <svg class="icon-local_grocery_store">
+          <use
+            xlink:href="\assets\images\products\icons-svg\icons.svg#icon-local_grocery_store"></use>
         </svg>
       </button>
     </div>
   </div>
 </div>
+<app-dialog />

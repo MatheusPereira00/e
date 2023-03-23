@@ -8,9 +8,16 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { SidenavComponent } from './components/layout/sidenav/sidenav.component';
 import { ServiceService } from './components/service/service.service';
 import { ProductModule } from './components/views/product/product.module';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, SidenavComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    SidenavComponent,
+    LoadingComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, ProductModule],
   providers: [ServiceService],
   bootstrap: [AppComponent],
