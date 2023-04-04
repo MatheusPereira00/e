@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../../service/service.service';
 import { Product } from '../../models/product-interface';
 
-
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -10,6 +9,7 @@ import { Product } from '../../models/product-interface';
 })
 export class ProductComponent implements OnInit {
   public product: Product[] = [];
+
   //INSERIR METODO GET
 
   constructor(private serviveService: ServiceService) {}

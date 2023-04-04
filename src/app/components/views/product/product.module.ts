@@ -11,7 +11,7 @@ import { DialogComponent } from '../../shared/dialog/dialog.component';
 @NgModule({
   declarations: [ProductComponent, CardComponent, DialogComponent],
   imports: [CommonModule, ProductRoutingModule, HttpClientModule],
-  exports: [ProductComponent, CardComponent],
+  exports: [ProductComponent, CardComponent, DialogComponent],
   providers: [ServiceService],
 })
 export class ProductModule {}

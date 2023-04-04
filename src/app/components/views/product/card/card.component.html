@@ -1,13 +1,11 @@
 <div class="container">
-  <div class="card" *ngFor="let product of product">
+  <div class="card" *ngFor="let product of products">
     <div class="card-image">
       <img src=" {{ product.image }} " alt="Book" />
     </div>
-
     <div class="card-stock">
       <p class="subtitle">Estoque: {{ product.stock }}</p>
     </div>
-
     <div class="card-name">
       <p class="title">
         {{ product.name }}
@@ -15,7 +13,7 @@
     </div>
     <div class="card-value">
       <p class="value">R${{ product.value }}</p>
-      <button class="button-card" (click)="onclick()">
+      <button class="button-card" (click)="changeStateModal(product.image)">
         <svg class="icon icon-add">
           <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-add"></use>
         </svg>
@@ -26,5 +24,6 @@
       </button>
     </div>
   </div>
+  <app-dialog [image]="image" (close)="close()" />
+  <div id="pagination">teste</div>
 </div>
-<app-dialog />

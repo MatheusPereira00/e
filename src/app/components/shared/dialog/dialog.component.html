@@ -1,1 +1,18 @@
+<ng-container *ngIf="toogleModal">
+  <div class="dialog">
+    <div class="imgDiv">
+      <img src=" {{ image }} " alt="image" />
+    </div>
+    <h1 class="dialog__title">Tem certeza que deseja adicionar o produto?</h1>
 
+    <div class="div-button">
+      <button (click)="fecharModal()">Adicionar</button>
+      <!-- <p>{{ mensagemAdicionado }}</p>
+      -->
+      <button data-dismiss="modal" aria-label="Fechar" (click)="fecharModal()">
+        Cancel
+      </button>
+    </div>
+  </div>
+  <div (click)="openDialog()" class="overlay"></div>
+</ng-container>
