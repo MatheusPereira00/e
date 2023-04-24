@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiceService } from '../../service/service.service';
+import { ServiceService } from '../../service/product.service';
 import { Product } from '../../models/product-interface';
+import { CartService } from '../../service/cart.service';
 
 @Component({
   selector: 'app-product',
@@ -12,7 +13,7 @@ export class ProductComponent implements OnInit {
 
   //INSERIR METODO GET
 
-  constructor(private serviveService: ServiceService) {}
+  constructor(private serviveService: ServiceService, private cartService: CartService) {}
 
   public ngOnInit(): void {
     this.getProduct();
@@ -22,5 +23,10 @@ export class ProductComponent implements OnInit {
     this.serviveService.getProduct().subscribe(data => {
       this.product = data;
     });
+  }
+
+  public addToCart(product: Product){
+    this.cartService.addToCart(product);
+    console.log(product)
   }
 }

@@ -22,8 +22,9 @@
             xlink:href="\assets\images\products\icons-svg\icons.svg#icon-local_grocery_store"></use>
         </svg>
       </button>
+      <button type="button" (click)="eventClick(product)">Buy</button>
     </div>
   </div>
   <app-dialog [image]="image" (close)="close()" />
-  <div id="pagination">teste</div>
+  <app-pagination />
 </div>

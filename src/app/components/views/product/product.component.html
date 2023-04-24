@@ -2,7 +2,9 @@
   <div class="starter-template">
     <h1>Você está vendo todos os produtos!</h1>
     <div class="card-list">
-      <app-card [products]="product"></app-card>
+      <app-card [products]="product" 
+      (productTeste)="addToCart($event)"
+      ></app-card>
     </div>
   </div>
 </main>

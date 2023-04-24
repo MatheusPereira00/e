@@ -12,6 +12,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./components/views/product/product.module').then(m => m.ProductModule),
   },
+  {
+    path: 'cart',
+    loadChildren: () =>
+      import('./components/views/cart/cart.module').then(m => m.CartModule),
+  },
   // {
   //   path: 'Books',
   //   loadChildren: () => import('../assets/images/products/books').then(m => m.productModule),

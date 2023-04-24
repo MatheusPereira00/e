@@ -1,6 +1,7 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import { Product } from 'src/app/components/models/product-interface';
 import { DialogComponent } from 'src/app/components/shared/dialog/dialog.component';
+import { CartService } from 'src/app/components/service/cart.service';
 
 @Component({
   selector: 'app-card',
@@ -8,12 +9,25 @@ import { DialogComponent } from 'src/app/components/shared/dialog/dialog.compone
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent {
-  @Input() public products: Product[] = [];
+  @Input() public products: Product[]= [];
+  @Output() public productTeste = new EventEmitter();
 
   public image = '';
 
+  constructor(private cartService: CartService) {}
+
   @ViewChild(DialogComponent)
   public dialogComponent!: DialogComponent;
+
+  public eventClick(product: Product): void {
+    this.cartService.addToCart(product);
+    this.productTeste.emit(product);
+    // window.alert('Your product has been added to the cart!');
+  }
+
+  // eventClick(){
+  //   this.cartService.addToCart(this.product);
+  // }
 
   public changeStateModal(image: string): void {
     this.image = image;
