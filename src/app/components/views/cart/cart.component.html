@@ -1,16 +1,66 @@
-
-<h2> Carrinho de Compras </h2>
-
-<div class="container" *ngFor="let cart of allProductCart">
-    <div class="card-name">
-        <p class="title">
-          {{ cart.name}}
-        </p>
-
-        <img src=" {{cart.image}}" alt="">
+<div class="card" *ngFor="let cart of allProductCart">
+  <div class="text">
+    <h2>Esses são os itens adicionados ao carrinho.</h2>
+  </div>
+  
+  <div class="container-main">
+    <div class="img"></div>
+  
+    <div class="container-two">
+      <div class="textos">
+        <div class="title-categoria">
+          <p class="title">Nome do Produto</p>
+          <p class="categoria">Categoria</p>
+        </div>
+      </div>
+      <div class="price">
+        <p>Valor unitarios</p>
+        <p>{{cart.unitPrice}}</p>
       </div>
     </div>
-    
-    <!-- <div class="card-image">
-  <img src=" {{ cart.image }} " alt="Book" />
-</div> -->
+  
+    <div class="buttons">
+      <button class="btn-l">-</button>
+      <button class="btn-c">10</button>
+      <button class="btn-r">+</button>
+    </div>
+  
+    <div class="amount">
+      <p>Total</p>
+      <p class="value">R$100</p>
+    </div>
+  
+    <button class="close">X</button>
+  </div>
+  
+  
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="card" *ngFor="let cart of allProductCart">
+   <div class="card">
+  <div class="card-image">
+    <img src="  " alt="Book" />
+  </div>
+  <div class="dados-product">
+    <div class="card-name">
+       "Nome do Produto"
+        "categoria"
+    </div>
+     <div class="unitPrice">
+      Valor unitario: R${{cart.unitPrice}}
+    </div>
+    <p> Valor unitario: R$10 </p>
+  </div>   -->

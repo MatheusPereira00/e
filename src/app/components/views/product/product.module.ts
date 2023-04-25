@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { DialogComponent } from '../../shared/dialog/dialog.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { ProductComponent } from './product.component';
+import { CartModule } from '../cart/cart.module';
+//import { CartComponent } from '../cart/cart.component';
 
 
 @NgModule({

@@ -1,7 +1,18 @@
 export interface Product {
-  stock: string;
-  value: number;
+  id: number;
+  sku: string;
   name: string;
-  //category: string;
-  image: string;
+  description: string;
+  unitPrice: number;
+  imageUrl: string;
+  category_id: number;
+  category_name: string;
+  subcategory_id: number;
+  subcategory_name: string;
+  active: boolean;
+  unitsInStock: number;
+  dateCreated: string;
+  lastUpdated: any;
+  newProduct: boolean;
+  rating: number;
 }
