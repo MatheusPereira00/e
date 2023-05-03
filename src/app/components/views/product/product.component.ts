@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiceService } from '../../service/product.service';
+import { ProductService } from '../../service/product.service';
 import { Product } from '../../models/product-interface';
 import { CartService } from '../../service/cart.service';
 
@@ -13,14 +13,14 @@ export class ProductComponent implements OnInit {
 
   //INSERIR METODO GET
 
-  constructor(private serviveService: ServiceService, private cartService: CartService) {}
+  constructor(private productService: ProductService, private cartService: CartService) {}
 
-  public ngOnInit(): void {
+  public ngOnInit() {
     this.getProduct();
   }
 
-  public getProduct(): void {
-    this.serviveService.getProduct().subscribe(data => {
+  public getProduct() {
+    this.productService.getProduct().subscribe(data => {
       this.product = data;
     });
   }

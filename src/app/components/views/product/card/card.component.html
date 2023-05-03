@@ -13,7 +13,7 @@
     </div>
     <div class="card-value">
       <p class="value">R${{ product.unitPrice }}</p>
-      <button class="button-card" (click)="changeStateModal(product.imageUrl)">
+      <button class="button-card" (click)="changeStateModal(product.imageUrl, product)">
         <svg class="icon icon-add">
           <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-add"></use>
         </svg>
@@ -22,7 +22,7 @@
             xlink:href="\assets\images\products\icons-svg\icons.svg#icon-local_grocery_store"></use>
         </svg>
       </button>
-      <button type="button" (click)="eventClick(product)">Buy</button>
+      <!-- <button type="button" (click)="eventClick(product)">Buy</button> -->
     </div>
   </div>
   <app-dialog [image]="image" (close)="close()" />

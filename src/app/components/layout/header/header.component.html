@@ -13,14 +13,14 @@
   <div class="icons">
     <div class="icons-actions">
 
-      <svg class="icon-local_grocery_store" routerLink="cart">
-        <use
-          xlink:href="\assets\images\products\icons-svg\icons.svg#icon-local_grocery_store"></use>
-        </svg>
-
         
-        {{cartService.productCarts.length}}
-
+        <svg class="icon-local_grocery_store" routerLink="cart">
+          <use
+            xlink:href="\assets\images\products\icons-svg\icons.svg#icon-local_grocery_store">
+            </use>
+          </svg>
+          
+          {{ cartService.checkLength()}}
 
       <svg class="icon-bell">
         <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-bell"></use>

@@ -20,8 +20,9 @@ export class CardComponent {
   public dialogComponent!: DialogComponent;
 
   public eventClick(product: Product): void {
-    this.cartService.addToCart(product);
+
     this.productTeste.emit(product);
+    //localStorage.setItem('Db', JSON.stringify(this.products));
     // window.alert('Your product has been added to the cart!');
   }
 
@@ -29,8 +30,9 @@ export class CardComponent {
   //   this.cartService.addToCart(this.product);
   // }
 
-  public changeStateModal(image: string): void {
+  public changeStateModal(image: string, product: Product): void {
     this.image = image;
+    this.dialogComponent.currentProduct = product;
     this.dialogComponent.toogleModal = true;
   }
 

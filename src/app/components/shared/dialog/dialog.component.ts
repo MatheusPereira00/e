@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { CartService } from '../../service/cart.service';
+import { Product } from '../../models/product-interface';
 
 @Component({
   selector: 'app-dialog',
@@ -12,21 +14,29 @@ export class DialogComponent implements OnInit {
 
   // mensagemAdicionado: string = '';
   public toogleModal = false;
+  currentProduct!: Product
 
   public ngOnInit(): void {
     console.log(this.image);
   }
 
-  constructor() {}
+  constructor(private cartService: CartService) {}
+
   public openDialog(): void {
     this.toogleModal = true;
   }
+
   public fecharModal(): void {
     //this.dialogComponent.dismissAll();
     this.close.emit();
   }
 
-  // public adicionar(): void {
-  //   this.mensagemAdicionado = 'Adicionado';
-  // }
+  
+  public confirmar(): void {
+    console.log(this.currentProduct)
+    this.cartService.addToCart(this.currentProduct);
+    
+    this.toogleModal = false;
+    this.close.emit();
+  }
 }

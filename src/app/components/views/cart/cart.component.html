@@ -1,42 +1,46 @@
+<div class="text">
+  <h2>Esses são os itens adicionados ao carrinho.</h2>
+</div>
 <div class="card" *ngFor="let cart of allProductCart">
-  <div class="text">
-    <h2>Esses são os itens adicionados ao carrinho.</h2>
-  </div>
   
   <div class="container-main">
-    <div class="img"></div>
+    <div class="div-image">
+      <img src= {{cart.imageUrl}} alt="">
+    </div>
   
     <div class="container-two">
       <div class="textos">
         <div class="title-categoria">
-          <p class="title">Nome do Produto</p>
-          <p class="categoria">Categoria</p>
+          <p class="title">{{cart.name}}
+            |</p>
+          <p class="categoria"> {{cart.category_name}}</p>
         </div>
       </div>
       <div class="price">
-        <p>Valor unitarios</p>
-        <p>{{cart.unitPrice}}</p>
+        <p class="txt-unit">Valor unitario</p>
+        <p class="price-unit">R$ {{cart.unitPrice}}</p>
       </div>
     </div>
   
     <div class="buttons">
-      <button class="btn-l">-</button>
-      <button class="btn-c">10</button>
-      <button class="btn-r">+</button>
+      <button class="btn-l" (click)="cartService.decrease(cart)">-</button>
+      <button class="btn-c">{{cart.quantity}}</button>
+      <button class="btn-r" (click)="cartService.increase(cart)">+</button>
     </div>
   
     <div class="amount">
       <p>Total</p>
-      <p class="value">R$100</p>
+      <p class="value">R$ {{cart.unitPrice * cart.quantity}}</p>
     </div>
   
-    <button class="close">X</button>
+    <button class="close" (click)="cartService.removeProduct(cart)">X</button>
   </div>
-  
-  
-  
 </div>
 
+<p>
+  teste:
+ {{ cartService.total() }}
+</p>
 
 
 
