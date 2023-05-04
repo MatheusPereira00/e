@@ -21,6 +21,12 @@ const routes: Routes = [
   //   path: 'Books',
   //   loadChildren: () => import('../assets/images/products/books').then(m => m.productModule),
   // },
+  {
+    path: 'checkout',
+    loadChildren: () =>
+    import('./components/views/checkout/checkout.module').then (m => m.CheckoutModule)
+  }
+
   
 ];
 

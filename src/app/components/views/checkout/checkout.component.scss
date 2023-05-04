@@ -1,0 +1,142 @@
+h2 {
+  font-weight: 400;
+  font-size: 35px;
+  color: #0052dd;
+}
+
+.container {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 295px;
+  height: 738px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.icon-pessoa {
+  display: flex;
+  // align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.icon-person {
+  display: inline-block;
+  width: 30px;
+  height: 26px;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+p {
+  font-weight: 700;
+  font-size: 15px;
+  color: #757680;
+}
+
+hr {
+  width: 280px;
+  height: 0px;
+  left: 296px;
+  top: 385px;
+  border: 1px solid #c5c6d0;
+}
+
+.identificador {
+  display: flex;
+  align-items: center;
+}
+
+.p-cadastro {
+  font-weight: 700;
+  font-size: 12px;
+  color: #757680;
+}
+
+button {
+  margin-left: 15px;
+  width: 130px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0052dd;
+  color: white;
+  height: 30px;
+  width: 100px;
+  border-radius: 8px;
+  border: none;
+}
+
+.div-name {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+label {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 32px;
+
+  /* or 200% */
+
+  /* IBM Shop/sys/light/outline */
+
+  color: #757680;
+}
+
+input {
+  width: 280px;
+  height: 30px;
+  background: #fefbff;
+  border: 1px solid #0052dd;
+  border-radius: 8px;
+}
+
+::placeholder {
+  padding-left: 20px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 32px;
+  /* identical to box height, or 200% */
+
+  color: #c5c6d0;
+}
+
+
+.content {
+  margin-top: 10px;
+  display: flex;
+  gap: 80px;
+}
+
+.lbl {
+  width: 230px;
+  font-size: 12px;
+}
+
+// .lbl>input{
+//   width: 20px;
+// }
+
+.input-senha {
+  width: 110px;
+}
+
+.div-confirmar {
+  // background-color: red;
+
+ 
+}
+
+.div-confirmar>input {
+  width: 80px;
+  background-color: #0052dd;
+}
+
+.div-senha>input {
+  background-color: #0052dd;
+  width: 90px;
+}

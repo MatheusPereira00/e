@@ -69,9 +69,12 @@ export class CartService {
 
   public total() {
     const TOTAL_PRICE = this.productCarts.reduce((price, product) => {
-      return price + product.unitPrice * product.quantity;
+      return price += product.unitPrice * product.quantity;
     }, 0)
+
+    return TOTAL_PRICE;
   }
+
 
   
 

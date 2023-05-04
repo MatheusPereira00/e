@@ -37,20 +37,18 @@
   </div>
 </div>
 
-<p>
-  teste:
- {{ cartService.total() }}
-</p>
+<div class="div-total">
+  <p class="paragrafo-total">
+    Total
+  </p>
+  <p class="total">
+     R${{ cartService.total() }}
+  </p>
+</div>
 
-
-
-
-
-
-
-
-
-
+<div class="div-btn">
+  <button (click)="checkout()">Comprar</button>
+</div>
 
 <!-- 
 <div class="card" *ngFor="let cart of allProductCart">

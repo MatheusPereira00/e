@@ -1,0 +1,84 @@
+<h2>Checkout dos Produtos</h2>
+
+<div class="container">
+  <form [formGroup]="cadastroForm">
+    <div class="icon-pessoa">
+      <svg class="icon icon-person">
+        <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-person"></use>
+      </svg>
+      <p>Dados Pessoais</p>
+    </div>
+
+    <hr />
+
+    <br /><br /><br />
+
+    <div class="identificador">
+      <p class="p-cadastro">Já possui cadastro?</p>
+      <button>identifique-se</button>
+    </div>
+
+    <div class="div-name">
+      <label for="name">Nome completo</label>
+      <input
+        id="name"
+        type="text"
+        placeholder=" insira seu nome aqui"
+        [formControl]="name" />
+    </div>
+
+    <div class="div-email">
+      <label for="Email">Email</label>
+      <input
+        id="email"
+        type="text"
+        placeholder=" insira seu email aqui"
+        [formControl]="name" />
+    </div>
+
+    <div class="content">
+      <div class="div-senha">
+        <label for="Senha">Senha</label>
+        <input type="text"/>
+        <!-- <input class="input-senha"
+        id="email"
+        type="text"
+        placeholder=" insira seu email aqui"
+        [formControl]="name" /> -->
+      </div>
+
+      <div class="div-confirmar">
+        <label for="confirmar-senha" class="lbl">Confirmar Senha</label>
+        <input type="text"/>
+      </div>
+    </div>
+
+    <!-- <input type="text" formControlName="firstName">
+        <br><br>
+        <input type="text" formControlName="lastName">
+      
+        <p>
+          {{ cadastroForm.get('firstName')?.value}}
+        </p> -->
+  </form>
+</div>
+<div class="container">
+  <!-- <input type="text" formControlName="firstName">
+        <br><br>
+        <input type="text" formControlName="lastName">
+      
+        <p>
+          {{ cadastroForm.get('firstName')?.value}}
+        </p> -->
+</div>
+
+<div class="container">
+  <!-- <input type="text" formControlName="firstName">
+        <br><br>
+        <input type="text" formControlName="lastName">
+      
+        <p>
+          {{ cadastroForm.get('firstName')?.value}}
+        </p>
+       -->
+</div>

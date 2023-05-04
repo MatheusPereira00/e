@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../service/cart.service';
 import { Product } from '../../models/product-interface';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class CartComponent implements OnInit {
 
   public allProductCart = this.cartService.getItems();
 
-  constructor(public cartService: CartService) {
+  constructor(public cartService: CartService, private router: Router) {
     // localStorage.setItem('BD', JSON.stringify(this.products));
   }
 
@@ -23,6 +24,9 @@ export class CartComponent implements OnInit {
     //console.log(this.allProductCart)
   }
   
+  public checkout() {
+    this.router.navigate(['/checkout']);
+  }
 
 }
 
