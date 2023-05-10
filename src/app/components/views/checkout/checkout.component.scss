@@ -1,26 +1,27 @@
-h2 {
-  font-weight: 400;
-  font-size: 35px;
-  color: #0052dd;
-}
-
 .container {
   display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  width: 295px;
-  height: 738px;
+  width: 3000px;
   margin: 10px;
-  overflow: hidden;
+  height: 738px;
+  left: 282px;
+  top: 303px;
+  /* IBM Shop/ref/neutral-variant/neutral-variant99 */
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
 }
 
 .icon-pessoa {
   display: flex;
-  // align-items: center;
+  align-items: center;
   margin-top: 20px;
   margin-bottom: 10px;
 }
+
 .icon-person {
   display: inline-block;
   width: 30px;
@@ -29,57 +30,48 @@ h2 {
   fill: currentColor;
 }
 
-p {
-  font-weight: 700;
-  font-size: 15px;
-  color: #757680;
-}
-
-hr {
-  width: 280px;
-  height: 0px;
-  left: 296px;
-  top: 385px;
-  border: 1px solid #c5c6d0;
-}
-
 .identificador {
   display: flex;
   align-items: center;
+
+  .p-cadastro {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 32px;
+    /* or 200% */
+
+    /* IBM Shop/sys/light/outline */
+
+    color: #757680;
+  }
+
+  button {
+    width: 134.73px;
+    height: 38px;
+    left: 457px;
+    top: 406px;
+
+    background: #0052dd;
+    border-radius: 8px;
+    border: #fefbff;
+    color: #fefbff;
+  }
 }
 
-.p-cadastro {
-  font-weight: 700;
-  font-size: 12px;
-  color: #757680;
-}
-
-button {
-  margin-left: 15px;
-  width: 130px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #0052dd;
-  color: white;
-  height: 30px;
-  width: 100px;
-  border-radius: 8px;
-  border: none;
-}
-
-.div-name {
+.div-ee {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
 }
 
 label {
+  margin-left: 8px;
+  font-family: 'Roboto';
+  font-style: normal;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 32px;
-
   /* or 200% */
 
   /* IBM Shop/sys/light/outline */
@@ -87,56 +79,184 @@ label {
   color: #757680;
 }
 
-input {
-  width: 280px;
-  height: 30px;
+#name {
+  margin-left: 8px;
+  background-color: #0052dd;
+  width: 270px;
+  height: 38px;
+  background: #fefbff;
+  border: 1px solid #0052dd;
+  border-radius: 8px;
+}
+#email {
+  margin-left: 8px;
+  background-color: #0052dd;
+  width: 270px;
+  height: 38px;
   background: #fefbff;
   border: 1px solid #0052dd;
   border-radius: 8px;
 }
 
-::placeholder {
-  padding-left: 20px;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 32px;
-  /* identical to box height, or 200% */
-
-  color: #c5c6d0;
-}
-
-
-.content {
-  margin-top: 10px;
+.div-senha-confirmar {
   display: flex;
-  gap: 80px;
+  margin: 5px;
+  gap: 5px;
 }
 
-.lbl {
-  width: 230px;
-  font-size: 12px;
+#senha {
+  width: 140px;
+  height: 30px;
+  left: 296px;
+  top: 679px;
+
+  background: #fefbff;
+  border: 1px solid #acaaaf;
+  border-radius: 8px;
 }
 
-// .lbl>input{
-//   width: 20px;
-// }
+#confirmar {
+  width: 140px;
+  height: 30px;
+  left: 296px;
+  top: 679px;
 
-.input-senha {
-  width: 110px;
+  background: #fefbff;
+  border: 1px solid #acaaaf;
+  border-radius: 8px;
 }
 
-.div-confirmar {
-  // background-color: red;
-
- 
+.cpf-rg {
+  display: flex;
+  margin: 5px;
+  gap: 5px;
 }
 
-.div-confirmar>input {
-  width: 80px;
-  background-color: #0052dd;
+#cpf {
+  width: 140px;
+  height: 30px;
+  left: 296px;
+  top: 679px;
+
+  background: #fefbff;
+  border: 1px solid #acaaaf;
+  border-radius: 8px;
+}
+#rg {
+  width: 140px;
+  height: 30px;
+  left: 296px;
+  top: 679px;
+
+  background: #fefbff;
+  border: 1px solid #acaaaf;
+  border-radius: 8px;
 }
 
-.div-senha>input {
-  background-color: #0052dd;
-  width: 90px;
+.data-tel {
+  display: flex;
+  margin: 5px;
+  gap: 5px;
+}
+
+#data {
+  width: 140px;
+  height: 30px;
+  left: 296px;
+  top: 679px;
+
+  background: #fefbff;
+  border: 1px solid #acaaaf;
+  border-radius: 8px;
+}
+
+#tel {
+  width: 140px;
+  height: 30px;
+  left: 296px;
+  top: 679px;
+
+  background: #fefbff;
+  border: 1px solid #acaaaf;
+  border-radius: 8px;
+}
+
+.txt-radio {
+  display: flex;
+}
+
+p {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  /* or 100% */
+
+  /* IBM Shop/sys/light/outline */
+
+  color: #757680;
+}
+
+#radioo {
+  box-sizing: border-box;
+  width: 38px;
+  height: 38px;
+  background: #FEFBFF;
+  border: 2px solid #ACAAAF;
+  border-radius: 10px;
+}
+
+.nn {
+  // width: 350px;
+  height: 593px;
+  left: 1062px;
+  top: 303px;
+  /* IBM Shop/ref/neutral-variant/neutral-variant99 */
+  background: #fefbff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+.radio-boleto {
+  display: flex;
+  align-items: center;
+  width: 320px;
+  height: 38px;
+  left: 1075px;
+  top: 405px;
+  background: #fefbff;
+  border: 1px solid #acaaaf;
+  border-radius: 8px;
+}
+
+.radio-pix {
+  display: flex;
+  align-items: center;
+  width: 320px;
+  height: 38px;
+  left: 1075px;
+  top: 405px;
+  background: #fefbff;
+  border: 1px solid #acaaaf;
+  border-radius: 8px;
+}
+
+.radio-credito {
+  display: flex;
+  align-items: center;
+  width: 320px;
+  height: 308px;
+  left: 1076px;
+  top: 501px;
+  background: #fefbff;
+  border: 1px solid #acaaaf;
+  border-radius: 8px;
+}
+
+.btn-fim {
+  width: 229.73px;
+  height: 38px;
+  background: #0052dd;
+  border-radius: 8px;
 }

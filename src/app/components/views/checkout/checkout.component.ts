@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -9,13 +9,12 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 })
 export class CheckoutComponent {
 
-  name = new FormControl('');
-
 
   constructor( private formBuilder: FormBuilder) {}
 
   public cadastroForm: FormGroup = this.formBuilder.group({
-    firstName: ['']
+    firstName: [''],
+    email: this.formBuilder.control('', Validators.email)
   })
   
   public submitForm() {

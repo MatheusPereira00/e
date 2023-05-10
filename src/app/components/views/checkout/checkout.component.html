@@ -1,7 +1,8 @@
 <h2>Checkout dos Produtos</h2>
 
-<div class="container">
-  <form [formGroup]="cadastroForm">
+
+<form [formGroup]="cadastroForm">
+  <div class="container">
     <div class="icon-pessoa">
       <svg class="icon icon-person">
         <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-person"></use>
@@ -9,76 +10,173 @@
       <p>Dados Pessoais</p>
     </div>
 
-    <hr />
-
-    <br /><br /><br />
-
     <div class="identificador">
       <p class="p-cadastro">Já possui cadastro?</p>
       <button>identifique-se</button>
     </div>
 
-    <div class="div-name">
+    <div class="div-ee">
       <label for="name">Nome completo</label>
       <input
         id="name"
         type="text"
         placeholder=" insira seu nome aqui"
-        [formControl]="name" />
+        formControlName="name" />
     </div>
 
-    <div class="div-email">
+    <div class="div-ee">
       <label for="Email">Email</label>
       <input
         id="email"
-        type="text"
+        type="email"
         placeholder=" insira seu email aqui"
-        [formControl]="name" />
+        formControlName="email" />
     </div>
 
-    <div class="content">
-      <div class="div-senha">
-        <label for="Senha">Senha</label>
-        <input type="text"/>
-        <!-- <input class="input-senha"
-        id="email"
-        type="text"
-        placeholder=" insira seu email aqui"
-        [formControl]="name" /> -->
+    <div class="div-senha-confirmar">
+      <div class="div-ee">
+        <label for="senha">Senha</label>
+        <input id="senha" type="password">
       </div>
 
-      <div class="div-confirmar">
-        <label for="confirmar-senha" class="lbl">Confirmar Senha</label>
-        <input type="text"/>
+
+      <div class="div-ee">
+        <label for="confirmar-senha">Confirmar</label>
+        <input id="confirmar"  type="password">
+      </div>
+
+    </div>
+
+    <div class="cpf-rg">
+      <div class="div-ee">
+        <label for="cpf">CPF</label>
+        <input type="number" name="" id="cpf">
+      </div>
+      <div class="div-ee">
+        <label for="rg">RG</label>
+        <input type="number" name="" id="rg">
       </div>
     </div>
 
-    <!-- <input type="text" formControlName="firstName">
-        <br><br>
-        <input type="text" formControlName="lastName">
-      
-        <p>
-          {{ cadastroForm.get('firstName')?.value}}
-        </p> -->
-  </form>
-</div>
-<div class="container">
-  <!-- <input type="text" formControlName="firstName">
-        <br><br>
-        <input type="text" formControlName="lastName">
-      
-        <p>
-          {{ cadastroForm.get('firstName')?.value}}
-        </p> -->
-</div>
+    <div class="data-tel">
+      <div class="div-ee">
+        <label for="data">Data</label>
+        <input type="date" name="" id="data">
+      </div>
+      <div class="div-ee">
+        <label for="tel">Celular</label>
+        <input type="tel" name="" id="tel">
+      </div>
+    </div>
 
-<div class="container">
-  <!-- <input type="text" formControlName="firstName">
-        <br><br>
-        <input type="text" formControlName="lastName">
+    <div class="txt-radio">
+      <div class="txt">
+        <p>Deseja receber notificações por email ou whatsapp?</p>
+      </div>
+      <div>
+        <input type="radio" name="" id="radioo">
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="container">
+
+    <div class="icon-pessoa">
+      <svg class="icon icon-person">
+        <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-person"></use>
+      </svg>
+      <p>Escolha a forma de envio</p>
+    </div>
+
+    <div class="cep">
+      <label for="cep">CEP</label>
+      <input type="number" name="" id="">
+    </div>
+    
+    <div class="radio">
+      <input type="radio" name="" id="">
+      <input type="radio" name="" id="">
+    </div>
+
+    <div class="uteis">
+      <p> <section>*</section>  Dias uteis, após a confirmação do pagamento
+    </div>
+
+    <div class="ende-num">
+      <div class="endereço">
+        <label for="endereço">endereço</label>
+        <input type="text" name="" id="">
+      </div>
+      <div class="num">
+        <label for="num">Numero</label>
+        <input type="number" name="" id="">
+      </div>
+    </div>
+
+    <div class="comple-refe">
+      <div class="comple">
+        <label for="comple">Complemento</label>
+        <input type="text" name="" id="">
+      </div>
+      <div class="refe">
+        <label for="refe">Referencia</label>
+        <input type="text" name="" id="">
+      </div>
+    </div>
+
+    <div class="bairro-city">
+      <div class="bairro">
+        <label for="bairro">Bairro</label>
+        <input type="text" name="" id="">
+      </div>
+      <div class="city">
+        <label for="city">Referencia</label>
+        <input type="text" name="" id="">
+      </div>
+    </div>
+
+    <div class="estado-pais">
+      <div class="estado">
+        <label for="estado">Estado</label>
+        <select name="" id=""></select>
+      </div>
+      <div class="pais">
+        <label for="pais">Pais</label>
+        <input type="text" name="" id="">
+      </div>
+    </div>
+  </div>
+
+  <div class="container nn">
+    <div class="icon-pessoa">
+      <svg class="icon icon-person">
+        <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-person"></use>
+      </svg>
+      <p>Escolha a forma de pagamento</p>
+    </div>
+
+    
       
-        <p>
-          {{ cadastroForm.get('firstName')?.value}}
-        </p>
-       -->
-</div>
+    <div class="radio-boleto"> 
+      <!-- display flex e aligns items -->
+      <input type="radio" name="" id="">
+      <p>Boleto</p>
+    </div>
+
+    <div class="radio-pix"> 
+      <!-- display flex e aligns items -->
+      <input type="radio" name="" id="">
+      <p>Pix</p>
+    </div>
+
+    <div class="radio-credito"> 
+      <!-- display flex e aligns items -->
+      <input type="radio" name="" id="">
+      <p>Credito</p>
+    </div>
+
+    <button class="btn-fim">Finalizar compra</button>
+
+  </div>
+</form>
