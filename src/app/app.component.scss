@@ -2,7 +2,7 @@
 .container{
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    background-color: rgb(203, 203, 227);
 }
 
 .main{
@@ -23,7 +23,9 @@
     // width: 100px;
 }
 
-
+.sidenav{
+    display: flex;
+}
 
 
 
