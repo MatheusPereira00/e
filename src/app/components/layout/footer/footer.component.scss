@@ -4,8 +4,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 89px;
+  height: 65px;
   width: 100%;
+  position: fixed;
   bottom: 0;
   gap: 5px;
 }
@@ -20,6 +21,19 @@
   fill: currentColor;
 }
 
+h1 {
+  width: 205px;
+  height: 28px;
+  // left: 685px;
+  // top: 30px;
+  // font-family: 'Inter';
+  // font-style: normal;
+  // font-weight: 600;
+  // font-size: 18px;
+  // line-height: 28px;
+
+  // color: #ffffff;
+}
 // footer {
 //     background: #3855C1;
 //     display: flex;
