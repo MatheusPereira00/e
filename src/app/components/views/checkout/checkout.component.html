@@ -1,7 +1,6 @@
 <h2>Checkout dos Produtos</h2>
 
-
-<form [formGroup]="cadastroForm">
+<form [formGroup]="cadastroForm" (ngSubmit)="onSubmit">
   <div class="container">
     <div class="icon-pessoa">
       <svg class="icon icon-person">
@@ -10,10 +9,14 @@
       <p>Dados Pessoais</p>
     </div>
 
+    <hr />
+
     <div class="identificador">
       <p class="p-cadastro">Já possui cadastro?</p>
       <button>identifique-se</button>
     </div>
+
+    <hr />
 
     <div class="div-ee">
       <label for="name">Nome completo</label>
@@ -30,42 +33,43 @@
         id="email"
         type="email"
         placeholder=" insira seu email aqui"
-        formControlName="email" />
+        formControlName="email"/>
+        <!-- <span *ngIf="cadastroForm.controls.email.errors >  </span> -->
     </div>
 
     <div class="div-senha-confirmar">
       <div class="div-ee">
         <label for="senha">Senha</label>
-        <input id="senha" type="password">
+        <input id="senha" type="password" placeholder="sua senha aqui" />
       </div>
-
 
       <div class="div-ee">
         <label for="confirmar-senha">Confirmar</label>
-        <input id="confirmar"  type="password">
+        <input id="confirmar" type="password" placeholder="sua senha aqui" />
       </div>
-
     </div>
+
+    <hr />
 
     <div class="cpf-rg">
       <div class="div-ee">
         <label for="cpf">CPF</label>
-        <input type="number" name="" id="cpf">
+        <input type="number" name="" id="cpf" placeholder="000.000.000-00" />
       </div>
       <div class="div-ee">
         <label for="rg">RG</label>
-        <input type="number" name="" id="rg">
+        <input type="number" name="" id="rg" placeholder="00.000.000-0" />
       </div>
     </div>
 
     <div class="data-tel">
       <div class="div-ee">
         <label for="data">Data</label>
-        <input type="date" name="" id="data">
+        <input type="date" name="" id="data" />
       </div>
       <div class="div-ee">
         <label for="tel">Celular</label>
-        <input type="tel" name="" id="tel">
+        <input type="tel" name="" id="tel" placeholder="(00) 00000-0000" />
       </div>
     </div>
 
@@ -74,14 +78,12 @@
         <p>Deseja receber notificações por email ou whatsapp?</p>
       </div>
       <div>
-        <input type="radio" name="" id="radioo">
+        <input type="radio" name="" id="radioo" />
       </div>
     </div>
   </div>
-  
 
   <div class="container">
-
     <div class="icon-pessoa">
       <svg class="icon icon-person">
         <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-person"></use>
@@ -91,59 +93,68 @@
 
     <div class="cep">
       <label for="cep">CEP</label>
-      <input type="number" name="" id="">
+      <input type="number" name="" id="cep" placeholder="00000-000" />
+    </div>
+
+    <div class="div-radio">
+      <div class="div-radioi">
+        <input type="radio" name="" id="radioi" />
+        Retirar na loja fisica 1 dia
+      </div>
+      <div class="div-radioa">
+        <input type="radio" name="" id="radioa" />
+        PAC 3 dias
+      </div>
     </div>
     
-    <div class="radio">
-      <input type="radio" name="" id="">
-      <input type="radio" name="" id="">
-    </div>
-
+    
     <div class="uteis">
-      <p> <section>*</section>  Dias uteis, após a confirmação do pagamento
+      <p></p>
+      <section>*</section>
+      Dias uteis, após a confirmação do pagamento
     </div>
-
+    <hr />
     <div class="ende-num">
-      <div class="endereço">
-        <label for="endereço">endereço</label>
-        <input type="text" name="" id="">
+      <div class="endereco">
+        <label for="endereço">Endereço</label>
+        <input type="text" name="" id="endereco" placeholder="Rua Ibmers" />
       </div>
       <div class="num">
         <label for="num">Numero</label>
-        <input type="number" name="" id="">
+        <input type="number" name="" id="num" placeholder="000" />
       </div>
     </div>
 
     <div class="comple-refe">
       <div class="comple">
         <label for="comple">Complemento</label>
-        <input type="text" name="" id="">
+        <input type="text" name="" id="comple" placeholder="apto xxxx" />
       </div>
       <div class="refe">
         <label for="refe">Referencia</label>
-        <input type="text" name="" id="">
+        <input type="text" name="" id="refe" placeholder="perto da avenida..." />
       </div>
     </div>
 
     <div class="bairro-city">
       <div class="bairro">
         <label for="bairro">Bairro</label>
-        <input type="text" name="" id="">
+        <input type="text" name="" id="city" placeholder="Bairro aqui" />
       </div>
       <div class="city">
-        <label for="city">Referencia</label>
-        <input type="text" name="" id="">
+        <label for="city">Cidade</label>
+        <input type="text" name="" id="city" placeholder="Cidade aqui" />
       </div>
     </div>
 
     <div class="estado-pais">
       <div class="estado">
         <label for="estado">Estado</label>
-        <select name="" id=""></select>
+        <input name="" id="estado" placeholder="Estado aqui" />
       </div>
       <div class="pais">
         <label for="pais">Pais</label>
-        <input type="text" name="" id="">
+        <input type="text" name="" id="estado" placeholder="Brasil" />
       </div>
     </div>
   </div>
@@ -156,27 +167,26 @@
       <p>Escolha a forma de pagamento</p>
     </div>
 
-    
-      
-    <div class="radio-boleto"> 
+    <div class="radio-boleto">
       <!-- display flex e aligns items -->
-      <input type="radio" name="" id="">
+      <input type="radio" name="" id="" placeholder="" />
       <p>Boleto</p>
     </div>
 
-    <div class="radio-pix"> 
+    <div class="radio-pix">
       <!-- display flex e aligns items -->
-      <input type="radio" name="" id="">
+      <input type="radio" name="" id="" placeholder="" />
       <p>Pix</p>
     </div>
 
-    <div class="radio-credito"> 
+    <div class="radio-credito">
       <!-- display flex e aligns items -->
-      <input type="radio" name="" id="">
+      <input type="radio" name="" id="" />
       <p>Credito</p>
     </div>
 
-    <button class="btn-fim">Finalizar compra</button>
-
+    <div class="div-btn">
+      <button class="btn-fim" (click)="onSubmit()">Finalizar compra</button>
+    </div>
   </div>
 </form>

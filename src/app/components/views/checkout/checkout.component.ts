@@ -13,11 +13,17 @@ export class CheckoutComponent {
   constructor( private formBuilder: FormBuilder) {}
 
   public cadastroForm: FormGroup = this.formBuilder.group({
-    firstName: [''],
-    email: this.formBuilder.control('', Validators.email)
+    // name:['', Validators.required.name],
+    // email: ['', Validators.required]
+
+    email: ['', Validators.required]
   })
   
-  public submitForm() {
-    console.log (this.cadastroForm)
+  get email(){
+    return this.cadastroForm.get('email')
+  }
+
+  onSubmit(){
+    console.log(this.cadastroForm.value)
   }
 }

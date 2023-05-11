@@ -1,6 +1,53 @@
 
-.main {
-    margin-left: 280px;
-    padding: 18px;
-    
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
 }
+
+.main{
+    display: flex;
+    padding-top: 11vh;
+    padding-bottom: 10rem;
+    // background-color: red;
+
+}
+
+.header{
+    // display: flex;
+    // position: absolute;
+    // justify-content: space-between;
+    // z-index: 1;
+    // min-height: 10vh;
+    // background-color: red;
+    // width: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .main {
+//     margin-left: 280px;
+//     padding: 18px;
+    
+// }
