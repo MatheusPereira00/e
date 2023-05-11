@@ -15,7 +15,7 @@
 
 
     background-color: var(--primary-color);
-    width: 26.1em;
+    width: 23.1em;
     height: 100vh;
     top: 7em;
     padding-left: 1.5rem;
@@ -34,13 +34,13 @@
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    width: 230px;
+    width: 215px;
     height: 48px;
     top: 98px;
     left: 10px;
     cursor: pointer;
     border-radius: 8px;
-    background: #3855c1;
+    background: var(--primary-color);
     border: none;
     color: white;
   }
