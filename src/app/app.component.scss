@@ -1,55 +1,22 @@
-
-.container{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(203, 203, 227);
+.container {
+  display: flex;
+  flex-direction: column;
+  //   margin-top: -30px;
 }
 
-.main{
-    display: flex;
-    padding-top: 11vh;
-    padding-bottom: 10rem;
-    // background-color: red;
-
+.main {
+  display: flex;
+//   padding-top: 11vh;
+  padding-bottom: 10rem;
+//   background-color:  red;
+  // background-color: red;
+}
+.products {
+  display: flex;
+  flex-direction: column;
+  padding-left: 250px;
 }
 
-.header{
-    // display: flex;
-    // position: absolute;
-    // justify-content: space-between;
-    // z-index: 1;
-    // min-height: 10vh;
-    // background-color: red;
-    // width: 100px;
+.sidenav {
+  display: flex;
 }
-
-.sidenav{
-    display: flex;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .main {
-//     margin-left: 280px;
-//     padding: 18px;
-    
-// }

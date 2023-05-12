@@ -9,9 +9,9 @@ h2 {
   justify-content: space-around;
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 10px;
+  padding: 1rem;
   height: 205px;
-  width: 950px;
+  width: 1140px;
   margin-top: 15px;
 }
 
@@ -27,7 +27,7 @@ h2 {
 img {
   height: 130px;
   padding-left: 12px;
-  padding-bottom: 10px;
+  padding-bottom: 1rem;
 }
 .title-categoria {
   display: flex;
@@ -47,8 +47,8 @@ img {
 .price {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 .txt-unit {
   font-style: normal;
@@ -126,7 +126,7 @@ img {
   gap: 8px;
   justify-content: flex-end;
   margin-top: 50px;
-  margin-right: 10px;
+  margin-right: 2rem;
 }
 
 .paragrafo-total {
@@ -148,7 +148,8 @@ img {
 .div-btn {
   display: flex;
   justify-content: flex-end;
-  margin-right: 9px;
+  margin-right: 2rem;
+  margin-bottom: 100px;
 }
 
 button {

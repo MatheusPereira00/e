@@ -12,7 +12,7 @@
 }
 
 ::placeholder {
-  padding: 10px;
+  padding: 1rem;
 }
 
 form {
@@ -178,7 +178,7 @@ label {
   height: 30px;
   left: 296px;
   top: 679px;
-  padding: 10px;
+  padding: 1rem;
   background: #fefbff;
   border: 1px solid #acaaaf;
   border-radius: 8px;
@@ -218,7 +218,7 @@ p {
   height: 38px;
   background: #fefbff;
   border: 2px solid #acaaaf;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 
 .cep {
@@ -265,17 +265,17 @@ p {
 
 #radioi {
   display: flex;
-  margin: 10px;
+  margin: 1rem;
 }
 #radioa {
   display: flex;
-  margin: 10px;
+  margin: 1rem;
 }
 
 
 .ende-num {
   display: flex;
-  gap: 10px;
+  gap: 1rem;
 }
 .endereco {
   display: flex;
@@ -311,7 +311,7 @@ p {
 
 .comple-refe {
   display: flex;
-  gap: 10px;
+  gap: 1rem;
 }
 
 #comple {
@@ -337,7 +337,7 @@ p {
 
 .bairro-city {
   display: flex;
-  gap: 10px;
+  gap: 1rem;
 }
 
 #bairro {
@@ -363,7 +363,7 @@ p {
 
 .estado-pais {
   display: flex;
-  gap: 10px;
+  gap: 1rem;
 }
 
 #estado {
@@ -402,7 +402,7 @@ p {
   align-items: center;
   width: 280px;
   height: 38px;
-  margin: 10px;
+  margin: 1rem;
   top: 405px;
   background: #fefbff;
   border: 1px solid #acaaaf;
@@ -414,7 +414,7 @@ p {
   align-items: center;
   width: 280px;
   height: 38px;
-  margin: 10px;
+  margin: 1rem;
   top: 405px;
   background: #fefbff;
   border: 1px solid #acaaaf;
@@ -426,7 +426,7 @@ p {
   align-items: center;
   width: 280px;
   height: 308px;
-  margin: 10px;
+  margin: 1rem;
   top: 501px;
   background: #fefbff;
   border: 1px solid #acaaaf;
@@ -436,8 +436,8 @@ p {
 .div-btn {
   display: flex;
   justify-content: flex-end;
-  margin-right: 10px;
-  top: 10px;
+  margin-right: 1rem;
+  top: 1rem;
 }
 .btn-fim {
   width: 229.73px;
