@@ -12,7 +12,7 @@ export class CartService {
   constructor() {
     const data = localStorage.getItem('cart');
     if (data) {
-      this.productCarts = data ? JSON.parse(data) : null;
+      this.productCarts = JSON.parse(data)
     }
   }
 
@@ -28,7 +28,6 @@ export class CartService {
       const index = this.productCarts.findIndex(prod => prod.id === product.id);
       this.productCarts[index].quantity++;
     }
-
     //this.productCarts.push(product);
     localStorage.setItem('cart', JSON.stringify(this.productCarts));
   }
@@ -43,9 +42,9 @@ export class CartService {
   }
 
   //aumenatar quantidade de produtos
-  public increase(product: CartProduct){
+  public increase(product: CartProduct) {
     const checkList = this.productCarts.find(prod => prod.id === product.id);
-    if(checkList){
+    if (checkList) {
       product.quantity++;
       localStorage.setItem('cart', JSON.stringify(this.productCarts));
     }
@@ -57,26 +56,24 @@ export class CartService {
     if (checkList && checkList.quantity > 1) {
       product.quantity--;
       localStorage.setItem('cart', JSON.stringify(this.productCarts));
-    } 
+    }
   }
 
-
-
   public checkLength(): number {
-    const length = this.productCarts.reduce((total, product)=>total+product.quantity, 0)
+    const length = this.productCarts.reduce(
+      (total, product) => total + product.quantity,
+      0
+    );
     return length;
   }
 
   public total() {
     const TOTAL_PRICE = this.productCarts.reduce((price, product) => {
-      return price += product.unitPrice * product.quantity;
-    }, 0)
+      return (price += product.unitPrice * product.quantity);
+    }, 0);
 
     return TOTAL_PRICE;
   }
-
-
-  
 
   // pegando intes do carts
   public getItems() {
@@ -102,7 +99,4 @@ export class CartService {
   saveData() {
     localStorage.setItem('cart', JSON.stringify(this.productCarts));
   }
-
-
-
 }

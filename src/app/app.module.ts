@@ -20,6 +20,7 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     SidenavComponent,
     LoadingComponent,
     //CartComponent,
+    
   ],
   imports: [BrowserModule, AppRoutingModule, ProductModule],
   providers: [],

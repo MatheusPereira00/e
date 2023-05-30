@@ -2,7 +2,7 @@
   <div routerLink="">
     <h1>IBM <span> Shop </span></h1>
   </div>
-
+ 
   <div class="search-bar">
     <input type="text" placeholder="Search Products..." />
     <svg class="icon icon-search">
@@ -12,15 +12,12 @@
 
   <div class="icons">
     <div class="icons-actions">
+      <svg class="icon-local_grocery_store" routerLink="cart">
+        <use
+          xlink:href="\assets\images\products\icons-svg\icons.svg#icon-local_grocery_store"></use>
+      </svg>
 
-        
-        <svg class="icon-local_grocery_store" routerLink="cart">
-          <use
-            xlink:href="\assets\images\products\icons-svg\icons.svg#icon-local_grocery_store">
-            </use>
-          </svg>
-          
-          {{ cartService.checkLength()}}
+      {{ cartService.checkLength() }}
 
       <svg class="icon-bell">
         <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-bell"></use>
@@ -32,6 +29,17 @@
         <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-person"></use>
       </svg>
       <p>Login</p>
+    </div>
+    <div>
+      <!-- <button class="btn-team" (click)="toggle()">Color</button> -->
+      <div class="theme-switcher">
+        <label class="swtich">
+          <input
+            type="checkbox"
+            [checked]="isLightTheme"
+            (change)="onThemeSwitchChange()" />
+        </label>
+      </div>
     </div>
   </div>
 </header>

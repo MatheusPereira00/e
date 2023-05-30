@@ -6,10 +6,10 @@
   left: 282px;
   top: 303px;
   /* IBM Shop/ref/neutral-variant/neutral-variant99 */
-  background: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   margin-bottom: 100px;
+  background-color: var(--container-menu-item-color);
 }
 
 ::placeholder {
@@ -106,7 +106,7 @@ label {
 
   /* IBM Shop/sys/light/outline */
 
-  color: #757680;
+  color: var(--texto-form-color);
 }
 
 #name {
@@ -222,6 +222,7 @@ hr {
   display: flex;
   // margin-top: 40px;
   margin: 20px;
+  align-items: center;
   // background-color: rgb(35, 35, 46);
 }
 
@@ -237,17 +238,17 @@ hr {
   box-sizing: border-box;
 }
 
-#radioo {
-  width: 38px;
-  height: 38px;
-  left: 577px;
-  top: 972px;
+// #radioo {
+//   width: 38px;
+//   height: 38px;
+//   left: 577px;
+//   top: 972px;
 
-  // background: #b21de4;
-  border: 1px solid #acaaaf;
-  border-radius: 8px;
-  box-sizing: border-box;
-}
+//   // background: #b21de4;
+//   border: 1px solid #acaaaf;
+//   border-radius: 8px;
+//   box-sizing: border-box;
+// }
 
 .cep {
   display: flex;
@@ -256,15 +257,16 @@ hr {
 }
 
 #cep {
-  width: 140px;
-  height: 30px;
-  left: 296px;
-  top: 679px;
-
-  background: #fefbff;
+  box-sizing: border-box;
+  width: 123px;
+  height: 38px;
+  left: 686px;
+  top: 435px;
   border: 1px solid #acaaaf;
   border-radius: 8px;
+  margin: 5px;
 }
+
 .div-radioi {
   display: flex;
   align-items: center;
@@ -272,23 +274,22 @@ hr {
   height: 38px;
   left: 685px;
   top: 491px;
-
-  background: #000000;
   border: 1px solid #acaaaf;
   border-radius: 8px;
+  margin: 5px;
 }
 .div-radioa {
   display: flex;
   align-items: center;
-  background-color: red;
-  // width: 319px;
-  // height: 38px;
-  // left: 685px;
-  // top: 491px;
+  margin: 5px;
+  width: 319px;
+  height: 38px;
+  left: 685px;
+  top: 491px;
 
-  // background: #fefbff;
-  // border: 1px solid #acaaaf;
-  // border-radius: 8px;
+  background: #fefbff;
+  border: 1px solid #acaaaf;
+  border-radius: 8px;
 }
 
 #radioi {
@@ -302,9 +303,16 @@ hr {
   // background-color: red;
 }
 
+.uteis {
+  display: flex;
+  align-items: center;
+  margin: 15px;
+}
+
 .ende-num {
   display: flex;
   gap: 1rem;
+  margin: 5px;
 }
 .endereco {
   display: flex;
@@ -341,6 +349,7 @@ hr {
 .comple-refe {
   display: flex;
   gap: 1rem;
+  margin: 5px;
 }
 
 #comple {
@@ -366,7 +375,8 @@ hr {
 
 .bairro-city {
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
+  margin: 5px;
 }
 
 #bairro {
@@ -393,6 +403,7 @@ hr {
 .estado-pais {
   display: flex;
   gap: 1rem;
+  margin: 5px;
 }
 
 #estado {
@@ -426,7 +437,8 @@ p {
 
   /* IBM Shop/sys/light/outline */
 
-  color: #757680;
+  color: var(--texto-form-color);
+
 }
 
 .nn {
@@ -442,37 +454,65 @@ p {
 .radio-boleto {
   display: flex;
   align-items: center;
-  width: 280px;
+  margin: 15px;
+  box-sizing: border-box;
+  width: 320px;
   height: 38px;
-  margin: 1rem;
+  left: 1075px;
   top: 405px;
+
   background: #fefbff;
   border: 1px solid #acaaaf;
   border-radius: 8px;
+}
+#input-radio {
+  margin: 5px;
+}
+
+.boleto-total {
+  display: flex;
+  gap: 100px;
 }
 
 .radio-pix {
   display: flex;
   align-items: center;
-  width: 280px;
+  margin: 15px;
+  box-sizing: border-box;
+  width: 320px;
   height: 38px;
-  margin: 1rem;
+  left: 1075px;
   top: 405px;
   background: #fefbff;
   border: 1px solid #acaaaf;
   border-radius: 8px;
 }
 
+.pix-total {
+  display: flex;
+  gap: 123px;
+}
+
 .radio-credito {
   display: flex;
   align-items: center;
-  width: 280px;
-  height: 308px;
-  margin: 1rem;
-  top: 501px;
-  background: #fefbff;
+  margin: 15px;
+  box-sizing: border-box;
+  width: 320px;
+  height: 38px;
+  left: 1075px;
+  top: 405px;
   border: 1px solid #acaaaf;
   border-radius: 8px;
+}
+
+.credito-total {
+  display: flex;
+  gap: 95px;
+}
+
+#input-credito {
+  margin: 5px;
 }
 
 .div-btn {
@@ -485,6 +525,15 @@ p {
   width: 229.73px;
   height: 38px;
   background: #0052dd;
+  color: white;
   border-radius: 8px;
   border: none;
+}
+
+// validacao
+
+.div-valid {
+  color: red;
+  display: flex;
+  margin-left: 10px;
 }

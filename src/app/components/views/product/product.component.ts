@@ -30,5 +30,4 @@ export class ProductComponent implements OnInit {
     console.log(product)
   }
 
-  
 }

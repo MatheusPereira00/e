@@ -1,6 +1,8 @@
 <h2>Checkout dos Produtos</h2>
 
-<form [formGroup]="cadastroForm" (ngSubmit)="onSubmit">
+
+
+<form #f="ngForm" [formGroup]="cadastroForm" (ngSubmit)="(onSubmit)">
   <div class="container">
     <div class="icon-pessoa">
       <svg class="icon icon-person">
@@ -25,6 +27,14 @@
         type="text"
         placeholder=" insira seu nome aqui"
         formControlName="name" />
+      <div
+        class="div-valid"
+        *ngIf="
+          cadastroForm.get('name')?.invalid &&
+          (cadastroForm.get('name')?.touched || cadastroForm.get('name')?.dirty)
+        ">
+        O campo é obrigatorio
+      </div>
     </div>
 
     <div class="div-ee">
@@ -33,19 +43,37 @@
         id="email"
         type="email"
         placeholder=" insira seu email aqui"
-        formControlName="email"/>
-        <!-- <span *ngIf="cadastroForm.controls.email.errors >  </span> -->
+        formControlName="email" />
     </div>
+
+    <div
+    class="div-valid"
+    *ngIf="
+      cadastroForm.get('email')?.invalid &&
+      (cadastroForm.get('email')?.touched || cadastroForm.get('email')?.dirty)
+    ">
+    O campo é obrigatorio
+  </div>
+
+    
 
     <div class="div-senha-confirmar">
       <div class="div-ee">
         <label for="senha">Senha</label>
-        <input id="senha" type="password" placeholder="sua senha aqui" />
+        <input
+          id="senha"
+          type="new-password"
+          placeholder="sua senha aqui"
+          formControlName="senha" />
       </div>
-
+      
       <div class="div-ee">
         <label for="confirmar-senha">Confirmar senha</label>
-        <input id="confirmar" type="password" placeholder="sua senha aqui" />
+        <input
+          id="confirmar"
+          type="new-password"
+          placeholder="sua senha aqui"
+          formControlName="confirmar" />
       </div>
     </div>
 
@@ -78,7 +106,7 @@
         <p>Deseja receber notificações por email ou whatsapp?</p>
       </div>
       <div class="radioo">
-        <input type="radio" name="" id="radioo" />
+        <!-- <input type="radio" name="" id="radioo" /> -->
       </div>
     </div>
   </div>
@@ -91,6 +119,8 @@
       <p>Escolha a forma de envio</p>
     </div>
 
+    <hr />
+
     <div class="cep">
       <label for="cep">CEP</label>
       <input type="number" name="" id="cep" placeholder="00000-000" />
@@ -99,21 +129,19 @@
     <div class="div-radio">
       <div class="div-radioi">
         <input type="radio" name="" id="radioi" />
-        Retirar na loja fisica 1 dia
+        Retirar na loja fisica | 1 dia
       </div>
       <div class="div-radioa">
         <input type="radio" name="" id="radioa" />
-        PAC 3 dias
+        PAC | 3 dias
       </div>
     </div>
-    
-    
+
     <div class="uteis">
-      <p></p>
       <section>*</section>
       Dias uteis, após a confirmação do pagamento
     </div>
-    <!-- <hr /> -->
+    <hr />
     <div class="ende-num">
       <div class="endereco">
         <label for="endereço">Endereço</label>
@@ -139,7 +167,7 @@
     <div class="bairro-city">
       <div class="bairro">
         <label for="bairro">Bairro</label>
-        <input type="text" name="" id="city" placeholder="Bairro aqui" />
+        <input type="text" name="" id="bairro" placeholder="Bairro aqui" />
       </div>
       <div class="city">
         <label for="city">Cidade</label>
@@ -154,7 +182,7 @@
       </div>
       <div class="pais">
         <label for="pais">Pais</label>
-        <input type="text" name="" id="estado" placeholder="Brasil" />
+        <input type="text" name="" id="pais" placeholder="Brasil" />
       </div>
     </div>
   </div>
@@ -167,22 +195,33 @@
       <p>Escolha a forma de pagamento</p>
     </div>
 
+    <hr />
+
     <div class="radio-boleto">
       <!-- display flex e aligns items -->
-      <input type="radio" name="" id="" placeholder="" />
-      <p>Boleto</p>
+      <input type="radio" name="" id="input-radio" placeholder="" />
+      <div class="boleto-total">
+        <p>Boleto</p>
+        <p>Valor Total R$ 18,90</p>
+      </div>
     </div>
 
     <div class="radio-pix">
       <!-- display flex e aligns items -->
-      <input type="radio" name="" id="" placeholder="" />
-      <p>Pix</p>
+      <input type="radio" name="" id="input-pix" placeholder="" />
+      <div class="pix-total">
+        <p>Pix</p>
+        <p>Valor Total R$ 18,90</p>
+      </div>
     </div>
 
     <div class="radio-credito">
       <!-- display flex e aligns items -->
-      <input type="radio" name="" id="" />
-      <p>Credito</p>
+      <input type="radio" name="" id="input-credito" placeholder="" />
+      <div class="credito-total">
+        <p>Credito</p>
+        <p>Valor Total R$ 18,90</p>
+      </div>
     </div>
 
     <div class="div-btn">
@@ -190,3 +229,15 @@
     </div>
   </div>
 </form>
+
+
+
+<!-- <div
+class="div-valid"
+*ngIf="
+  cadastroForm.get('confirmar')?.invalid &&
+  (cadastroForm.get('confirmar')?.touched ||
+    cadastroForm.get('confirmar')?.dirty)
+">
+O campo é obrigatorio
+</div> -->

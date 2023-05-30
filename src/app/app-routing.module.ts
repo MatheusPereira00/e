@@ -27,7 +27,6 @@ const routes: Routes = [
     import('./components/views/checkout/checkout.module').then (m => m.CheckoutModule)
   }
 
-  
 ];
 
 @NgModule({
