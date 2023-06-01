@@ -9,13 +9,14 @@
 
 .main {
   display: flex;
-  padding-bottom: 10rem;
+  padding-bottom: 7rem;
 }
 
 .products {
   display: flex;
   flex-direction: column;
   padding-left: 250px;
+  background-color: var( --dark-backgroud-color)
 }
 
 .sidenav {

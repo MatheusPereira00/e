@@ -9,7 +9,7 @@ import { CartService } from '../../service/cart.service';
 })
 export class HeaderComponent implements OnInit {
   public localStorageTheme!: string | null;
-  public isLightTheme = true;
+  public isDarkTheme = true;
 
   constructor(public cartService: CartService) {
     // const darkTheme = localStorage.getItem('dark-theme')
@@ -17,10 +17,16 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.localStorageTheme =
-      localStorage.getItem('theme') !== null ? localStorage.getItem('theme') : 'true';
-
-    // console.log(this.localStorageTheme);
+    const theme = localStorage.getItem('theme')
+    if(theme){
+      if(theme === 'true'){
+        this.isDarkTheme = true
+        document.body.setAttribute('data-theme','dark');
+      } else {
+        document.body.setAttribute('data-theme','theme');
+        this.isDarkTheme = false
+      }
+    }
   }
   // public toggle() {
   // document.body.classList.toggle('dark-theme');
@@ -30,19 +36,20 @@ export class HeaderComponent implements OnInit {
   onThemeSwitchChange() {
     // const darkTheme = JSON.parse(localStorage.getItem('data-theme'));
 
-    this.isLightTheme = !this.isLightTheme;
+    this.isDarkTheme = !this.isDarkTheme;
 
-    localStorage.setItem('theme', JSON.stringify(this.isLightTheme));
+    localStorage.setItem('theme', JSON.stringify(this.isDarkTheme));
 
-    document.body.setAttribute('data-theme', this.localStorageTheme ? 'light' : 'dark');
+    document.body.setAttribute('data-theme', this.isDarkTheme ? 'dark' : 'theme');
 
     this.localStorageTheme;
-    console.log(this.isLightTheme);
-
+    
     // console.log(this.localStorageTheme)
 
     // localStorage.setItem('data-theme', JSON.stringify(dataTheme))
 
     // localStorage.setItem('data-theme', JSON.stringify(darkTheme));
+
+
   }
 }
