@@ -8,6 +8,8 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { SidenavComponent } from './components/layout/sidenav/sidenav.component';
 import { ProductModule } from './components/views/product/product.module';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { ControlContainerComponent } from './components/views/control-container/control-container.component';
+import { SearchComponent } from './components/shared/search/search.component';
 //import { CartModule } from './components/views/cart/cart.module';
 //import { CartComponent } from './components/views/cart/cart.component';
 
@@ -19,7 +21,7 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     FooterComponent,
     SidenavComponent,
     LoadingComponent,
-    //CartComponent,
+    SearchComponent
     
   ],
   imports: [BrowserModule, AppRoutingModule, ProductModule],

@@ -1,20 +1,20 @@
 <header>
-  <div routerLink="">
+  <div class="__logo">
+    <svg class="icon icon-menu">
+      <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-menu"></use>
+    </svg>
+
     <h1>IBM <span> Shop </span></h1>
   </div>
- 
-  <div class="search-bar">
-    <input type="text" placeholder="Search Products..." />
-    <svg class="icon icon-search">
-      <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-search"></use>
-    </svg>
+
+  <div class="container__search">
+    <app-search></app-search>
   </div>
 
   <div class="icons">
     <div class="icons-actions">
       <svg class="icon-local_grocery_store" routerLink="cart">
-        <use
-          xlink:href="\assets\images\products\icons-svg\icons.svg#icon-local_grocery_store"></use>
+        <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-local_grocery_store"></use>
       </svg>
 
       {{ cartService.checkLength() }}
@@ -34,10 +34,7 @@
       <!-- <button class="btn-team" (click)="toggle()">Color</button> -->
       <div class="theme-switcher">
         <label class="swtich">
-          <input
-            type="checkbox"
-            [checked]="isDarkTheme"
-            (change)="onThemeSwitchChange()" />
+          <input type="checkbox" [checked]="isDarkTheme" (change)="onThemeSwitchChange()" />
         </label>
       </div>
     </div>

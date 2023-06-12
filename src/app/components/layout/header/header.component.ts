@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../service/cart.service';
 // import { JSDocComment } from '@angular/compiler';
+import { SearchComponent } from '../../shared/search/search.component';
 
 @Component({
   selector: 'app-header',

@@ -7,7 +7,7 @@
     padding: 2rem;
     gap: 1rem;
     z-index: 11;
-    background: var(--white);
+    background: #fff;
     box-shadow: var(--shadow-dark);
     border-radius: 8px;
     width: 40%;
@@ -52,3 +52,8 @@ button {
     border: none;
   }
   
+.dialog__title {
+    display: flex;
+    justify-content: center;
+    
+}

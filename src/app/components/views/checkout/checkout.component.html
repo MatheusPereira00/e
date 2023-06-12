@@ -1,7 +1,5 @@
 <h2>Checkout dos Produtos</h2>
 
-
-
 <form #f="ngForm" [formGroup]="cadastroForm" (ngSubmit)="(onSubmit)">
   <div class="container">
     <div class="icon-pessoa">
@@ -11,7 +9,6 @@
       <p>Dados Pessoais</p>
     </div>
     <hr />
-
 
     <div class="identificador">
       <p class="p-cadastro">Já possui cadastro?</p>
@@ -47,15 +44,13 @@
     </div>
 
     <div
-    class="div-valid"
-    *ngIf="
-      cadastroForm.get('email')?.invalid &&
-      (cadastroForm.get('email')?.touched || cadastroForm.get('email')?.dirty)
-    ">
-    O campo é obrigatorio
-  </div>
-
-    
+      class="div-valid"
+      *ngIf="
+        cadastroForm.get('email')?.invalid &&
+        (cadastroForm.get('email')?.touched || cadastroForm.get('email')?.dirty)
+      ">
+      O campo é obrigatorio
+    </div>
 
     <div class="div-senha-confirmar">
       <div class="div-ee">
@@ -66,7 +61,7 @@
           placeholder="sua senha aqui"
           formControlName="senha" />
       </div>
-      
+
       <div class="div-ee">
         <label for="confirmar-senha">Confirmar senha</label>
         <input
@@ -229,8 +224,6 @@
     </div>
   </div>
 </form>
-
-
 
 <!-- <div
 class="div-valid"
