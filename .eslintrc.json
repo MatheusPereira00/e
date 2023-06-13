@@ -1,6 +1,8 @@
 {
   "root": true,
-  "ignorePatterns": ["projects/**/*"],
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
   "env": {
     "browser": true,
     "node": true,
@@ -8,9 +10,13 @@
   },
   "overrides": [
     {
-      "files": ["*.ts"],
+      "files": [
+        "*.ts"
+      ],
       "parserOptions": {
-        "project": ["tsconfig.json"],
+        "project": [
+          "tsconfig.json"
+        ],
         "createDefaultProgram": true
       },
       "extends": [
@@ -20,10 +26,18 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
-        "@typescript-eslint/no-unused-vars": ["warn"],
-        "@typescript-eslint/no-inferrable-types": ["warn"],
-        "@typescript-eslint/no-empty-function": ["warn"],
-        "@typescript-eslint/explicit-function-return-type": ["error"],
+        "@typescript-eslint/no-unused-vars": [
+          "warn"
+        ],
+        "@typescript-eslint/no-inferrable-types": [
+          "warn"
+        ],
+        "@typescript-eslint/no-empty-function": [
+          "warn"
+        ],
+        "@typescript-eslint/explicit-function-return-type": [
+          "error"
+        ],
         "@typescript-eslint/explicit-member-accessibility": [
           "error",
           {
@@ -37,10 +51,18 @@
             }
           }
         ],
-        "prefer-const": ["warn"],
-        "no-implicit-coercion": ["warn"],
-        "no-console": ["warn"],
-        "no-multi-spaces": ["warn"],
+        "prefer-const": [
+          "warn"
+        ],
+        "no-implicit-coercion": [
+          "warn"
+        ],
+        "no-console": [
+          "warn"
+        ],
+        "no-multi-spaces": [
+          "warn"
+        ],
         "sort-imports": [
           "warn",
           {
@@ -70,17 +92,29 @@
             "style": "kebab-case"
           }
         ],
-        "@angular-eslint/no-empty-lifecycle-method": ["error"]
+        "@angular-eslint/no-empty-lifecycle-method": [
+          "error"
+        ]
       }
     },
     {
-      "files": ["*.html"],
-      "excludedFiles": ["*inline-template-*.component.html"],
-      "extends": ["plugin:prettier/recommended", "plugin:@angular-eslint/template/recommended"],
+      "files": [
+        "*.html"
+      ],
+      "excludedFiles": [
+        "*inline-template-*.component.html"
+      ],
+      "extends": [
+        "plugin:prettier/recommended",
+        "plugin:@angular-eslint/template/recommended"
+      ],
       "rules": {
         "prettier/prettier": [
           "error",
-          { "parser": "angular", "endOfLine": "auto" }
+          {
+            "parser": "angular",
+            "endOfLine": "auto"
+          }
         ]
       }
     }
