@@ -35,4 +35,5 @@ export class CheckoutComponent {
   onSubmit() {
     console.log(this.cadastroForm.value);
   }
+
 }
