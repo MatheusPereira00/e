@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../service/cart.service';
 // import { JSDocComment } from '@angular/compiler';
 import { SearchComponent } from '../../shared/search/search.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
+    standalone: true,
+    imports: [SearchComponent, RouterLink],
 })
 export class HeaderComponent implements OnInit {
   public localStorageTheme!: string | null;

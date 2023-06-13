@@ -1,11 +1,14 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CartService } from '../../service/cart.service';
 import { Product } from '../../models/product-interface';
+import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-dialog',
-  templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.scss'],
+    selector: 'app-dialog',
+    templateUrl: './dialog.component.html',
+    styleUrls: ['./dialog.component.scss'],
+    standalone: true,
+    imports: [NgIf],
 })
 export class DialogComponent implements OnInit {
   // eslint-disable-next-line @typescript-eslint/no-empty-function

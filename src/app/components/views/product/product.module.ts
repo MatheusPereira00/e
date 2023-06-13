@@ -14,9 +14,8 @@ import { CartComponent } from '../cart/cart.component';
 
 
 @NgModule({
-  declarations: [ProductComponent, CardComponent, DialogComponent, PaginationComponent, CartComponent],
-  imports: [CommonModule, ProductRoutingModule, HttpClientModule],
-  exports: [ProductComponent, CardComponent, DialogComponent],
-  providers: [ProductService],
+    imports: [CommonModule, ProductRoutingModule, HttpClientModule, ProductComponent, CardComponent, DialogComponent, PaginationComponent, CartComponent],
+    exports: [ProductComponent, CardComponent, DialogComponent],
+    providers: [ProductService],
 })
 export class ProductModule {}

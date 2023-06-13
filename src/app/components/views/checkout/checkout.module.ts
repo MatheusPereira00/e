@@ -7,14 +7,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [
-    CheckoutComponent
-  ],
-  imports: [
-    CommonModule,
-    CheckoutRoutingModule,
-    ReactiveFormsModule,
-    ReactiveFormsModule
-  ]
+    imports: [
+        CommonModule,
+        CheckoutRoutingModule,
+        ReactiveFormsModule,
+        ReactiveFormsModule,
+        CheckoutComponent
+    ]
 })
 export class CheckoutModule { }

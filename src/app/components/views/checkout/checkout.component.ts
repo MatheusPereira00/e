@@ -1,12 +1,15 @@
 import { Component, } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgIf } from '@angular/common';
 
 
 @Component({
-  selector: 'app-checkout',
-  templateUrl: './checkout.component.html',
-  styleUrls: ['./checkout.component.scss'],
+    selector: 'app-checkout',
+    templateUrl: './checkout.component.html',
+    styleUrls: ['./checkout.component.scss'],
+    standalone: true,
+    imports: [ReactiveFormsModule, NgIf],
 })
 export class CheckoutComponent {
   constructor(private router: Router) {}

@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../service/product.service';
 import { Product } from '../../models/product-interface';
 import { CartService } from '../../service/cart.service';
+import { CardComponent } from './card/card.component';
 
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss'],
+    selector: 'app-product',
+    templateUrl: './product.component.html',
+    styleUrls: ['./product.component.scss'],
+    standalone: true,
+    imports: [CardComponent],
 })
 export class ProductComponent implements OnInit {
   public product: Product[] = [];
