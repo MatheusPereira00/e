@@ -20,16 +20,10 @@ export class CartComponent implements OnInit {
   public allProductCart = this.cartService.getItems();
 
   constructor(public cartService: CartService, private router: Router) {
-    // localStorage.setItem('BD', JSON.stringify(this.products));
-    console.log('foi')
-    alert('deu certo')
   }
 
   ngOnInit(): void {
-    console.log('foi')
-    alert('deu certo')
     this.cartService.getItems();
-    // console.log(this.allProductCart)
   }
   
   public checkout() {
