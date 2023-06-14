@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { NgFor } from '@angular/common';
 
 
+
 @Component({
     selector: 'app-cart',
     templateUrl: './cart.component.html',
@@ -20,11 +21,15 @@ export class CartComponent implements OnInit {
 
   constructor(public cartService: CartService, private router: Router) {
     // localStorage.setItem('BD', JSON.stringify(this.products));
+    console.log('foi')
+    alert('deu certo')
   }
 
   ngOnInit(): void {
-    //this.cartService.getItems();
-    //console.log(this.allProductCart)
+    console.log('foi')
+    alert('deu certo')
+    this.cartService.getItems();
+    // console.log(this.allProductCart)
   }
   
   public checkout() {

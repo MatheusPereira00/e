@@ -10,21 +10,17 @@ const routes: Routes = [
   {
     path: 'product',
     loadChildren: () =>
-      import('./components/views/product/product.module').then(m => m.ProductModule),
+      import('./routes.module').then(m => m.productsRoutes),
   },
   {
     path: 'cart',
     loadChildren: () =>
-      import('./components/views/cart/cart.module').then(m => m.CartModule),
+      import('./routes.module').then(m => m.cartRoutes),
   },
-  // {
-  //   path: 'Books',
-  //   loadChildren: () => import('../assets/images/products/books').then(m => m.productModule),
-  // },
   {
     path: 'checkout',
     loadChildren: () =>
-    import('./components/views/checkout/checkout.module').then (m => m.CheckoutModule)
+    import('./routes.module').then (m => m.checkoutRoutes)
   }
 
 ];
