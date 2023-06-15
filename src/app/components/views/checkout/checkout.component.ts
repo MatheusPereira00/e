@@ -2,6 +2,7 @@ import { Component, } from '@angular/core';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgIf } from '@angular/common';
+import { CustomValidationMessageComponent } from "../custom-validation-message/custom-validation-message.component";
 
 
 @Component({
@@ -9,7 +10,7 @@ import { NgIf } from '@angular/common';
     templateUrl: './checkout.component.html',
     styleUrls: ['./checkout.component.scss'],
     standalone: true,
-    imports: [ReactiveFormsModule, NgIf],
+    imports: [ReactiveFormsModule, NgIf, CustomValidationMessageComponent]
 })
 export class CheckoutComponent {
   constructor(private router: Router) {}
@@ -31,8 +32,24 @@ export class CheckoutComponent {
     }),
     celular: new FormControl('', {nonNullable: true, validators: [Validators.required],
     }),
-    city: new FormControl('', {nonNullable: true, validators: [Validators.required],
+    cep: new FormControl('', {nonNullable: true, validators: [Validators.required],
     }),
+    endereco: new FormControl('', {nonNullable: true, validators: [Validators.required],
+    }),
+    num: new FormControl('', {nonNullable: true, validators: [Validators.required],
+    }),
+    comple: new FormControl('', {nonNullable: true, validators: [Validators.required],
+    }),
+    refe: new FormControl('', {nonNullable: true, validators: [Validators.required],
+    }),
+    bairro: new FormControl('', {nonNullable: true, validators: [Validators.required],
+    }),
+    cidade: new FormControl('', {nonNullable: true, validators: [Validators.required],
+    }),
+    estado: new FormControl('', {nonNullable: true, validators: [Validators.required],
+    }), 
+    pais: new FormControl('', {nonNullable: true, validators: [Validators.required],
+    }), 
   });
   
   onSubmit() {

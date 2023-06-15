@@ -12,9 +12,6 @@
   background-color:var(--dark-backgroud-color);
 }
 
-::placeholder {
-  padding: 1rem;
-}
 
 form {
   display: flex;
@@ -465,9 +462,11 @@ p {
   border: 1px solid #acaaaf;
   border-radius: 8px;
 }
-#input-radio {
-  margin: 5px;
-}
+
+// input {
+//   // margin: 5px;
+//   background-color: #757680;
+// }
 
 .boleto-total {
   display: flex;
@@ -511,9 +510,9 @@ p {
   gap: 95px;
 }
 
-#input-credito {
-  margin: 5px;
-}
+// #input-credito {
+//   margin: 5px;
+// }
 
 .div-btn {
   display: flex;
@@ -537,3 +536,12 @@ p {
   display: flex;
   margin-left: 10px;
 }
+
+
+
+input{
+  padding-left: 1rem !important;
+}
+
+
+
