@@ -6,6 +6,8 @@
   position: fixed;
   overflow: none;
   background-color: rgb(30, 112, 225);
+  // background-color: var(--teste-home-color);
+  
 }
 
 * {
@@ -23,7 +25,7 @@
   left: 1rem;
   cursor: pointer;
   border-radius: 8px;
-  background: var(--sidenav-menu-item-color);
+  background-color: rgb(30, 112, 225);
   border: none;
   color: white;
 }

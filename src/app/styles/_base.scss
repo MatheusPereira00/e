@@ -3,11 +3,22 @@
 
 [data-theme='light'] {
   --dark-backgroud-color: #fff;
+  // --teste-home-color: rgb(255, 0, 0);
 }
 
 [data-theme='dark'] {
   --dark-backgroud-color: hsl(0, 0%, 33%);
+  // --teste-home-color: rgb(34, 30, 30);
 }
+
+// [data-theme='light'] {
+//   --teste-home-color: rgb(224, 26, 26);
+// }
+// [data-theme='dark'] {
+//   --teste-home-color: rgb(34, 30, 30);
+// }
+
+
 
 $bp-largest: 75em; //1200px/16
 $bp-large: 68.75em; //1100px/16

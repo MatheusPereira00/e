@@ -224,28 +224,30 @@ hr {
 }
 
 .radioo {
-  width: 38px;
+  width: 3.8rem;
   height: 38px;
+
+
   left: 577px;
   top: 972px;
 
-  // background: #b21de4;
+
   border: 1px solid #acaaaf;
   border-radius: 8px;
   box-sizing: border-box;
 }
 
-// #radioo {
-//   width: 38px;
-//   height: 38px;
-//   left: 577px;
-//   top: 972px;
+#radioo {
+  width: 3.8rem;
+  height: 3.8rem;
+  // left: 577px;
+  // top: 972px;
 
-//   // background: #b21de4;
-//   border: 1px solid #acaaaf;
-//   border-radius: 8px;
-//   box-sizing: border-box;
-// }
+  // // background: #b21de4;
+  // border: 1px solid #acaaaf;
+  // border-radius: 8px;
+  // box-sizing: border-box;
+}
 
 .cep {
   display: flex;

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../service/cart.service';
-// import { JSDocComment } from '@angular/compiler';
 import { SearchComponent } from '../../shared/search/search.component';
 import { RouterLink } from '@angular/router';
 
@@ -16,8 +15,6 @@ export class HeaderComponent implements OnInit {
   public isDarkTheme = true;
 
   constructor(public cartService: CartService) {
-    // const darkTheme = localStorage.getItem('dark-theme')
-    // darkTheme ? JSON.parse(darkTheme): false
   }
 
   ngOnInit(): void {
@@ -32,14 +29,9 @@ export class HeaderComponent implements OnInit {
       }
     }
   }
-  // public toggle() {
-  // document.body.classList.toggle('dark-theme');
-  // localStorage.getItem('toogle', JSDocComment(this.toogle));
-  // localStorage.setItem('toogle',JSON.stringify('dark-theme'));
-  // }
-  onThemeSwitchChange() {
-    // const darkTheme = JSON.parse(localStorage.getItem('data-theme'));
 
+  onThemeSwitchChange() {
+  
     this.isDarkTheme = !this.isDarkTheme;
 
     localStorage.setItem('theme', JSON.stringify(this.isDarkTheme));
@@ -48,12 +40,5 @@ export class HeaderComponent implements OnInit {
 
     this.localStorageTheme;
     
-    // console.log(this.localStorageTheme)
-
-    // localStorage.setItem('data-theme', JSON.stringify(dataTheme))
-
-    // localStorage.setItem('data-theme', JSON.stringify(darkTheme));
-
-
   }
 }

@@ -18,14 +18,24 @@ import { PaginationComponent } from './pagination/pagination.component';
 })
 export class ProductComponent implements OnInit {
   public product: Product[] = [];
-
+  public isDarkTheme = true;
   //INSERIR METODO GET
 
   constructor(private productService: ProductService, private cartService: CartService) { }
 
   public ngOnInit() {
-    console.log('carregou')
     this.getProduct();
+    const theme = localStorage.getItem('theme')
+    if(theme){
+      if(theme === 'true'){
+        this.isDarkTheme = true
+        document.body.setAttribute('data-theme','dark');
+      } else {
+        document.body.setAttribute('data-theme','theme');
+        this.isDarkTheme = false
+      }
+    }
+
   }
 
   public getProduct() {

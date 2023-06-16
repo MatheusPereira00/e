@@ -1,7 +1,5 @@
 .container{
 
-    border: red 1px solid;
-
     width: 100%;
     height: 100%;
 
@@ -14,9 +12,12 @@
     border-radius: 5rem;
 
     input{
-        width: 100%;
-        border: 0px none;
+        // width: 100%;
+        border: 0px none ;
         background-color: transparent;
+
+        height: 2rem;
+        width: 50rem;
 
         font-size: 1.4rem;
         padding-left: 1rem;
