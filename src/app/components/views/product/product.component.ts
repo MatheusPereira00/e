@@ -6,22 +6,26 @@ import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DialogComponent } from '../../shared/dialog/dialog.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { Observable } from 'rxjs';
+import {  NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss'],
   standalone: true,
-  imports: [HttpClientModule, CardComponent, DialogComponent, PaginationComponent],
-  // exports: [ProductComponent, CardComponent, DialogComponent],
+  imports: [HttpClientModule, CardComponent, DialogComponent, PaginationComponent, NgFor],
   providers: [ProductService],
 })
 export class ProductComponent implements OnInit {
-  public product: Product[] = [];
+
+  public products: Product[]=[];
+
   public isDarkTheme = true;
   //INSERIR METODO GET
 
-  constructor(private productService: ProductService, private cartService: CartService) { }
+  constructor(private productService: ProductService, private cartService: CartService) {
+   }
 
   public ngOnInit() {
     this.getProduct();
@@ -40,7 +44,7 @@ export class ProductComponent implements OnInit {
 
   public getProduct() {
     this.productService.getProduct().subscribe(data => {
-      this.product = data;
+      this.products = data;
     });
   }
 

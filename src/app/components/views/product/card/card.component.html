@@ -1,31 +1,24 @@
-<div class="container">
- 
-  <div class="card" *ngFor="let product of products">
-    <div class="card-image">
-      <img src=" {{ product.imageUrl }} " alt="Book" />
+<div class="container" *ngIf="products">
+  <div class="container__card">
+    <div class="container__card--image">
+      <img src=" {{ products.imageUrl }} " alt="Book" />
     </div>
-    <div class="card-stock">
-      <p class="subtitle">Estoque: {{ product.unitsInStock }}</p>
-    </div>
-    <div class="card-name">
-      <p class="title">
-        {{ product.name }}
-      </p>
-    </div>
-    <div class="card-value">
-      <p class="value">R${{ product.unitPrice }}</p>
-      <button class="button-card" (click)="changeStateModal(product.imageUrl, product)">
-        <svg class="icon icon-add">
+    <p>Estoque: {{ products.unitsInStock }}</p>
+    <h1>
+      {{ products.name }}
+    </h1>
+    <div class="container__card--value">
+      <p>R${{ products.unitPrice }}</p>
+      <button (click)="changeStateModal(products.imageUrl, products)">
+        <svg class="icon-add">
           <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-add"></use>
         </svg>
-        <svg class="icon-local_grocery_store">
-          <use
-            xlink:href="\assets\images\products\icons-svg\icons.svg#icon-local_grocery_store"></use>
+        <svg>
+          <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-local_grocery_store">
+          </use>
         </svg>
       </button>
-      <!-- <button type="button" (click)="eventClick(product)">Buy</button> -->
     </div>
   </div>
   <app-dialog [image]="image" (close)="close()" />
-  <!-- <app-pagination /> -->
 </div>

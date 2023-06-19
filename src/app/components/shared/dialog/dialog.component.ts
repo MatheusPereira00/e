@@ -11,11 +11,9 @@ import { NgIf } from '@angular/common';
     imports: [NgIf],
 })
 export class DialogComponent implements OnInit {
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
   @Input() public image = '';
   @Output() public close = new EventEmitter();
-
-  // mensagemAdicionado: string = '';
+  
   public toogleModal = false;
   currentProduct!: Product
 

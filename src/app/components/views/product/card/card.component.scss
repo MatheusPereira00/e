@@ -1,132 +1,92 @@
 .container {
-  margin-left: 30px;
-  margin: 1rem;
-  margin-bottom: 100px;
-  background-color: var(--dark-backgroud-color);
-}
+  width: 100%;
+  height: 100%;
 
-.card {
-  display: inline-block;
-  width: 183.52px;
-  height: 257.61px;
-  // left: 292px;
-  top: 538px;
-  background: #fefbff;
-  box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  margin: 20px;
-  // margin-bottom: 60px;
-}
-
-img {
-  width: 100px;
-  height: 100px;
-  left: 340px;
-  top: 538px;
-}
-
-// .card {
-//   display: inline-block;
-//   border: 1px solid #ccc;
-//   border-radius: 5px;
-//   padding: 1rem;
-//    max-width: 100px;
-//   margin: 1rem;
-// }
-
-// .card img {
-//   flex-basis: 40%;
-//   max-width: 100%;
-//   margin-right: 1rem;
-// }
-
-// .card-content {
-//   flex-grow: 1;
-// }
-
-.icon { // ++
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-}
-
-.icon-local_grocery_store { // cart
   display: flex;
-  align-items: center;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
+  flex-direction: row;
+
+  margin-left: 3rem;
+  margin: 1rem;
+  margin-bottom: 10rem;
+  background-color: var(--dark-backgroud-color);
+
+  font-family: 'Roboto';
+  font-style: normal;
+
+  &__card {
+    width: 18rem;
+    height: 25rem;
+
+    background: var(--white);
+    box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+
+    &--image {
+      width: 18rem;
+      height: 12rem;
+
+      background: var(--primary-color);
+      border-radius: 8px 8px 0px 0px;
+
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 14rem;
+      }
+    }
+
+    p {
+      width: 13rem;
+      height: 3rem;
+
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 3.6rem;
+
+      color: var(--blue-dark-color-1);
+    }
+
+    h1 {
+      width: 100%;
+      height: 3rem;
+
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+
+      color: var(--blue-dark-color-1);
+    }
+
+    &--value {
+      margin-top: 3rem;
+
+      width: 100%;
+      height: 4rem;
+      
+      display: flex;
+      flex-direction: row;
+      p {
+        width: 8rem;
+        height: 27px;
+
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 3.2rem;
+
+        color: var(--primary-color);
+      }
+
+      button {
+        width: 5rem;
+        height: 3rem;
+
+        svg {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+  }
+
 }
-
-// // .button-card {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   background-color: #0052dd;
-//   color: white;
-//   height: 30px;
-//   width: 50px;
-//   border-radius: 8px;
-//   border: none;
-// }
-
-// .card-value {
-//   display: flex;
-//   align-items: center;
-//   gap: 30px;
-// }
-
-// .container {
-//   position: absolute;
-//   width: 183.52px;
-//   height: 257.61px;
-//   left: 306px;
-//   top: 601px;
-// }
-
-// .card-image {
-//   position: absolute;
-//   width: 80px;
-//   height: 120px;
-//   left: 354px;
-//   top: 601px;
-// }
-
-// .container {
-// }
-
-// .card {
-
-//   height: 257.61px;
-//   width: 183.52px;
-//   border: 1px solid #ccc;
-//   border-radius: 8px;
-//   padding: 1rem;
-//   max-width: 900px;
-//   // overflow: auto;
-// }
-// img {
-//   display: inline-block;
-//   position: absolute;
-//   width: 280px;
-//   height: 220px;
-//   left: 354px;
-//   top: 284px;
-// }
-
-// .conatiner {
-//     text-align: center;
-//     overflow: hidden;
-// }
-// img {
-//     float: left;
-//     margin: 1rem;
-//     height: 150px;
-//     width: 150px;
-// }
-

@@ -7,6 +7,6 @@ bootstrapApplication(AppComponent,{
     providers: [
       importProvidersFrom(
         BrowserModule,
-         AppRoutingModule
+         AppRoutingModule,
          )],
 }).catch(err => console.error(err));

@@ -101,7 +101,7 @@
 
     <div class="cep">
       <label for="cep">CEP</label>
-      <input id="cep" placeholder="00000-000" formControlName="cep"/>
+      <input id="cep" placeholder="00000-000" formControlName="cep" (keyup)="getCep()"/>
       <app-custom-validation-message [controlContainer]="cadastroForm.get('cep')!"></app-custom-validation-message>
     </div>
 

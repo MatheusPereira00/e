@@ -3,17 +3,18 @@ import { Product } from 'src/app/components/models/product-interface';
 import { DialogComponent } from 'src/app/components/shared/dialog/dialog.component';
 import { CartService } from 'src/app/components/service/cart.service';
 import { DialogComponent as DialogComponent_1 } from '../../../shared/dialog/dialog.component';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
+
 
 @Component({
     selector: 'app-card',
     templateUrl: './card.component.html',
     styleUrls: ['./card.component.scss'],
     standalone: true,
-    imports: [NgFor, DialogComponent_1],
+    imports: [NgFor, DialogComponent_1, NgIf],
 })
 export class CardComponent {
-  @Input() public products: Product[]= [];
+  @Input() public products!: Product;
   @Output() public productTeste = new EventEmitter();
 
   public image = '';
@@ -26,13 +27,7 @@ export class CardComponent {
   public eventClick(product: Product): void {
 
     this.productTeste.emit(product);
-    //localStorage.setItem('Db', JSON.stringify(this.products));
-    // window.alert('Your product has been added to the cart!');
   }
-
-  // eventClick(){
-  //   this.cartService.addToCart(this.product);
-  // }
 
   public changeStateModal(image: string, product: Product): void {
     this.image = image;
