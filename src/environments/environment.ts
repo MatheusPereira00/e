@@ -1,4 +1,4 @@
-export const environment = {
-    production: false,
-    urlApiViaCep: 'https://viacep.com.br/ws/'
-};
+// export const environment = {
+//     production: false,
+//     urlCep: 'viacep.com.br/ws/01001000/json/',
+// };

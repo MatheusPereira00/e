@@ -2,7 +2,10 @@ import { Component, } from '@angular/core';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgIf } from '@angular/common';
+// import { cep } from '../../models/cep';
 import { CustomValidationMessageComponent } from "../custom-validation-message/custom-validation-message.component";
+import { Subject } from 'rxjs/internal/Subject';
+import { CepService } from '../../service/cep.service';
 
 
 @Component({
@@ -13,7 +16,12 @@ import { CustomValidationMessageComponent } from "../custom-validation-message/c
     imports: [ReactiveFormsModule, NgIf, CustomValidationMessageComponent]
 })
 export class CheckoutComponent {
-  constructor(private router: Router) {}
+
+  // cep: cep = {};
+
+  // form = new Subject<boolean>();
+
+  constructor(private router: Router, private cepService: CepService) {}
 
   cadastroForm = new FormGroup({
     name: new FormControl('', {nonNullable: true, validators: [Validators.required],
@@ -56,4 +64,17 @@ export class CheckoutComponent {
     console.log(this.cadastroForm.value);
   }
 
+  // getViaCep(cep: FocusEvent){
+  //   if((cep.target as HTMLInputElement)?.value){
+  //     let inputCep = (cep.target as HTMLInputElement)?.value;
+
+  //     const cepResponse = this.cepService.getCep(inputCep);
+  //     cepResponse.subscribe(
+  //       (cepModel) => {
+  //         this.cep = cepModel;
+  //         this.form.next(true);
+  //       }
+  //     )
+  //   }
+  // }
 }
