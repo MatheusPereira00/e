@@ -3,6 +3,7 @@ import { ProductComponent } from './components/views/product/product.component';
 import { CartComponent } from './components/views/cart/cart.component';
 import { CheckoutComponent } from './components/views/checkout/checkout.component';
 
+
  export const productsRoutes: Routes = [
   {
     path: '', component: ProductComponent
@@ -20,3 +21,5 @@ import { CheckoutComponent } from './components/views/checkout/checkout.componen
     path: '', component: CheckoutComponent
   }
  ]
+
+ 
