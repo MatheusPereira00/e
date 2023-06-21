@@ -1,17 +1,16 @@
 .container {
   display: inline-block;
+
   width: 350px;
-  margin: 6px;
   height: 738px;
-  left: 282px;
-  top: 303px;
-  /* IBM Shop/ref/neutral-variant/neutral-variant99 */
+
+  margin: 6px;
+  margin-bottom: 100px;
+
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
-  margin-bottom: 100px;
-  background-color:var(--dark-backgroud-color);
+  background-color: var(--dark-backgroud-color);
 }
-
 
 form {
   display: flex;
@@ -20,16 +19,18 @@ form {
 .icon-pessoa {
   display: flex;
   align-items: center;
+
   margin-top: 20px;
   margin-bottom: 20px;
+
   p {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 36px;
-    /* or 180% */
+    font-size: 2rem;
 
+    line-height: 36px;
+  
     color: #757680;
   }
 }
@@ -41,12 +42,6 @@ form {
   stroke: currentColor;
   fill: currentColor;
 }
-
-// hr {
-//   width: 300px;
-//   margin: 5px;
-//   border: 1px solid #c5c6d0;
-// }
 
 .identificador {
   display: flex;
@@ -99,10 +94,6 @@ label {
   font-weight: 700;
   font-size: 16px;
   line-height: 32px;
-  /* or 200% */
-
-  /* IBM Shop/sys/light/outline */
-
   color: var(--texto-form-color);
 }
 
@@ -115,6 +106,7 @@ label {
   border: 1px solid #0052dd;
   border-radius: 8px;
 }
+
 #email {
   margin-left: 8px;
   background-color: #0052dd;
@@ -176,6 +168,7 @@ hr {
   border: 1px solid #acaaaf;
   border-radius: 8px;
 }
+
 #rg {
   width: 153px;
   height: 30px;
@@ -217,20 +210,13 @@ hr {
 
 .txt-radio {
   display: flex;
-  // margin-top: 40px;
   margin: 20px;
   align-items: center;
-  // background-color: rgb(35, 35, 46);
 }
 
 .radioo {
   width: 3.8rem;
   height: 38px;
-
-
-  left: 577px;
-  top: 972px;
-
 
   border: 1px solid #acaaaf;
   border-radius: 8px;
@@ -240,13 +226,6 @@ hr {
 #radioo {
   width: 3.8rem;
   height: 3.8rem;
-  // left: 577px;
-  // top: 972px;
-
-  // // background: #b21de4;
-  // border: 1px solid #acaaaf;
-  // border-radius: 8px;
-  // box-sizing: border-box;
 }
 
 .cep {
@@ -256,35 +235,37 @@ hr {
 }
 
 #cep {
-  box-sizing: border-box;
   width: 123px;
   height: 38px;
-  left: 686px;
-  top: 435px;
+
+  box-sizing: border-box;
   border: 1px solid #acaaaf;
   border-radius: 8px;
+
   margin: 5px;
 }
 
 .div-radioi {
   display: flex;
   align-items: center;
+
   width: 319px;
   height: 38px;
-  left: 685px;
-  top: 491px;
+
   border: 1px solid #acaaaf;
   border-radius: 8px;
+
   margin: 5px;
 }
+
 .div-radioa {
   display: flex;
   align-items: center;
   margin: 5px;
+
   width: 319px;
   height: 38px;
-  left: 685px;
-  top: 491px;
+
 
   background: #fefbff;
   border: 1px solid #acaaaf;
@@ -294,12 +275,12 @@ hr {
 #radioi {
   display: flex;
   margin: 1rem;
-  // background-color: red;
 }
+
 #radioa {
   display: flex;
   margin: 1rem;
-  // background-color: red;
+
 }
 
 .uteis {
@@ -313,11 +294,13 @@ hr {
   gap: 1rem;
   margin: 5px;
 }
+
 .endereco {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
 }
+
 .num {
   display: flex;
   flex-direction: column;
@@ -334,6 +317,7 @@ hr {
   border: 1px solid #acaaaf;
   border-radius: 8px;
 }
+
 #num {
   width: 97px;
   height: 38px;
@@ -361,6 +345,7 @@ hr {
   border: 1px solid #acaaaf;
   border-radius: 8px;
 }
+
 #refe {
   width: 150px;
   height: 38px;
@@ -388,6 +373,7 @@ hr {
   border: 1px solid #acaaaf;
   border-radius: 8px;
 }
+
 #city {
   width: 150px;
   height: 38px;
@@ -415,6 +401,7 @@ hr {
   border: 1px solid #acaaaf;
   border-radius: 8px;
 }
+
 #pais {
   width: 150px;
   height: 38px;
@@ -522,6 +509,7 @@ p {
   margin-right: 1rem;
   top: 1rem;
 }
+
 .btn-fim {
   width: 229.73px;
   height: 38px;
@@ -541,9 +529,6 @@ p {
 
 
 
-input{
+input {
   padding-left: 1rem !important;
 }
-
-
-

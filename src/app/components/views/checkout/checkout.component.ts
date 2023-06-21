@@ -3,12 +3,10 @@ import { FormControl, FormGroup, Validators, ReactiveFormsModule, AbstractContro
 import { Router } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { CustomValidationMessageComponent } from "../custom-validation-message/custom-validation-message.component";
-import { Subject } from 'rxjs/internal/Subject';
 import { CepService } from '../../service/cep.service';
 import { cep } from '../../models/cep';
 import { HttpClientModule } from '@angular/common/http';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-
 
 @Component({
   selector: 'app-checkout',

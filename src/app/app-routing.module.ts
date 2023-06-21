@@ -21,6 +21,11 @@ const routes: Routes = [
     path: 'checkout',
     loadChildren: () =>
     import('./routes.module').then (m => m.checkoutRoutes)
+  },
+  {
+    path: 'login',
+    loadChildren: () =>
+    import('./routes.module').then (m => m.loginRoutes)
   }
 
 ];
