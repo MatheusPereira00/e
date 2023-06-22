@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../../service/product.service';
 import { Product } from '../../models/product-interface';
-import { CartService } from '../../service/cart.service';
+
 import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DialogComponent } from '../../shared/dialog/dialog.component';
-import {  NgFor } from '@angular/common';
+import { NgFor } from '@angular/common';
+import { ProductService } from '../../services/product.service';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss'],
   standalone: true,
-  imports: [HttpClientModule, CardComponent, DialogComponent, NgFor],
+  imports: [HttpClientModule, CardComponent, NgFor],
   providers: [ProductService],
 })
 export class ProductComponent implements OnInit {

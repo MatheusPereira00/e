@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { CartService } from '../../service/cart.service';
+
 import { Product } from '../../models/product-interface';
 import { NgIf } from '@angular/common';
+import { CartService } from '../../services/cart.service';
 
 @Component({
     selector: 'app-dialog',

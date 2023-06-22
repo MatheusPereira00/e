@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from '../../service/cart.service';
+
 import { SearchComponent } from '../../shared/search/search.component';
 import { RouterLink } from '@angular/router';
+import { CartService } from '../../services/cart.service';
 
 @Component({
     selector: 'app-header',

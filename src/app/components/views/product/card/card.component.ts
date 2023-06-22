@@ -1,17 +1,15 @@
 import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import { Product } from 'src/app/components/models/product-interface';
 import { DialogComponent } from 'src/app/components/shared/dialog/dialog.component';
-import { CartService } from 'src/app/components/service/cart.service';
-import { DialogComponent as DialogComponent_1 } from '../../../shared/dialog/dialog.component';
 import { NgFor, NgIf } from '@angular/common';
-
+import { CartService } from 'src/app/components/services/cart.service';
 
 @Component({
     selector: 'app-card',
     templateUrl: './card.component.html',
     styleUrls: ['./card.component.scss'],
     standalone: true,
-    imports: [NgFor, DialogComponent_1, NgIf],
+    imports: [NgFor, DialogComponent,  NgIf],
 })
 export class CardComponent {
   @Input() public products!: Product;

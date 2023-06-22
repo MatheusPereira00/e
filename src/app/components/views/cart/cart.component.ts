@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from '../../service/cart.service';
+
 import { Product } from '../../models/product-interface';
 import { Router } from '@angular/router';
 import { NgFor } from '@angular/common';
+import { CartService } from '../../services/cart.service';
 
 
 
