@@ -5,8 +5,6 @@ import { CartService } from '../../service/cart.service';
 import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DialogComponent } from '../../shared/dialog/dialog.component';
-import { PaginationComponent } from './pagination/pagination.component';
-import { Observable } from 'rxjs';
 import {  NgFor } from '@angular/common';
 
 @Component({
@@ -14,7 +12,7 @@ import {  NgFor } from '@angular/common';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss'],
   standalone: true,
-  imports: [HttpClientModule, CardComponent, DialogComponent, PaginationComponent, NgFor],
+  imports: [HttpClientModule, CardComponent, DialogComponent, NgFor],
   providers: [ProductService],
 })
 export class ProductComponent implements OnInit {
