@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../models/product-interface';
-
-import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
-import { DialogComponent } from '../../shared/dialog/dialog.component';
 import { NgFor } from '@angular/common';
 import { ProductService } from '../../services/product.service';
 import { CartService } from '../../services/cart.service';
+import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-product',
