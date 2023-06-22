@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from './components/layout/header/header.component';
-import { SidenavComponent } from './components/layout/sidenav/sidenav.component';
-import { FooterComponent } from './components/layout/footer/footer.component';
+import { HeaderComponent } from './components/core/header/header.component';
+import { SidenavComponent } from './components/core/sidenav/sidenav.component';
+import { FooterComponent } from './components/core/footer/footer.component';
 import { RouterOutlet } from '@angular/router';
 
 
@@ -14,7 +14,8 @@ import { RouterOutlet } from '@angular/router';
     HeaderComponent,
     SidenavComponent,
     FooterComponent,
-    RouterOutlet
+    RouterOutlet,
+
   ]
 })
 export class AppComponent {}

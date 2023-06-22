@@ -1,19 +1,19 @@
-.container__card {
+.container {
     display: flex;
     flex-direction: column;
 
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 
+    font-family: Roboto;
+    
     width: 35rem;
     height: 40rem;
 
     margin-top: 3rem;
     margin-left: 35rem;
 
-    &--title {
-        // border: 1px solid red;
-
+    &__title {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -29,7 +29,6 @@
         }
 
         h1 {
-            font-family: Roboto;
             font-size: 2rem;
             font-weight: 400;
             line-height: 52px;
@@ -38,8 +37,7 @@
         }
     }
 
-
-    &--form {
+    &__form {
         display: flex;
         flex-direction: column;
 
@@ -48,7 +46,6 @@
         gap: 0.5rem;
 
         label {
-            font-family: Roboto;
             font-size: 1.6rem;
             font-weight: 700;
             line-height: 3.2rem;
@@ -68,7 +65,6 @@
             text-align: center;
             line-height: 3.2rem;
 
-            font-family: Roboto;
             font-size: 1.6rem;
             font-weight: 700;
 
