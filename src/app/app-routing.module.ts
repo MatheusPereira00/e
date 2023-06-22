@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoadingComponent } from './components/shared/loading/loading.component';
+import { CreateAccountComponent } from './components/views/account/create-account/create-account.component';
+import { AuthenticationComponent } from './components/shared/authentication/authentication.component';
+import { authGuard } from './components/shared/auth-guard/auth.guard';
 
 const routes: Routes = [
   {
@@ -20,13 +24,14 @@ const routes: Routes = [
   {
     path: 'checkout',
     loadChildren: () =>
-    import('./routes.module').then (m => m.checkoutRoutes)
+      import('./routes.module').then(m => m.checkoutRoutes)
   },
+  
   {
-    path: 'login',
+    path: 'auth',
     loadChildren: () =>
-    import('./routes.module').then (m => m.loginRoutes)
-  }
+      import('./routes.module').then(m => m.authenticationRoutes)
+  },
 
 ];
 
@@ -34,4 +39,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

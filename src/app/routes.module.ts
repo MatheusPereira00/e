@@ -2,8 +2,9 @@ import { Routes } from '@angular/router';
 import { ProductComponent } from './components/views/product/product.component';
 import { CartComponent } from './components/views/cart/cart.component';
 import { CheckoutComponent } from './components/views/checkout/checkout.component';
-import { LoginComponent } from './components/views/login/login.component';
-
+import { AuthenticationComponent } from './components/shared/authentication/authentication.component';
+import { CreateAccountComponent } from './components/views/account/create-account/create-account.component';
+import { LoginComponent } from './components/views/account/login/login.component';
 
  export const productsRoutes: Routes = [
   {
@@ -23,11 +24,14 @@ import { LoginComponent } from './components/views/login/login.component';
   }
  ]
 
- export const loginRoutes: Routes = [
+ export const authenticationRoutes: Routes = [
   {
-    path: '', component: LoginComponent
-  }
- ]
-
-
- 
+    path: '', component: AuthenticationComponent
+  },
+  {
+    path: 'login', component: LoginComponent
+  },
+  {
+    path: 'create', component: CreateAccountComponent
+  },
+]
