@@ -5,13 +5,14 @@ import { NgFor } from '@angular/common';
 import { ProductService } from '../../services/product.service';
 import { CartService } from '../../services/cart.service';
 import { CardComponent } from '../card/card.component';
+import { LoginComponent } from '../account/login/login.component';
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss'],
   standalone: true,
-  imports: [HttpClientModule, CardComponent, NgFor],
+  imports: [HttpClientModule, CardComponent, NgFor, LoginComponent],
   providers: [ProductService],
 })
 export class ProductComponent implements OnInit {

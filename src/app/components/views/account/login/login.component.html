@@ -5,7 +5,7 @@
     <h1>Acesse sua conta</h1>
 </div>
 
-<form [formGroup]="loginForm">
+<form [formGroup]="loginForm" (ngSubmit)="(onSubmit)">
     <label>Email</label>
     <input type="text" placeholder="insira seu email aqui" formControlName="email">
     <app-custom-validation-message [controlContainer]="loginForm.get('email')!"
@@ -18,10 +18,10 @@
 
     <p>Esqueci a senha</p>
 
-    <button routerLink="">Login</button>
+    <button routerLink="" (click)="onSubmit()">Login</button>
 
     <p>Não tem uma conta ainda?</p>
 
-    <button [routerLink]="['/auth/create']">Faça um cadastro</button>
+    <button [routerLink]="['/account/create']">Faça um cadastro</button>
 
 </form>

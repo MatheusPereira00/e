@@ -22,4 +22,8 @@ export class LoginComponent {
       nonNullable: true, validators: [Validators.required],
     }),
   })
+
+  onSubmit() {
+    console.log(this.loginForm.value);
+  }
 }

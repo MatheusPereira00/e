@@ -28,7 +28,7 @@ const routes: Routes = [
   },
   
   {
-    path: 'auth',
+    path: 'account',
     loadChildren: () =>
       import('./routes.module').then(m => m.authenticationRoutes)
   },

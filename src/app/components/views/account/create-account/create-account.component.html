@@ -1,1 +1,32 @@
-<p>create-account works!</p>
+<div class="container">
+    <svg>
+        <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-person"></use>
+    </svg>
+    <h1>Faça seu cadastro</h1>
+</div>
+
+
+<form [formGroup]="formCreate" (ngSubmit)="(onSubmit)">
+
+    <label>Name</label>
+    <input type="text" placeholder="insira seu name aqui" formControlName="name">
+    <app-custom-validation-message [controlContainer]="formCreate.get('name')!"
+        class="validators"></app-custom-validation-message>
+
+    <label>Usuario</label>
+    <input type="text" placeholder="insira seu usuario aqui" formControlName="usuario">
+    <app-custom-validation-message [controlContainer]="formCreate.get('usuario')!"
+        class="validators"></app-custom-validation-message>
+
+    <label>Email</label>
+    <input type="text" placeholder="insira seu email aqui" formControlName="email">
+    <app-custom-validation-message [controlContainer]="formCreate.get('email')!"
+        class="validators"></app-custom-validation-message>
+
+    <label>Senha</label>
+    <input type="text" placeholder="insira sua senha aqui" formControlName="senha">
+    <app-custom-validation-message [controlContainer]="formCreate.get('senha')!"
+        class="validators"></app-custom-validation-message>
+
+    <button  (click)="onSubmit()"  routerLink="" >Finalizar cadastro</button>
+</form>

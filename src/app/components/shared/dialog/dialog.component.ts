@@ -11,16 +11,12 @@ import { CartService } from '../../services/cart.service';
     standalone: true,
     imports: [NgIf],
 })
-export class DialogComponent implements OnInit {
+export class DialogComponent {
   @Input() public image = '';
   @Output() public close = new EventEmitter();
   
   public toogleModal = false;
   currentProduct!: Product
-
-  public ngOnInit(): void {
-    console.log(this.image);
-  }
 
   constructor(private cartService: CartService) {}
 
@@ -29,11 +25,9 @@ export class DialogComponent implements OnInit {
   }
 
   public fecharModal(): void {
-    //this.dialogComponent.dismissAll();
     this.close.emit();
   }
 
-  
   public confirmar(): void {
     console.log(this.currentProduct)
     this.cartService.addToCart(this.currentProduct);
