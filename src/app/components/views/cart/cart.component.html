@@ -1,16 +1,101 @@
 <div class="container">
+
+  <div class="container__card" *ngFor="let cart of allProductCart">
+
+    <div class="container__card--img">
+      <img src={{cart.imageUrl}} alt="">
+    </div>
+
+    <div class="container__card--dados">
+
+      <div class="container__card--dados__name">
+
+        <h1>
+          {{cart.name}}
+        </h1>
+        <p>|</p>
+        <p>
+          {{cart.category_name}}
+        </p>
+
+      </div>
+
+      <div class="container__card--dados__price">
+        <p>Valor unitario</p>
+        <h2>R${{cart.unitPrice}}</h2>
+      </div>
+
+    </div>
+
+    <div class="container__card--btn">
+      <button (click)="cartService.decrease(cart)">-</button>
+      <button>{{cart.quantity}}</button>
+      <button (click)="cartService.increase(cart)">+</button>
+    </div>
+
+    <div class="container__card--total">
+      <h1>Total</h1>
+      <h2>R${{cart.unitPrice * cart.quantity}}</h2>
+    </div>
+
+    <div class="container__card--excluir">
+      <button (click)="cartService.removeProduct(cart)">X</button>
+    </div>
+
+  </div>
+
+  <div class="container__valorTotal">
+    <div class="container__valorTotal--price">
+      <h1>Total</h1>
+      <h2>R${{cartService.total()}}</h2>
+    </div>
+    <button (click)="checkout()">Comprar</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
   
   <div class="text">
     <h2>Esses são os itens adicionados ao carrinho.</h2>
-  </div>
-  <div class="card" *ngFor="let cart of allProductCart">
+  </div> -->
+
+<!-- <div class="card" *ngFor="let cart of allProductCart">
     
     <div class="container-main">
+
       <div class="div-image">
         <img src= {{cart.imageUrl}} alt="">
       </div>
     
       <div class="container-two">
+
         <div class="textos">
           <div class="title-categoria">
             <p class="title">{{cart.name}}
@@ -22,6 +107,7 @@
           <p class="txt-unit">Valor unitario</p>
           <p class="price-unit">R$ {{cart.unitPrice}}</p>
         </div>
+
       </div>
     
       <div class="buttons">
@@ -52,4 +138,4 @@
       <button (click)="checkout()">Comprar</button>
     </div>
   </div>
-</div>
+</div> -->

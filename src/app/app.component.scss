@@ -1,22 +1,23 @@
 .container {
   display: flex;
   flex-direction: column;
-}
+  width: 100%;
 
-.main {
-  display: flex;
-  padding-bottom: 7rem;
-}
+  &__header {
+    z-index: 9999;
+  }
 
-.products {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding-left: 250px;
-  background-color: var( --dark-backgroud-color);
-}
+  &__content {
+    display: flex;
 
-.sidenav {
-  display: flex;
-  
+    &--sidenav {
+      display: flex;
+      z-index: 999;
+    }
+    &--products {
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+    }
+  }
 }
