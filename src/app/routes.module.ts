@@ -5,7 +5,6 @@ import { CheckoutComponent } from './components/views/checkout/checkout.componen
 import { CreateAccountComponent } from './components/views/account/create-account/create-account.component';
 import { LoginComponent } from './components/views/account/login/login.component';
 import { AdmComponent } from './components/views/admin/adm/adm.component';
-import { EditCategoriaComponent } from './components/views/admin/edit-categoria/edit-categoria.component';
 
  export const productsRoutes: Routes = [
   {
@@ -40,9 +39,6 @@ import { EditCategoriaComponent } from './components/views/admin/edit-categoria/
 export const adminRoutes: Routes = [
   {
     path: 'adm', component: AdmComponent,
-  },
-  {
-    path: 'edit-categoria', component: EditCategoriaComponent
   },
 ]
 
