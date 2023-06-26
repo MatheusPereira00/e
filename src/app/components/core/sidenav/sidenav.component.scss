@@ -12,22 +12,19 @@
   &__sidenav {
 
     ul {
-      list-style-type:none;
-      line-height: 3rem;
-      
+      list-style-type: none;
+    
       display: flex;
       flex-direction: column;
-     
 
       li {
         width: 23rem;
-        height: 3.2rem;
+        height: 4rem;
 
         display: flex;
         flex-direction: row;
-        // align-items: center;
+        align-items: center;
         align-content: center;
-
         gap: 1rem;
 
         svg {
@@ -40,7 +37,7 @@
         p {
           color: var(--white);
 
-          font-family:'Roboto';
+          font-family: 'Roboto';
           font-style: normal;
           font-weight: 400;
           font-size: 1.8rem;
@@ -49,6 +46,5 @@
         }
       }
     }
-
   }
 }

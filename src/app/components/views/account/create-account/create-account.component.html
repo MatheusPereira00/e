@@ -8,7 +8,7 @@
 
 <form [formGroup]="formCreate" (ngSubmit)="(onSubmit)">
 
-    <label>Name</label>
+    <label>Nome</label>
     <input type="text" placeholder="insira seu name aqui" formControlName="name">
     <app-custom-validation-message [controlContainer]="formCreate.get('name')!"
         class="validators"></app-custom-validation-message>

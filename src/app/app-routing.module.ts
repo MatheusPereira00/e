@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoadingComponent } from './components/shared/loading/loading.component';
-import { CreateAccountComponent } from './components/views/account/create-account/create-account.component';
-import { AuthenticationComponent } from './components/shared/authentication/authentication.component';
-import { authGuard } from './components/shared/auth-guard/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'product',
-    pathMatch: 'prefix',
+    pathMatch: 'full',
   },
   {
     path: 'product',
@@ -17,22 +13,25 @@ const routes: Routes = [
       import('./routes.module').then(m => m.productsRoutes),
   },
   {
-    path: 'cart',
+    path: '',
     loadChildren: () =>
       import('./routes.module').then(m => m.cartRoutes),
   },
   {
-    path: 'checkout',
+    path: '',
     loadChildren: () =>
       import('./routes.module').then(m => m.checkoutRoutes)
   },
-  
-  {
-    path: 'account',
+   {
+    path: '',
     loadChildren: () =>
-      import('./routes.module').then(m => m.authenticationRoutes)
+      import('./routes.module').then(m => m.accountRoutes)
   },
-
+  {
+    path: '',
+    loadChildren: () =>
+      import('./routes.module').then(m => m.adminRoutes)
+  },
 ];
 
 @NgModule({
