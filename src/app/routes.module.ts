@@ -5,6 +5,8 @@ import { CheckoutComponent } from './components/views/checkout/checkout.componen
 import { CreateAccountComponent } from './components/views/account/create-account/create-account.component';
 import { LoginComponent } from './components/views/account/login/login.component';
 import { AdmComponent } from './components/views/admin/adm/adm.component';
+import { ListCategoriasSubcategoriasComponent } from './components/views/admin/categorias/list-categorias-subcategorias/list-categorias-subcategorias.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 
  export const productsRoutes: Routes = [
   {
@@ -40,6 +42,8 @@ export const adminRoutes: Routes = [
   {
     path: 'adm', component: AdmComponent,
   },
- 
+  {
+    path: 'categorias', component: ListCategoriasSubcategoriasComponent
+  }
 ]
 

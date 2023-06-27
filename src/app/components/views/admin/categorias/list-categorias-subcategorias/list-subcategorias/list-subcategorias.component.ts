@@ -8,6 +8,4 @@ import { CommonModule } from '@angular/common';
   templateUrl: './list-subcategorias.component.html',
   styleUrls: ['./list-subcategorias.component.scss']
 })
-export class ListSubcategoriasComponent {
-
-}
+export class ListSubcategoriasComponent {}
