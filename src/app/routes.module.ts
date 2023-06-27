@@ -40,5 +40,6 @@ export const adminRoutes: Routes = [
   {
     path: 'adm', component: AdmComponent,
   },
+ 
 ]
 

@@ -3,30 +3,40 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Router, RouterLink } from '@angular/router';
 import { CustomValidationMessageComponent } from "../../custom-validation-message/custom-validation-message.component";
 
-
-
 @Component({
-    selector: 'app-create-account',
-    templateUrl: './create-account.component.html',
-    styleUrls: ['./create-account.component.scss'],
-    standalone: true,
-    providers: [],
-    imports: [ReactiveFormsModule, CustomValidationMessageComponent, RouterLink]
+  selector: 'app-create-account',
+  templateUrl: './create-account.component.html',
+  styleUrls: ['./create-account.component.scss'],
+  standalone: true,
+  providers: [],
+  imports: [ReactiveFormsModule, CustomValidationMessageComponent, RouterLink]
 })
 export class CreateAccountComponent {
-  constructor(private router: Router ) { }
+  constructor(private router: Router) { }
 
   formCreate = new FormGroup({
-    name: new FormControl('', {
+    nome: new FormControl('', {
       nonNullable: true, validators: [Validators.required],
     }),
-    usuario: new FormControl('', {
+    nomeSocial: new FormControl('', {
+      nonNullable: true, validators: [Validators.required],
+    }),
+    Cpf: new FormControl('', {
+      nonNullable: true, validators: [Validators.required],
+    }),
+    dataNasciemnto: new FormControl('', {
       nonNullable: true, validators: [Validators.required],
     }),
     email: new FormControl('', {
       nonNullable: true, validators: [Validators.required, Validators.email],
     }),
+    telefone: new FormControl('', {
+      nonNullable: true, validators: [Validators.required],
+    }),
     senha: new FormControl('', {
+      nonNullable: true, validators: [Validators.required],
+    }),
+    Confirmar: new FormControl('', {
       nonNullable: true, validators: [Validators.required],
     }),
   })
