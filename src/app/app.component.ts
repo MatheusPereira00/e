@@ -4,6 +4,7 @@ import { SidenavComponent } from './components/core/sidenav/sidenav.component';
 import { FooterComponent } from './components/core/footer/footer.component';
 import { RouterOutlet } from '@angular/router';
 
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',

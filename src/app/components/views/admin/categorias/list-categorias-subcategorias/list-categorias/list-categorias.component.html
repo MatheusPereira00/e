@@ -1,3 +1,1 @@
-<button>
-    list categorias
-</button>
+<app-table [colunmNames]="categoryColuns" [rowData]="categoryData" (onClickDeletEvent)="delet($event)" (onClickEditEvent)="edit($event)"></app-table>

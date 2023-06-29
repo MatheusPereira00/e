@@ -1,11 +1,14 @@
 <div class="container">
-    
-        <div class="container__list">
-            <app-list-categorias></app-list-categorias>
-        </div>
-    
-        <div class="container__list--subcategorias">
-            <app-list-subcategorias></app-list-subcategorias>
-        </div>
-    
+
+    <div class="container__list">
+        <button routerLink="/novaCate" class="btn-create">nova categorias</button>
+        <app-list-categorias></app-list-categorias>
+    </div>
+
+    <div class="container__list--subcategorias">
+        <button routerLink="/novaSub" class="btn-create">nova subcategorias</button>
+        <app-list-subcategorias></app-list-subcategorias>
+    </div>
+
 </div>
+
