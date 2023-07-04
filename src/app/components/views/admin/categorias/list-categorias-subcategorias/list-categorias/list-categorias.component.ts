@@ -10,15 +10,5 @@ import { TableComponent } from "../../../../../shared/table/table.component";
     imports: [CommonModule, TableComponent]
 })
 export class ListCategoriasComponent {
-    categoryColuns = ['Nome da categoria', 'id']
-    categoryKeys = ['name','id']
-    categoryData = ['name','id']
 
-    delet(id: string){
-        console.log('delet acionado')
-    }
-
-    edit(id: string){
-        console.log('edit acionado')
-    }
 }

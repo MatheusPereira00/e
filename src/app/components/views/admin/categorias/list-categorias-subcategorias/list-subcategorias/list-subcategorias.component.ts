@@ -11,15 +11,5 @@ import { RouterLink } from '@angular/router';
     imports: [CommonModule, TableComponent, RouterLink]
 })
 export class ListSubcategoriasComponent {
-    categoryColuns = ['Nome da categoria','Nome da subcategoria', 'id']
-    categoryKeys = [ 'category','subcategory','id']
-    categoryData = [{}]
-    
-    delet(id: string){
-        console.log('delet acionado')
-    }
 
-    edit(id: string){
-        console.log('edit acionado')
-    }
 }
