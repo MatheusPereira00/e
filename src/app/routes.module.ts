@@ -6,8 +6,6 @@ import { CreateAccountComponent } from './components/views/account/create-accoun
 import { LoginComponent } from './components/views/account/login/login.component';
 import { AdmComponent } from './components/views/admin/adm/adm.component';
 import { ListCategoriasSubcategoriasComponent } from './components/views/admin/categorias/list-categorias-subcategorias/list-categorias-subcategorias.component';
-import { EditAddCategoriaSubcategoriaComponent } from './components/views/admin/categorias/edit-add-categoria-subcategoria/edit-add-categoria-subcategoria.component';
-
 
  export const productsRoutes: Routes = [
   {
@@ -46,11 +44,6 @@ export const adminRoutes: Routes = [
   {
     path: 'categorias', component: ListCategoriasSubcategoriasComponent
   },
-  {
-    path: 'novaCate', component: EditAddCategoriaSubcategoriaComponent
-  },
-  {
-    path: 'novaSub', component: EditAddCategoriaSubcategoriaComponent
-  }
 ]
+
 

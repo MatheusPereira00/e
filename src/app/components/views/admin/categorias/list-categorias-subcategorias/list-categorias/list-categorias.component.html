@@ -1,1 +1,22 @@
-<app-table [colunmNames]="categoryColuns" [rowData]="categoryData" (onClickDeletEvent)="delet($event)" (onClickEditEvent)="edit($event)"></app-table>
+<table class="table">
+  <thead>
+    <button class="btn-create">nova categoria</button>
+    <tr>
+      <th>Nome da categoria</th>
+      <th>id</th>
+      <th class="th-btn">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td> {{product.category_name}} </td>
+      <td> {{product.category_id}} </td>
+
+      <td class="td-btn">
+        <button class="btn-1" >Editar</button>
+        <button class="btn-2" >Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
