@@ -6,6 +6,7 @@ import { CreateAccountComponent } from './components/views/account/create-accoun
 import { LoginComponent } from './components/views/account/login/login.component';
 import { AdmComponent } from './components/views/admin/adm/adm.component';
 import { ListCategoriasSubcategoriasComponent } from './components/views/admin/categorias/list-categorias-subcategorias/list-categorias-subcategorias.component';
+import { LogoutComponent } from './components/shared/logout/logout/logout.component';
 
  export const productsRoutes: Routes = [
   {
@@ -44,6 +45,9 @@ export const adminRoutes: Routes = [
   {
     path: 'categorias', component: ListCategoriasSubcategoriasComponent
   },
+  {
+    path: 'logout', component: LogoutComponent
+  }
 ]
 
 

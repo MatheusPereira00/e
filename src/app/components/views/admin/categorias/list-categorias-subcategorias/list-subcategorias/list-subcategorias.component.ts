@@ -31,8 +31,4 @@ export class ListSubcategoriasComponent {
     delet(id: string){
         console.log('delet acionado')
     }
-
-    edit(id: string){
-        console.log('edit acionado')
-    }
 }
