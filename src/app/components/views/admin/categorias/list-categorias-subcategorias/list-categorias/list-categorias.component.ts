@@ -5,17 +5,17 @@ import { Product } from 'src/app/components/models/product-interface';
 
 
 @Component({
-    selector: 'app-list-categorias',
-    standalone: true,
-    templateUrl: './list-categorias.component.html',
-    styleUrls: ['./list-categorias.component.scss'],
-    imports: [CommonModule]
+  selector: 'app-list-categorias',
+  standalone: true,
+  templateUrl: './list-categorias.component.html',
+  styleUrls: ['./list-categorias.component.scss'],
+  imports: [CommonModule]
 })
 export class ListCategoriasComponent implements OnInit {
-
-    constructor(private categoriasService: CategoriasService){}
-
-    public products: Product[]=[];
+  
+  constructor(private categoriasService: CategoriasService){}
+  
+  public products: Product[]=[];
 
     ngOnInit(): void {
         this.getCategorys();
@@ -35,4 +35,5 @@ export class ListCategoriasComponent implements OnInit {
     edit(id: string){
         console.log('edit acionado')
     }
+
 }
