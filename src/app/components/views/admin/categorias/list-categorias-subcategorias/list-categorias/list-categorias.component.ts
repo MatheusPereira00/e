@@ -35,13 +35,4 @@ export class ListCategoriasComponent implements OnInit {
     edit(id: string){
         console.log('edit acionado')
     }
-
-@Component({
-    selector: 'app-list-categorias',
-    standalone: true,
-    templateUrl: './list-categorias.component.html',
-    styleUrls: ['./list-categorias.component.scss'],
-    imports: [CommonModule]
-})
-export class ListCategoriasComponent {
-}
+  }
