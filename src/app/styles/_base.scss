@@ -3,11 +3,12 @@
 
 :root {
   --primary-color: #0052DD;
+  --primary-: #0052DD;
   --text-color: #ffffff;
-  --text-color-logo: #0052DD;
+  --text-blue-white: #0052DD;
   --primary-color-dark: #0052DD;
   --primary-color-light: #5CB7F4;
-  --blue-dark-color-1: #00174C;
+  --blue-dark-color-1: #0052DD ;
   --yellow-color-1: #CDA94C;
   --light-color: #FEFBFF;
   --accent-color: #00A5A5;
@@ -17,6 +18,7 @@
   --white-black: #ffffff;
   --body: #ffffff;
   --black: #000;
+  --black-white: #000;
   --grey-light-color-1: #FAF9F9;
   --grey-light-color-2: #F4F2F2;
   --grey-light-color-3: #F0EEEE;
@@ -36,14 +38,17 @@
 }
 
 :root .dark-theme {
-  --white-black: #0000009d;
   --primary-color: #0000009d;
+  --white-black: #0000009d;
   --body: #0000009d;
-  --grey-dark-color-3: #ffffff; //ICONS HEADER
-  --text-white: #ffffff;
-  --text-color-logo: #ffffff; //LOGO & IBMSHOP
-  --light-color: #000000; // white -- black
-  --primary-color-dark: #000000;
+  --black-white: #fff;
+  --text-blue-white: #fff;
+  --blue-dark-color-1: #00174C;
+  // --grey-dark-color-3: #ffffff; //ICONS HEADER
+  // --text-white: #ffffff;
+  // --text-color-logo: #ffffff; //LOGO & IBMSHOP
+  // --light-color: #000000; // white -- black
+  // --primary-color-dark: #000000;
 }
 
 $bp-largest: 75em; //1200px/16

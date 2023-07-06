@@ -44,6 +44,7 @@ form {
         font-size: 1.6rem;
         font-weight: 700;
         line-height: 3.2rem;
+        color: var(--grey-dark-color-3);
     }
 
     input {
@@ -75,7 +76,7 @@ form {
         border-radius: 8px;
         border: 1px;
 
-        background-color: var(--primary-color);
-        color: var(--white);
+        background-color: var(--blue-dark-color-1);
+        color: var(--text-color);
     }
 }

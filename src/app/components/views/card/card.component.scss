@@ -50,7 +50,7 @@
         font-size: 1.4rem;
         line-height: 3.6rem;
 
-        color: var(--text-color-logo);
+        color: var(--text-blue-white);
       }
 
       h1 {
@@ -61,7 +61,7 @@
         font-size: 1.8rem;
         line-height: 2.8rem;
 
-        color: var(--text-color-logo);
+        color: var(--black-white);
       }
 
       &__value {
@@ -83,22 +83,22 @@
           font-size: 1.8rem;
           line-height: 3.2rem;
 
-          color: var(--text-color-logo);
+          color: var(--text-blue-white);
         }
 
         button {
           width: 5rem;
           height: 3rem;
 
-          background: var(--text-color-logo);
+          background: var(--);
           border-radius: 8px;
-          border: var(--primary-color);
+          border: var(--primary-blue);
 
           svg {
             width: 1.8rem;
             height: 1.8rem;
 
-            fill: var(--light-color);
+            fill: var(--primary-blue);
           }
         }
       }
