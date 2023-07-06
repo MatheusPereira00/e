@@ -2,17 +2,26 @@ import { Injectable } from '@angular/core';
 import { Product } from '../models/product-interface';
 import { Observable } from 'rxjs/internal/Observable';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoriasService {
-   private BaseUrl = 'http://localhost:3000/categorys';
 
+  public products: Product[]=[];
+  
   constructor(private http: HttpClient) { }
 
-  public getProduct(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.BaseUrl}`);
+  public getCategorys(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${environment.PRODUCT_API}/categorys`);
+  }
+
+  public getAllProducts(pagina: number, limite: number) {
+
+    const API = `http://localhost:3000/categorys?_page=${pagina}&_limit=${limite}`;
+
+    return this.http.get<Product[]>(API);
   }
 }

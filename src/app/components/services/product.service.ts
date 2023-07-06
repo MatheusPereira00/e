@@ -8,15 +8,10 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class ProductService {
-  // private BaseUrl = 'http://localhost:3000';
-
+  
   constructor(private http: HttpClient) {}
 
   public getProduct(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${environment.PRODUCT_API}/products/`);
-  }
-  // `${this.BaseUrl}/products`
-  public getProductId(productId: string) {
-    // return this.http.get<Product>(`${environment.PRODUCT_API}/products/${productId}`)
+    return this.http.get<Product[]>(`${environment.PRODUCT_API}/products`);
   }
 }

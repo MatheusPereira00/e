@@ -2,20 +2,24 @@
   "categorys": [
     {
       "category_name": "books",
+      "category_id": 1
+    },
+    {
+      "category_name": "coffee-mugs",
+      "category_id": 2
+    }
+  ],
+  "subcategorys": [
+    {
+      "category_name": "books",
       "subcategory_name": "Livros-de-tecnologia",
       "category_id": 1
     },
     {
-      "category_name": "books",
-      "subcategory_name": "Livros-de-tecnologia",
+      "category_name": "coffee-mugs",
+      "subcategory_name": "Xicaras-personalizadas",
       "category_id": 2
-    },
-    {
-      "category_name": "books",
-      "subcategory_name": "Livros-de-tecnologia",
-      "category_id": 3
     }
-  
   ],
 
   "products": [

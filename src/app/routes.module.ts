@@ -8,7 +8,6 @@ import { AdmComponent } from './components/views/admin/adm/adm.component';
 import { ListCategoriasSubcategoriasComponent } from './components/views/admin/categorias/list-categorias-subcategorias/list-categorias-subcategorias.component';
 import { LogoutComponent } from './components/shared/logout/logout/logout.component';
 
-
  export const productsRoutes: Routes = [
   {
     path: '', component: ProductComponent
@@ -50,4 +49,5 @@ export const adminRoutes: Routes = [
     path: 'logout', component: LogoutComponent
   }
 ]
+
 

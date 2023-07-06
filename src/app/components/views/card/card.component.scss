@@ -17,7 +17,7 @@
     width: 20rem;
     height: 29rem;
 
-    background: var(--white);
+    background: var(--white-black);
     box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
 
@@ -50,7 +50,7 @@
         font-size: 1.4rem;
         line-height: 3.6rem;
 
-        color: var(--blue-dark-color-1);
+        color: var(--text-blue-white);
       }
 
       h1 {
@@ -61,7 +61,7 @@
         font-size: 1.8rem;
         line-height: 2.8rem;
 
-        color: var(--blue-dark-color-1);
+        color: var(--black-white);
       }
 
       &__value {
@@ -83,22 +83,22 @@
           font-size: 1.8rem;
           line-height: 3.2rem;
 
-          color: var(--primary-color);
+          color: var(--text-blue-white);
         }
 
         button {
           width: 5rem;
           height: 3rem;
 
-          background: var(--primary-color);
+          background: var(--);
           border-radius: 8px;
-          border: var(--primary-color);
+          border: var(--primary-blue);
 
           svg {
             width: 1.8rem;
             height: 1.8rem;
 
-            fill: var(--white);
+            fill: var(--primary-blue);
           }
         }
       }
