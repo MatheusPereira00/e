@@ -7,7 +7,7 @@
     padding: 2rem;
     gap: 1rem;
     z-index: 11;
-    background: var(--white-black);
+    background: var(--body);
     box-shadow: var(--shadow-dark);
     border-radius: 8px;
     width: 40%;
@@ -16,7 +16,7 @@
     overflow: none;
 }
 h1 {
-    color: var(--text-blue-white);
+    color: var(--black-white);
 }
 .overlay {
     position: fixed;
