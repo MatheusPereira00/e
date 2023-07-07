@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SearchComponent } from '../../shared/search/search.component';
 import { RouterLink } from '@angular/router';
 import { CartService } from '../../services/cart.service';
