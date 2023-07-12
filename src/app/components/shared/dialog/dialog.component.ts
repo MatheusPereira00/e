@@ -1,5 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from '../../models/product-interface';
 import { NgIf } from '@angular/common';
 import { CartService } from '../../services/cart.service';

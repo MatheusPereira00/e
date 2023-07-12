@@ -1,14 +1,5 @@
 {
-  "categorys": [
-    {
-      "category_name": "books",
-      "category_id": 1
-    },
-    {
-      "category_name": "coffee-mugs",
-      "category_id": 2
-    }
-  ],
+  "categorys": [],
   "subcategorys": [
     {
       "category_name": "books",
@@ -21,7 +12,6 @@
       "category_id": 2
     }
   ],
-
   "products": [
     {
       "id": 1,
@@ -97,7 +87,7 @@
       "dateCreated": "2023-02-02T23:31:30.000+00:00",
       "lastUpdated": null,
       "newProduct": true,
-      "rating": 2.0,
+      "rating": 2,
       "_links": {
         "self": {
           "href": "http://localhost:8080/products/3"
@@ -155,7 +145,7 @@
       "dateCreated": "2023-02-02T23:31:30.000+00:00",
       "lastUpdated": null,
       "newProduct": false,
-      "rating": 5.0,
+      "rating": 5,
       "_links": {
         "self": {
           "href": "http://localhost:8080/products/5"
