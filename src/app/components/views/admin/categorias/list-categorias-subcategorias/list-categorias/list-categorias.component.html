@@ -1,6 +1,6 @@
 <table class="table">
   <thead>
-    <button class="btn-create">nova categoria</button>
+    <button class="btn-create" routerLink="add">nova categoria</button>
     <tr>
       <th>Nome da categoria</th>
       <th>id</th>
@@ -9,14 +9,15 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let product of products">
-      <td> {{product.category_name}} </td>
-      <td> {{product.category_id}} </td>
+    <tr *ngFor="let category of categories">
+      <td> {{category.name}} </td>
+      <td> {{category.id}} </td>
 
       <td class="td-btn">
-        <button class="btn-1" >Editar</button>
-        <button class="btn-2" >Excluir</button>
+        <button class="btn-1" [routerLink]="['edit', category.id]">Editar</button>
+        <button class="btn-2" (click)="deleteCategory(category.id)">Excluir</button>
       </td>
     </tr>
   </tbody>
+  <app-dialog-edit (close)="close()"></app-dialog-edit>
 </table>

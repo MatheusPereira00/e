@@ -7,31 +7,32 @@ import { LoginComponent } from './components/views/account/login/login.component
 import { AdmComponent } from './components/views/admin/adm/adm.component';
 import { ListCategoriasSubcategoriasComponent } from './components/views/admin/categorias/list-categorias-subcategorias/list-categorias-subcategorias.component';
 import { LogoutComponent } from './components/shared/logout/logout/logout.component';
+import { AddEditCategoryComponent } from './components/views/admin/categorias/list-categorias-subcategorias/list-categorias/add-edit-category/add-edit-category.component';
 
  export const productsRoutes: Routes = [
   {
     path: '', component: ProductComponent
   },
-  {
-    path: 'login', component: LoginComponent
-  }
- ]
+]
 
- export const cartRoutes: Routes = [
+export const cartRoutes: Routes = [
   {
-    path: 'cart', component: CartComponent
+    path: '', component: CartComponent
   }
- ]
+]
 
- export const checkoutRoutes: Routes = [
+export const checkoutRoutes: Routes = [
   {
-    path: 'checkout', component: CheckoutComponent
+    path: '', component: CheckoutComponent
   }
- ]
+]
 
- export const accountRoutes: Routes = [
-   {
-     path: 'login', component: LoginComponent,
+export const accountRoutes: Routes = [
+  {
+    path: 'logout', component: LogoutComponent
+  },
+  {
+    path: 'login', component: LoginComponent,
    },
    {
      path: 'create', component: CreateAccountComponent
@@ -40,13 +41,16 @@ import { LogoutComponent } from './components/shared/logout/logout/logout.compon
 
 export const adminRoutes: Routes = [
   {
-    path: 'adm', component: AdmComponent,
+    path: '', component: AdmComponent,
   },
   {
-    path: 'categorias', component: ListCategoriasSubcategoriasComponent
+    path: 'categories', component: ListCategoriasSubcategoriasComponent
   },
   {
-    path: 'logout', component: LogoutComponent
+    path: 'categories/edit/:id', component: AddEditCategoryComponent
+  },
+  {
+    path: 'categories/add', component: AddEditCategoryComponent
   }
 ]
 

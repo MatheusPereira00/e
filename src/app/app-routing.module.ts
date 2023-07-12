@@ -15,22 +15,22 @@ const routes: Routes = [
       import('./routes.module').then(m => m.productsRoutes),
   },
   {
-    path: '',
+    path: 'cart',
     loadChildren: () =>
       import('./routes.module').then(m => m.cartRoutes),
   },
   {
-    path: '',
+    path: 'checkout',
     loadChildren: () =>
       import('./routes.module').then(m => m.checkoutRoutes)
   },
    {
-    path: '',
+    path: 'account',
     loadChildren: () =>
       import('./routes.module').then(m => m.accountRoutes)
   },
   {
-    path: '',
+    path: 'adm',
     loadChildren: () =>
       import('./routes.module').then(m => m.adminRoutes)
   },
