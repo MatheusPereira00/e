@@ -1,17 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { cep} from '../models/cep'
+import { cep } from '../models/cep';
 import { Observable } from 'rxjs';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CepService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  getCep(cep: string): Observable<cep> {
+  public getCep(cep: string): Observable<cep> {
     const urlGet = `http://viacep.com.br/ws/${cep}/json`;
     return this.http.get<cep>(urlGet);
   }

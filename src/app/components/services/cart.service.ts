@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../models/product-interface';
-import { Cart, CartProduct } from '../models/cart';
+import { CartProduct } from '../models/cart';
 
 @Injectable({
   providedIn: 'root',
@@ -12,11 +12,11 @@ export class CartService {
   constructor() {
     const data = localStorage.getItem('cart');
     if (data) {
-      this.productCarts = JSON.parse(data)
+      this.productCarts = JSON.parse(data);
     }
   }
 
-  public addToCart(product: Product) {
+  public addToCart(product: Product): void {
     //verificando se já existe o id no arrey do carrinho
     const checkList = this.productCarts.find(prod => prod.id === product.id);
     if (!checkList) {
@@ -33,7 +33,7 @@ export class CartService {
   }
 
   // Removendo o produto adicionado no carrinho
-  public removeProduct(product: Product) {
+  public removeProduct(product: Product): void {
     const checkList = this.productCarts.find(prod => prod.id === product.id);
     if (checkList) {
       this.productCarts.shift();
@@ -42,7 +42,7 @@ export class CartService {
   }
 
   //aumenatar quantidade de produtos
-  public increase(product: CartProduct) {
+  public increase(product: CartProduct): void {
     const checkList = this.productCarts.find(prod => prod.id === product.id);
     if (checkList) {
       product.quantity++;
@@ -51,7 +51,7 @@ export class CartService {
   }
 
   //remover quantidade de produtos
-  public decrease(product: CartProduct) {
+  public decrease(product: CartProduct): void {
     const checkList = this.productCarts.find(prod => prod.id === product.id);
     if (checkList && checkList.quantity > 1) {
       product.quantity--;
@@ -67,7 +67,7 @@ export class CartService {
     return length;
   }
 
-  public total() {
+  public total(): number {
     const TOTAL_PRICE = this.productCarts.reduce((price, product) => {
       return (price += product.unitPrice * product.quantity);
     }, 0);
@@ -76,7 +76,7 @@ export class CartService {
   }
 
   // pegando intes do carts
-  public getItems() {
+  public getItems(): any {
     return this.productCarts;
   }
 
@@ -96,7 +96,7 @@ export class CartService {
   // }
 
   // Armazenar dados no LocalStorage e deixar o objeto como string
-  saveData() {
+  public saveData(): void {
     localStorage.setItem('cart', JSON.stringify(this.productCarts));
   }
 }

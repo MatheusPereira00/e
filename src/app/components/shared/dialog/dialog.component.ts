@@ -4,18 +4,18 @@ import { NgIf } from '@angular/common';
 import { CartService } from '../../services/cart.service';
 
 @Component({
-    selector: 'app-dialog',
-    templateUrl: './dialog.component.html',
-    styleUrls: ['./dialog.component.scss'],
-    standalone: true,
-    imports: [NgIf],
+  selector: 'app-dialog',
+  templateUrl: './dialog.component.html',
+  styleUrls: ['./dialog.component.scss'],
+  standalone: true,
+  imports: [NgIf],
 })
 export class DialogComponent {
   @Input() public image = '';
-  @Output() public close = new EventEmitter();
-  
+  @Output() public Close = new EventEmitter();
+
   public toogleModal = false;
-  currentProduct!: Product
+  public currentProduct!: Product;
 
   constructor(private cartService: CartService) {}
 
@@ -24,14 +24,14 @@ export class DialogComponent {
   }
 
   public fecharModal(): void {
-    this.close.emit();
+    this.Close.emit();
   }
 
   public confirmar(): void {
-    console.log(this.currentProduct)
+    console.log(this.currentProduct);
     this.cartService.addToCart(this.currentProduct);
-    
+
     this.toogleModal = false;
-    this.close.emit();
+    this.Close.emit();
   }
 }

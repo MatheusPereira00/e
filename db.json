@@ -1,5 +1,10 @@
 {
-  "categorys": [],
+  "categorys": [
+    {
+      "name": "coffee-mugs",
+      "id": 2
+    }
+  ],
   "subcategorys": [
     {
       "category_name": "books",

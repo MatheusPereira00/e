@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SearchComponent } from '../../shared/search/search.component';
 import { RouterLink } from '@angular/router';
 import { CartService } from '../../services/cart.service';
@@ -13,10 +13,9 @@ import { CartService } from '../../services/cart.service';
 export class HeaderComponent {
   public darkTheme!: string;
 
-  constructor(public cartService: CartService) {
-  }
-  
-  onThemeSwitchChange() {
-    document.body.classList.toggle('dark-theme')
+  constructor(public cartService: CartService) {}
+
+  public onThemeSwitchChange(): void {
+    document.body.classList.toggle('dark-theme');
   }
 }

@@ -8,7 +8,7 @@ describe('AddEditCategoryComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [AddEditCategoryComponent]
+      imports: [AddEditCategoryComponent],
     });
     fixture = TestBed.createComponent(AddEditCategoryComponent);
     component = fixture.componentInstance;

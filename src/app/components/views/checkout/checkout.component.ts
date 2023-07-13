@@ -1,8 +1,8 @@
 import { Component, DestroyRef, inject } from '@angular/core';
-import { FormControl, FormGroup, Validators, ReactiveFormsModule, AbstractControl } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgIf } from '@angular/common';
-import { CustomValidationMessageComponent } from "../custom-validation-message/custom-validation-message.component";
+import { CustomValidationMessageComponent } from '../custom-validation-message/custom-validation-message.component';
 import { cep } from '../../models/cep';
 import { HttpClientModule } from '@angular/common/http';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -13,72 +13,93 @@ import { CepService } from '../../services/cep.service';
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.scss'],
   standalone: true,
-  imports: [ReactiveFormsModule, NgIf, CustomValidationMessageComponent, HttpClientModule],
-  providers: [CepService]
+  imports: [
+    ReactiveFormsModule,
+    NgIf,
+    CustomValidationMessageComponent,
+    HttpClientModule,
+  ],
+  providers: [CepService],
 })
 export class CheckoutComponent {
+  public cep: cep = {};
 
-  cep: cep = {};
+  private readonly _destroy: DestroyRef = inject(DestroyRef);
 
-  private _destroyRef = inject(DestroyRef);
+  constructor(private router: Router, public cepService: CepService) {}
 
-  constructor(private router: Router, public cepService: CepService) { }
-
-  cadastroForm = new FormGroup({
+  public cadastroForm = new FormGroup({
     name: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     email: new FormControl('', {
-      nonNullable: true, validators: [Validators.required, Validators.email],
+      nonNullable: true,
+      validators: [Validators.required, Validators.email],
     }),
     senha: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     confirmar: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     cpf: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     rg: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     data: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     celular: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     cep: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     endereco: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     num: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     comple: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     refe: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     bairro: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     cidade: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     estado: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     pais: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
   });
 
-  onSubmit() {
+  public onSubmit(): void {
     console.log(this.cadastroForm.value);
   }
 
@@ -87,7 +108,7 @@ export class CheckoutComponent {
       if (cep.length === 8) {
         this.cepService
           .getCep(cep)
-          .pipe(takeUntilDestroyed(this._destroyRef))
+          .pipe(takeUntilDestroyed(this._destroy))
           .subscribe(data => {
             console.log(data);
             this.cadastroForm.patchValue({

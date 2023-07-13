@@ -8,7 +8,7 @@ describe('DialogEditComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [DialogEditComponent]
+      imports: [DialogEditComponent],
     });
     fixture = TestBed.createComponent(DialogEditComponent);
     component = fixture.componentInstance;

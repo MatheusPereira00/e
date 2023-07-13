@@ -16,39 +16,35 @@ import { LoginComponent } from '../account/login/login.component';
   providers: [ProductService],
 })
 export class ProductComponent implements OnInit {
-
-  public products: Product[]=[];
+  public products: Product[] = [];
 
   public isDarkTheme = true;
   //INSERIR METODO GET
 
-  constructor(private productService: ProductService, private cartService: CartService) {
-   }
+  constructor(private productService: ProductService, private cartService: CartService) {}
 
-  public ngOnInit() {
+  public ngOnInit(): void {
     this.getProduct();
-    const theme = localStorage.getItem('theme')
-    if(theme){
-      if(theme === 'true'){
-        this.isDarkTheme = true
-        document.body.setAttribute('data-theme','dark');
+    const theme = localStorage.getItem('theme');
+    if (theme) {
+      if (theme === 'true') {
+        this.isDarkTheme = true;
+        document.body.setAttribute('data-theme', 'dark');
       } else {
-        document.body.setAttribute('data-theme','theme');
-        this.isDarkTheme = false
+        document.body.setAttribute('data-theme', 'theme');
+        this.isDarkTheme = false;
       }
     }
-
   }
 
-  public getProduct() {
+  public getProduct(): void {
     this.productService.getProduct().subscribe(data => {
       this.products = data;
     });
   }
 
-  public addToCart(product: Product) {
+  public addToCart(product: Product): void {
     this.cartService.addToCart(product);
-    console.log(product)
+    console.log(product);
   }
-
 }

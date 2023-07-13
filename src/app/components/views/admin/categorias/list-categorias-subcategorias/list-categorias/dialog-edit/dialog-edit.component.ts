@@ -7,10 +7,10 @@ import { CartService } from 'src/app/components/services/cart.service';
   standalone: true,
   imports: [CommonModule, NgIf],
   templateUrl: './dialog-edit.component.html',
-  styleUrls: ['./dialog-edit.component.scss']
+  styleUrls: ['./dialog-edit.component.scss'],
 })
 export class DialogEditComponent {
-  @Output() public close = new EventEmitter();
+  @Output() public Close = new EventEmitter();
 
   public toogleModal = false;
 
@@ -21,6 +21,6 @@ export class DialogEditComponent {
   }
 
   public closeModal(): void {
-    this.close.emit();
+    this.Close.emit();
   }
 }

@@ -2,7 +2,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -11,28 +10,23 @@ const routes: Routes = [
   },
   {
     path: 'product',
-    loadChildren: () =>
-      import('./routes.module').then(m => m.productsRoutes),
+    loadChildren: () => import('./routes.module').then(m => m.productsRoutes),
   },
   {
     path: 'cart',
-    loadChildren: () =>
-      import('./routes.module').then(m => m.cartRoutes),
+    loadChildren: () => import('./routes.module').then(m => m.cartRoutes),
   },
   {
     path: 'checkout',
-    loadChildren: () =>
-      import('./routes.module').then(m => m.checkoutRoutes)
+    loadChildren: () => import('./routes.module').then(m => m.checkoutRoutes),
   },
-   {
+  {
     path: 'account',
-    loadChildren: () =>
-      import('./routes.module').then(m => m.accountRoutes)
+    loadChildren: () => import('./routes.module').then(m => m.accountRoutes),
   },
   {
     path: 'adm',
-    loadChildren: () =>
-      import('./routes.module').then(m => m.adminRoutes)
+    loadChildren: () => import('./routes.module').then(m => m.adminRoutes),
   },
 ];
 
@@ -41,4 +35,4 @@ const routes: Routes = [
 
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
