@@ -17,7 +17,9 @@
         "project": [
           "tsconfig.json"
         ],
-        "createDefaultProgram": true
+        "createDefaultProgram": true,
+        "sourceType": "module"
+
       },
       "extends": [
         "eslint:recommended",
@@ -116,7 +118,10 @@
             "endOfLine": "auto"
           }
         ]
-      }
+      },
+      "plugins": [
+        "@typescript-eslint"
+      ]
     }
   ]
 }

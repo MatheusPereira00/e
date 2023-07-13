@@ -1,22 +1,19 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-pagination',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './pagination.component.html',
-  styleUrls: ['./pagination.component.scss']
+  styleUrls: ['./pagination.component.scss'],
 })
 export class PaginationComponent {
+  @Input() public paginaAtual = 1;
+  @Input() public qtdPorPagina = 5;
+  @Input() public totalRegistros = 10;
+  @Output() public OnPaginate: EventEmitter<number> = new EventEmitter<number>(); // Emite o numero da página clicada
 
-  @Input() public paginaAtual: number = 1;
-  @Input() public qtdPorPagina: number = 5;
-  @Input() public totalRegistros: number = 10;
-  @Output() public onPaginate: EventEmitter<number> = new EventEmitter<number>(); // Emite o numero da página clicada
-
-  constructor(private route: ActivatedRoute){}
+  constructor(private route: ActivatedRoute) {}
 }
-
-

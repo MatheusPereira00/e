@@ -1,8 +1,8 @@
 export class cep {
-    cep?: string;
-    logradouro?: string;
-    complemento?: string;
-    bairro?: string;
-    localidade?: string;
-    uf?: string;
+  public cep?: string;
+  public logradouro?: string;
+  public complemento?: string;
+  public bairro?: string;
+  public localidade?: string;
+  public uf?: string;
 }

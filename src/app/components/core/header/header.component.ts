@@ -13,10 +13,9 @@ import { CartService } from '../../services/cart.service';
 export class HeaderComponent {
   public darkTheme!: string;
 
-  constructor(public cartService: CartService) {
-  }
-  
-  onThemeSwitchChange() {
-    document.body.classList.toggle('dark-theme')
+  constructor(public cartService: CartService) {}
+
+  public onThemeSwitchChange(): void {
+    document.body.classList.toggle('dark-theme');
   }
 }

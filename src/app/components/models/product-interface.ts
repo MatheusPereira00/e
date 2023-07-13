@@ -16,5 +16,3 @@ export interface Product {
   newProduct: boolean;
   rating: number;
 }
-
-

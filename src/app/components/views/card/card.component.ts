@@ -5,11 +5,11 @@ import { NgFor, NgIf } from '@angular/common';
 import { CartService } from 'src/app/components/services/cart.service';
 
 @Component({
-    selector: 'app-card',
-    templateUrl: './card.component.html',
-    styleUrls: ['./card.component.scss'],
-    standalone: true,
-    imports: [NgFor, DialogComponent,  NgIf],
+  selector: 'app-card',
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.scss'],
+  standalone: true,
+  imports: [NgFor, DialogComponent, NgIf],
 })
 export class CardComponent {
   @Input() public products!: Product;
@@ -23,7 +23,6 @@ export class CardComponent {
   public dialogComponent!: DialogComponent;
 
   public eventClick(product: Product): void {
-
     this.productTeste.emit(product);
   }
 

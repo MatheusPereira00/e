@@ -8,7 +8,6 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class ProductService {
-  
   constructor(private http: HttpClient) {}
 
   public getProduct(): Observable<Product[]> {

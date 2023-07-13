@@ -5,29 +5,24 @@ import { NgFor } from '@angular/common';
 import { CartService } from '../../services/cart.service';
 
 @Component({
-    selector: 'app-cart',
-    templateUrl: './cart.component.html',
-    styleUrls: ['./cart.component.scss'],
-    standalone: true,
-    imports: [NgFor,],
+  selector: 'app-cart',
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.scss'],
+  standalone: true,
+  imports: [NgFor],
 })
 export class CartComponent implements OnInit {
-
-  public products: Product[]= [];
+  public products: Product[] = [];
 
   public allProductCart = this.cartService.getItems();
 
-  constructor(public cartService: CartService, private router: Router) {
-  }
+  constructor(public cartService: CartService, private router: Router) {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.cartService.getItems();
   }
-  
-  public checkout() {
+
+  public checkout(): void {
     this.router.navigate(['/checkout']);
   }
-
-  
 }
-
