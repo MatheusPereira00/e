@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label>Nome category</label>
+  <!-- <input type="text" formControlName="nameCategory" /> -->
+  <select formControlName="nameCategory">
+    <option *ngFor="let category of categories">{{ category.name }}</option>
+  </select>
+  <label>Nome subcategory</label>
+  <input type="text" formControlName="nameSubCategory" />
+  <button type="submit">Salvar</button>
+</form>
+
+<!-- usar ngfor no option para mostrar as opcoes de categorias -->

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { Product } from 'src/app/components/models/product-interface';
 import { SubcategoriasService } from 'src/app/components/services/subcategorias.service';
-import { Category } from 'src/app/components/models/category';
+import { subCategory } from 'src/app/components/models/subcategory';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-list-subcategorias',
@@ -15,9 +15,7 @@ import { Category } from 'src/app/components/models/category';
 export class ListSubcategoriasComponent {
   constructor(private subcategoriaService: SubcategoriasService) {}
 
-  public products: Product[] = [];
-
-  public categories: Category[] = [];
+  public subCategories: subCategory[] = [];
 
   public ngOnInit(): void {
     this.getSubCategorys();
@@ -25,7 +23,12 @@ export class ListSubcategoriasComponent {
 
   public getSubCategorys(): void {
     this.subcategoriaService.getSubCategorys().subscribe(data => {
-      this.products = data;
+      this.subCategories = data;
     });
+  }
+
+  public deletesubCategory(id: number): void {
+    this.subcategoriaService.deletesubCategory(id).pipe(take(1)).subscribe();
+    this.getSubCategorys();
   }
 }
