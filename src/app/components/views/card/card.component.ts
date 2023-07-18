@@ -14,7 +14,6 @@ import { CartService } from 'src/app/components/services/cart.service';
 export class CardComponent {
   @Input() public products!: Product;
   @Output() public productTeste = new EventEmitter();
-
   public image = '';
 
   constructor(private cartService: CartService) {}
@@ -26,12 +25,14 @@ export class CardComponent {
     this.productTeste.emit(product);
   }
 
+  //abrir modal
   public changeStateModal(image: string, product: Product): void {
     this.image = image;
     this.dialogComponent.currentProduct = product;
     this.dialogComponent.toogleModal = true;
   }
 
+  //fechar modal
   public close(): void {
     this.dialogComponent.toogleModal = false;
   }
