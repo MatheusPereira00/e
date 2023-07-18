@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../models/product-interface';
+
 import { HttpClientModule } from '@angular/common/http';
 import { NgFor } from '@angular/common';
 import { ProductService } from '../../services/product.service';
 import { CartService } from '../../services/cart.service';
 import { CardComponent } from '../card/card.component';
 import { LoginComponent } from '../account/login/login.component';
+import { Product } from '../../models/product-interface';
 
 @Component({
   selector: 'app-product',
@@ -45,6 +46,5 @@ export class ProductComponent implements OnInit {
 
   public addToCart(product: Product): void {
     this.cartService.addToCart(product);
-    console.log(product);
   }
 }

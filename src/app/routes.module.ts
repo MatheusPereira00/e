@@ -9,6 +9,8 @@ import { ListCategoriasSubcategoriasComponent } from './components/views/admin/c
 import { LogoutComponent } from './components/shared/logout/logout/logout.component';
 import { AddEditCategoryComponent } from './components/views/admin/categorias/list-categorias-subcategorias/list-categorias/add-edit-category/add-edit-category.component';
 import { AddEditSubactegoryComponent } from './components/views/admin/categorias/list-categorias-subcategorias/list-subcategorias/add-edit-subactegory/add-edit-subactegory.component';
+import { ListProductsComponent } from './components/views/admin/products/list-products/list-products.component';
+import { AddEditProductsComponent } from './components/views/admin/products/add-edit-products/add-edit-products.component';
 
 export const productsRoutes: Routes = [
   {
@@ -70,5 +72,17 @@ export const adminRoutes: Routes = [
   {
     path: 'categories/subcategories/add',
     component: AddEditSubactegoryComponent,
+  },
+  {
+    path: 'products',
+    component: ListProductsComponent,
+  },
+  {
+    path: 'products/add',
+    component: AddEditProductsComponent,
+  },
+  {
+    path: 'products/edit:id',
+    component: AddEditProductsComponent,
   },
 ];
