@@ -20,7 +20,6 @@ import { take } from 'rxjs';
 })
 export class AddEditCategoryComponent {
   public form: FormGroup = new FormGroup({});
-
   public id!: string | null;
   public isEditMode = false;
 
@@ -54,7 +53,7 @@ export class AddEditCategoryComponent {
     if (this.isEditMode) {
       const formData = this.form.getRawValue();
       this.categoriasService
-        .updateCategory(+this.id!, formData)
+        .updateCategory(Number(this.id!), formData)
         .pipe(take(1))
         .subscribe();
     }

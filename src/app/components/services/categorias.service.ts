@@ -8,13 +8,12 @@ import { Category } from '../models/category';
   providedIn: 'root',
 })
 export class CategoriasService {
-  public products: Product[] = [];
   public categoryUrl = 'http://localhost:3000/categorys';
 
   constructor(private http: HttpClient) {}
 
-  public getCategorys(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${environment.PRODUCT_API}/categorys`);
+  public getCategorys(): Observable<Category[]> {
+    return this.http.get<Category[]>(`${environment.PRODUCT_API}/categorys`);
   }
 
   public getAllProducts(pagina: number, limite: number): Observable<Product[]> {
