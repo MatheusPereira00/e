@@ -7,7 +7,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { take } from 'rxjs';
 import { Category } from 'src/app/components/models/category';
 import { CategoriasService } from 'src/app/components/services/categorias.service';
@@ -16,7 +16,7 @@ import { SubcategoriasService } from 'src/app/components/services/subcategorias.
 @Component({
   selector: 'app-add-edit-subactegory',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, FormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, RouterLink],
   templateUrl: './add-edit-subactegory.component.html',
   styleUrls: ['./add-edit-subactegory.component.scss'],
 })
