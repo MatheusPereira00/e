@@ -38,7 +38,6 @@ export class ListCategoriasComponent implements OnInit {
   public openModal(id: number): void {
     this.id = id;
     this.dialogEditComponent.toogleModal = true;
-
   }
 
   public close(): void {
@@ -51,5 +50,4 @@ export class ListCategoriasComponent implements OnInit {
       this.categories = data;
     });
   }
-
 }

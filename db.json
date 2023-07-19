@@ -1,15 +1,24 @@
 {
   "categorys": [
     {
-      "name": "teste",
-      "id": 3
+      "name": "mouse-pads",
+      "id": 1
+    },
+    {
+      "name": "books",
+      "id": 2
     }
   ],
   "subcategorys": [
     {
-      "nameCategory": "teste",
-      "nameSubCategory": "testetete",
-      "id": 5
+      "nameCategory": "mouse-pads",
+      "nameSubCategory": "mouse",
+      "id": 7
+    },
+    {
+      "nameCategory": "books",
+      "nameSubCategory": "livros",
+      "id": 8
     }
   ],
   "products": [

@@ -19,8 +19,9 @@
         <button class="btn-1" [routerLink]="['subcategories/edit', subCategory.id]">
           Editar
         </button>
-        <button class="btn-2" (click)="deletesubCategory(subCategory.id)">Excluir</button>
+        <button class="btn-2" (click)="openModal(subCategory.id)">Excluir</button>
       </td>
+      <app-dialog-edit (close)="close()" (delet)="delet()"></app-dialog-edit>
     </tr>
   </tbody>
 </table>
