@@ -1,24 +1,11 @@
 {
   "categorys": [
     {
-      "name": "books",
-      "id": 1
-    },
-    {
-      "name": "coffee-mugs",
-      "id": 2
-    },
-    {
       "name": "teste",
       "id": 3
     }
   ],
   "subcategorys": [
-    {
-      "nameCategory": "coffee-mugs",
-      "nameSubCategory": "teste2",
-      "id": 2
-    },
     {
       "nameCategory": "teste",
       "nameSubCategory": "testetete",

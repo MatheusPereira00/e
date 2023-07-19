@@ -1,6 +1,8 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CommonModule, NgIf } from '@angular/common';
-import { CartService } from 'src/app/components/services/cart.service';
+import { CategoriasService } from 'src/app/components/services/categorias.service';
+import { take } from 'rxjs';
+import { Category } from 'src/app/components/models/category';
 
 @Component({
   selector: 'app-dialog-edit',
@@ -9,18 +11,36 @@ import { CartService } from 'src/app/components/services/cart.service';
   templateUrl: './dialog-edit.component.html',
   styleUrls: ['./dialog-edit.component.scss'],
 })
-export class DialogEditComponent {
-  @Output() public Close = new EventEmitter();
-
+export class DialogEditComponent implements OnInit{
+  @Output() public close = new EventEmitter();
+  @Output() public delet = new EventEmitter();
   public toogleModal = false;
+  public categories: Category[]= [];
+  
+  constructor(private categoriasService: CategoriasService) {}
 
-  constructor(private cartService: CartService) {}
+  public ngOnInit(): void {
+    
+  }
 
   public openDialog(): void {
     this.toogleModal = true;
   }
 
   public closeModal(): void {
-    this.Close.emit();
+    this.close.emit();
   }
+
+  public deleteCategory(): void {
+    this.delet.emit();
+    this.toogleModal = false;
+    this.close.emit();
+  }
+
+  public getCategorys(): void {
+    this.categoriasService.getCategorys().subscribe(data => {
+      this.categories = data;
+    });
+  }
+
 }
