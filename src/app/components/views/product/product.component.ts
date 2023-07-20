@@ -20,7 +20,6 @@ export class ProductComponent implements OnInit {
   public products: Product[] = [];
 
   public isDarkTheme = true;
-  //INSERIR METODO GET
 
   constructor(private productService: ProductService, private cartService: CartService) {}
 

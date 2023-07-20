@@ -9,9 +9,9 @@
   </thead>
 
   <tbody>
-    <tr>
-      <td>name</td>
-      <td>id</td>
+    <tr *ngFor="let products of products">
+      <td>{{ products.name }}</td>
+      <td>{{ products.id }}</td>
 
       <td class="td-btn">
         <button class="btn-1">Editar</button>

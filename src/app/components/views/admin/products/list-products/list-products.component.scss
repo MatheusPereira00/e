@@ -1,8 +1,10 @@
 .table {
-    width: 95%;
+    width: 100rem;
   
-    margin: 25rem;
-  
+    // margin: 25rem;
+    margin-left: 25rem;
+    margin-top: 10rem;
+
     font-size: 0.9em;
     border-radius: 8px;
     border-collapse: collapse;
@@ -23,14 +25,14 @@
     background-color: var(--grey-light-color-2);
   }
   
-  
   .th-btn {
     display: flex;
-    margin-left: 3rem;
+    margin-left: 54rem;
   }
   
   .td-btn {
     display: flex;
+    margin-left: 50rem;
     gap: 1.5rem;
   }
   

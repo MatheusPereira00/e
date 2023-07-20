@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { SubcategoriasService } from 'src/app/components/services/subcategorias.service';
@@ -12,7 +12,7 @@ import { take } from 'rxjs';
   styleUrls: ['./list-subcategorias.component.scss'],
   imports: [CommonModule, RouterLink],
 })
-export class ListSubcategoriasComponent {
+export class ListSubcategoriasComponent implements OnInit {
   constructor(private subcategoriaService: SubcategoriasService) {}
 
   public subCategories: subCategory[] = [];
