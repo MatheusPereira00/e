@@ -64,11 +64,11 @@ export const adminRoutes: Routes = [
     component: AddEditCategoryComponent,
   },
   {
-    path: 'subcategories/edit:id',
+    path: 'categories/subcategories/edit/:id',
     component: AddEditSubactegoryComponent,
   },
   {
-    path: 'subcategories/add',
+    path: 'categories/subcategories/add',
     component: AddEditSubactegoryComponent,
   },
 ];

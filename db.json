@@ -1,20 +1,24 @@
 {
   "categorys": [
     {
-      "name": "coffee-mugs",
+      "name": "mouse-pads",
+      "id": 1
+    },
+    {
+      "name": "books",
       "id": 2
     }
   ],
   "subcategorys": [
     {
-      "category_name": "books",
-      "subcategory_name": "Livros-de-tecnologia",
-      "category_id": 1
+      "nameCategory": "mouse-pads",
+      "nameSubCategory": "mouse",
+      "id": 7
     },
     {
-      "category_name": "coffee-mugs",
-      "subcategory_name": "Xicaras-personalizadas",
-      "category_id": 2
+      "nameCategory": "books",
+      "nameSubCategory": "livros",
+      "id": 8
     }
   ],
   "products": [
