@@ -1,10 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CategoriasService } from 'src/app/components/services/categorias.service';
 import { DialogEditComponent } from './dialog-edit/dialog-edit.component';
 import { RouterLink } from '@angular/router';
 import { Category } from 'src/app/components/models/category';
-import { take } from 'rxjs';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-list-categorias',
@@ -13,21 +13,20 @@ import { take } from 'rxjs';
   styleUrls: ['./list-categorias.component.scss'],
   imports: [CommonModule, DialogEditComponent, RouterLink],
 })
-export class ListCategoriasComponent implements OnInit {
+export class ListCategoriasComponent implements OnInit, OnDestroy {
   public categories: Category[] = [];
   public id!: number;
+  public subscription!: Subscription;
+  public subscriptionGet!: Subscription;
 
-  constructor(
-    private categoriasService: CategoriasService
-    ) {}
+  constructor(private categoriasService: CategoriasService) {}
 
-    public ngOnInit(): void {
-      this.getCategorys();
-    }
-    
+  public ngOnInit(): void {
+    this.getCategorys();
+  }
+
   @ViewChild(DialogEditComponent)
   public dialogEditComponent!: DialogEditComponent;
-
 
   public getCategorys(): void {
     this.categoriasService.getCategorys().subscribe(data => {
@@ -45,9 +44,15 @@ export class ListCategoriasComponent implements OnInit {
   }
 
   public delet(): void {
-    this.categoriasService.deleteCategory(this.id).pipe(take(1)).subscribe();
-    this.categoriasService.getCategorys().subscribe(data => {
+    this.subscription = this.categoriasService.deleteCategory(this.id).subscribe();
+
+    this.subscriptionGet = this.categoriasService.getCategorys().subscribe(data => {
       this.categories = data;
     });
+  }
+
+  public ngOnDestroy(): void {
+    if (this.subscription) this.subscription.unsubscribe();
+    if (this.subscriptionGet) this.subscriptionGet.unsubscribe();
   }
 }

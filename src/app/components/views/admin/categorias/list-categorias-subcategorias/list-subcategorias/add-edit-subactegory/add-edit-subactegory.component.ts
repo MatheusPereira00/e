@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -8,7 +8,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { take } from 'rxjs';
+import { Subscription, take } from 'rxjs';
 import { Category } from 'src/app/components/models/category';
 import { CategoriasService } from 'src/app/components/services/categorias.service';
 import { SubcategoriasService } from 'src/app/components/services/subcategorias.service';
@@ -20,9 +20,10 @@ import { SubcategoriasService } from 'src/app/components/services/subcategorias.
   templateUrl: './add-edit-subactegory.component.html',
   styleUrls: ['./add-edit-subactegory.component.scss'],
 })
-export class AddEditSubactegoryComponent {
+export class AddEditSubactegoryComponent implements OnInit, OnDestroy {
   public form: FormGroup = new FormGroup({});
   public id!: string | null;
+  private subscription!: Subscription;
   public isEditMode = false;
   public categories: Category[] = [];
 
@@ -74,8 +75,12 @@ export class AddEditSubactegoryComponent {
   }
 
   public getCategorys(): void {
-    this.categoriaService.getCategorys().subscribe(data => {
+    this.subscription = this.categoriaService.getCategorys().subscribe(data => {
       this.categories = data;
     });
+  }
+
+  public ngOnDestroy(): void {
+    if (this.subscription) this.subscription.unsubscribe();
   }
 }
