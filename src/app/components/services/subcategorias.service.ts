@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs/internal/Observable';
 import { subCategory } from '../models/subcategory';
 
@@ -13,7 +12,7 @@ export class SubcategoriasService {
   constructor(private http: HttpClient) {}
 
   public getSubCategorys(): Observable<subCategory[]> {
-    return this.http.get<subCategory[]>(`${environment.PRODUCT_API}/subcategorys`);
+    return this.http.get<subCategory[]>(this.subCategoryUrl);
   }
 
   public getsubCategoryById(id: number): Observable<subCategory[]> {
