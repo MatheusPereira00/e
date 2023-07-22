@@ -1,11 +1,36 @@
+.one {
+    margin-top: 10rem;
+    margin-left: 25rem;
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+
+        p {
+            color: var(--primary-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+        }
+    }
+    svg {
+        width: 3rem;
+        height: 3rem;
+        fill: var(--primary-color);
+    }
+}
+
 .container {
     display: flex;
     flex-direction: column;
     
     width: 98rem;
-    height: 68rem;
+    height: 70rem;
     
-    margin-top: 20rem;
+    margin-top: 4rem;
     margin-left: 25rem;
     margin-bottom: 10rem;
     
@@ -21,6 +46,10 @@
         margin-top: 4rem;
         margin-left: 2rem;
 
+        label {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+        }
         &--one {
             display: flex;
             flex-direction: column;
@@ -29,6 +58,7 @@
             input {
                 width: 20rem;
                 height: 3rem;
+                padding: 1rem;
                 border-radius: 8px;
                 border: 1px solid #ACAAAF;
             }
@@ -50,6 +80,10 @@
         margin-top: 4rem;
         margin-left: 2rem;
 
+        label {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+        }
         &--two {
             display: flex;
             flex-direction: column;
@@ -58,6 +92,7 @@
             input {
                 width: 20rem;
                 height: 3rem;
+                padding-left: 1rem;
                 border-radius: 8px;
                 border: 1px solid #ACAAAF;
             }
@@ -74,6 +109,7 @@
             input {
                 width: 40rem;
                 height: 23rem;
+                padding-left: 1rem;
                 border-radius: 8px;
                 border: 1px solid #ACAAAF;
             }
@@ -90,9 +126,4 @@
 
 
     }
-
-    ::placeholder {
-        padding-left: 1rem;
-    }
-
 }

@@ -1,18 +1,33 @@
-<form class="container">
+<div class="one">
+  <div class="one__left">
+    <svg class="icon icon-reply" routerLink="/adm/products">
+      <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-reply"></use>
+    </svg>
+    <p>Voltar para administrar os produtos</p>
+  </div>
+  <div class="one__left">
+    <svg class="icon icon-gift">
+      <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-gift"></use>
+    </svg>
+    <h1>Voce esta editando o Produto XYL</h1>
+  </div>
+</div>
+
+<form class="container" [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="container__form">
     <div class="container__form--one">
       <label>Nome do produto:</label>
-      <input type="text" placeholder="PRODUTO" />
+      <input type="text" placeholder="PRODUTO" formControlName="name" />
     </div>
 
     <div class="container__form--one">
       <label>SKU</label>
-      <input type="text" placeholder="SKU" />
+      <input type="text" placeholder="SKU" formControlName="sku" />
     </div>
 
     <div class="container__form--one">
       <label>Preço unitario</label>
-      <input type="text" placeholder="PRICE" />
+      <input type="text" placeholder="PRICE" formControlName="price" />
     </div>
   </div>
 
@@ -20,21 +35,24 @@
     <div class="container__form--one">
       <label>Nome da categoria</label>
       <select>
-        Categoria do produto
+        <option>teste</option>
+        <option>teste</option>
       </select>
     </div>
 
     <div class="container__form--one">
       <label>SubCategoria do produto</label>
       <select>
-        SubCategoria do produto
+        <option>books</option>
+        <option>mouse</option>
       </select>
     </div>
 
     <div class="container__form--one">
       <label>Status do produto</label>
       <select>
-        Status do produto
+        <option>true</option>
+        <option>false</option>
       </select>
     </div>
 

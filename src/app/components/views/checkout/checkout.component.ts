@@ -110,7 +110,6 @@ export class CheckoutComponent {
           .getCep(cep)
           .pipe(takeUntilDestroyed(this._destroy))
           .subscribe(data => {
-            console.log(data);
             this.cadastroForm.patchValue({
               endereco: data.logradouro,
               bairro: data.bairro,
