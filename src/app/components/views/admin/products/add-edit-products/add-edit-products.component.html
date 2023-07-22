@@ -34,23 +34,23 @@
   <div class="container__form">
     <div class="container__form--one">
       <label>Nome da categoria</label>
-      <select>
-        <option>teste</option>
-        <option>teste</option>
+      <select formControlName="categoria">
+        <option *ngFor="let category of categories">{{ category.name }}</option>
       </select>
     </div>
 
     <div class="container__form--one">
       <label>SubCategoria do produto</label>
-      <select>
-        <option>books</option>
-        <option>mouse</option>
+      <select formControlName="subCategoria">
+        <option *ngFor="let subCategory of subCategories">
+          {{ subCategory.nameSubCategory }}
+        </option>
       </select>
     </div>
 
     <div class="container__form--one">
       <label>Status do produto</label>
-      <select>
+      <select formControlName="status">
         <option>true</option>
         <option>false</option>
       </select>
@@ -58,19 +58,22 @@
 
     <div class="container__form--one">
       <label>Estoque Produto</label>
-      <input type="text" placeholder="ESTOQUE" />
+      <input type="text" placeholder="ESTOQUE" formControlName="estoque" />
     </div>
   </div>
 
   <div class="container__two">
     <div class="container__two--two">
       <label>Imagem do Produto</label>
-      <input type="text" placeholder="INSERIR URL" />
+      <input type="text" placeholder="INSERIR URL" formControlName="urlImagem" />
     </div>
 
     <div class="container__two--tww">
       <label>Descrição do Produto</label>
-      <input type="text" placeholder="INSERIR BREVE DESCRIÇÃO AQUI" />
+      <input
+        type="text"
+        placeholder="INSERIR BREVE DESCRIÇÃO AQUI"
+        formControlName="descrição" />
     </div>
 
     <button>Salvar edição</button>

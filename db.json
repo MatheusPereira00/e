@@ -14,6 +14,11 @@
       "nameCategory": "books",
       "nameSubCategory": "livros",
       "id": 1
+    },
+    {
+      "nameCategory": "coffee-mugs",
+      "nameSubCategory": "mouse",
+      "id": 2
     }
   ],
   "products": [
