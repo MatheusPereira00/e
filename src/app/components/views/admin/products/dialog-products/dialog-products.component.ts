@@ -14,7 +14,7 @@ export class DialogProductsComponent implements OnInit {
   public products: Product[] = [];
   public toogleModal = false;
   @Output() public Close = new EventEmitter();
-
+  @Output() public delet = new EventEmitter();
   constructor(private productService: ProductService) {}
 
   public ngOnInit(): void {
@@ -32,6 +32,11 @@ export class DialogProductsComponent implements OnInit {
   }
 
   public closeModal(): void {
-    this.toogleModal = false;
+    this.Close.emit();
+  }
+
+  public deleteProduct(): void {
+    this.delet.emit();
+    this.Close.emit();
   }
 }

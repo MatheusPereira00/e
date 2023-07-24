@@ -15,11 +15,12 @@ import { DialogProductsComponent } from '../dialog-products/dialog-products.comp
 })
 export class ListProductsComponent implements OnInit {
   public products: Product[] = [];
+  public id!: number;
 
   constructor(private productsServie: ProductService) {}
 
   @ViewChild(DialogProductsComponent)
-  public dialogEditComponent!: DialogProductsComponent;
+  public DialogProductsComponent!: DialogProductsComponent;
 
   public ngOnInit(): void {
     this.getProduct();
@@ -31,11 +32,16 @@ export class ListProductsComponent implements OnInit {
     });
   }
 
-  public openModal(): void {
-    this.dialogEditComponent.toogleModal = true;
+  public openModal(id: number): void {
+    this.id = id;
+    this.DialogProductsComponent.toogleModal = true;
   }
 
   public close(): void {
-    this.dialogEditComponent.toogleModal = false;
+    this.DialogProductsComponent.toogleModal = false;
+  }
+
+  public delet(): void {
+    this.productsServie.deleteProducts(this.id).subscribe();
   }
 }
