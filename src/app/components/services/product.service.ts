@@ -15,6 +15,12 @@ export class ProductService {
     return this.http.get<Product[]>(this.productUrl);
   }
 
+  public getProductsById(id: number): Observable<Product[]> {
+    let url = this.productUrl;
+    url += `?id=${id}`;
+    return this.http.get<Product[]>(url);
+  }
+
   public postProducts(newProducts: { name: string }): Observable<Product> {
     return this.http.post<Product>(this.productUrl, newProducts);
   }

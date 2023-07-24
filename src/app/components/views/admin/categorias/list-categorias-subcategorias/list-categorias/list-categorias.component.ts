@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CategoriasService } from 'src/app/components/services/categorias.service';
-import { CartService } from 'src/app/components/services/cart.service';
 import { DialogEditComponent } from './dialog-edit/dialog-edit.component';
 import { RouterLink } from '@angular/router';
 import { take } from 'rxjs';
@@ -15,12 +14,9 @@ import { Category } from 'src/app/components/models/category';
   imports: [CommonModule, DialogEditComponent, RouterLink],
 })
 export class ListCategoriasComponent implements OnInit {
-  constructor(
-    private categoriasService: CategoriasService,
-    private cartService: CartService
-  ) {}
-
   public categories: Category[] = [];
+
+  constructor(private categoriasService: CategoriasService) {}
 
   @ViewChild(DialogEditComponent)
   public dialogEditComponent!: DialogEditComponent;

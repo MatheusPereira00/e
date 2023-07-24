@@ -31,31 +31,33 @@
 
     <div class="container__form--one">
       <label>Preço unitario</label>
-      <input type="text" placeholder="PRICE" formControlName="price" />
+      <input type="text" placeholder="PRICE" formControlName="unitPrice" />
       <app-custom-validation-message
-        [controlContainer]="form.get('price')!"></app-custom-validation-message>
+        [controlContainer]="form.get('unitPrice')!"></app-custom-validation-message>
     </div>
   </div>
 
   <div class="container__form">
     <div class="container__form--one">
       <label>Nome da categoria</label>
-      <select formControlName="categoria">
+      <select formControlName="category_name">
         <option *ngFor="let category of categories">{{ category.name }}</option>
       </select>
       <app-custom-validation-message
-        [controlContainer]="form.get('categoria')!"></app-custom-validation-message>
+        [controlContainer]="form.get('category_name')!"></app-custom-validation-message>
     </div>
 
     <div class="container__form--one">
       <label>SubCategoria do produto</label>
-      <select formControlName="subCategoria">
+      <select formControlName="subcategory_name">
         <option *ngFor="let subCategory of subCategories">
           {{ subCategory.nameSubCategory }}
         </option>
       </select>
       <app-custom-validation-message
-        [controlContainer]="form.get('subCategoria')!"></app-custom-validation-message>
+        [controlContainer]="
+          form.get('subcategory_name')!
+        "></app-custom-validation-message>
     </div>
 
     <div class="container__form--one">
@@ -70,9 +72,9 @@
 
     <div class="container__form--one">
       <label>Estoque Produto</label>
-      <input type="text" placeholder="ESTOQUE" formControlName="estoque" />
+      <input type="number" placeholder="ESTOQUE" formControlName="unitsInStock" />
       <app-custom-validation-message
-        [controlContainer]="form.get('estoque')!"></app-custom-validation-message>
+        [controlContainer]="form.get('unitsInStock')!"></app-custom-validation-message>
     </div>
   </div>
 

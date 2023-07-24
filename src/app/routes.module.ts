@@ -82,7 +82,7 @@ export const adminRoutes: Routes = [
     component: AddEditProductsComponent,
   },
   {
-    path: 'products/edit:id',
+    path: 'products/edit/:id',
     component: AddEditProductsComponent,
   },
 ];

@@ -8,7 +8,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CategoriasService } from 'src/app/components/services/categorias.service';
 import { Category } from 'src/app/components/models/category';
 import { subCategory } from 'src/app/components/models/subcategory';
@@ -43,7 +43,8 @@ export class AddEditProductsComponent implements OnInit {
     private fb: FormBuilder,
     private categoriasService: CategoriasService,
     private subCategoriasService: SubcategoriasService,
-    private productsServie: ProductService
+    private productsServie: ProductService,
+    private activedRoute: ActivatedRoute
   ) {}
 
   public form: FormGroup = new FormGroup({});
@@ -60,23 +61,23 @@ export class AddEditProductsComponent implements OnInit {
         nonNullable: true,
         validators: [Validators.required],
       }),
-      price: new FormControl('', {
+      unitPrice: new FormControl('', {
         nonNullable: true,
         validators: [Validators.required],
       }),
-      categoria: new FormControl('', {
+      category_name: new FormControl('', {
         nonNullable: true,
         validators: [Validators.required],
       }),
-      subCategoria: new FormControl('', {
+      subcategory_name: new FormControl('', {
         nonNullable: true,
         validators: [Validators.required],
       }),
-      status: new FormControl('', {
+      active: new FormControl('', {
         nonNullable: true,
         validators: [Validators.required],
       }),
-      estoque: new FormControl('', {
+      unitsInStock: new FormControl('', {
         nonNullable: true,
         validators: [Validators.required],
       }),
@@ -89,6 +90,26 @@ export class AddEditProductsComponent implements OnInit {
         validators: [Validators.required],
       }),
     });
+    this.id = this.activedRoute.snapshot.paramMap.get('id');
+    if (this.id) {
+      this.isEditMode = true;
+      this.productsServie
+        .getProductsById(Number(this.id))
+        .pipe(take(1))
+        .subscribe(products => {
+          this.form.patchValue({
+            name: products[0].name,
+            sku: products[0].sku,
+            unitPrice: products[0].unitPrice,
+            category_name: products[0].category_name,
+            subcategory_name: products[0].subcategory_name,
+            active: products[0].active,
+            unitsInStock: products[0].unitsInStock,
+          });
+        });
+    } else {
+      this.isEditMode = false;
+    }
   }
 
   public getCategorys(): void {
