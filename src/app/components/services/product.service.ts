@@ -30,4 +30,10 @@ export class ProductService {
     url += `/${id}`;
     return this.http.patch<Product>(url, newProducts);
   }
+
+  public deleteProducts(id: number): Observable<Product> {
+    let url = this.productUrl;
+    url += `/${id}`;
+    return this.http.delete<Product>(url);
+  }
 }

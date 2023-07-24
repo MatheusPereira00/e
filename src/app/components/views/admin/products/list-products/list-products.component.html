@@ -15,8 +15,9 @@
 
       <td class="td-btn">
         <button class="btn-1" [routerLink]="['edit', products.id]">Editar</button>
-        <button class="btn-2">Excluir</button>
+        <button class="btn-2" (click)="openModal()">Excluir</button>
       </td>
     </tr>
   </tbody>
+  <app-dialog-products (close)="close()"></app-dialog-products>
 </table>
