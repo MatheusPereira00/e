@@ -62,12 +62,12 @@
 
     <div class="container__form--one">
       <label>Status do produto</label>
-      <select formControlName="status">
+      <select formControlName="active">
         <option>true</option>
         <option>false</option>
       </select>
       <app-custom-validation-message
-        [controlContainer]="form.get('status')!"></app-custom-validation-message>
+        [controlContainer]="form.get('active')!"></app-custom-validation-message>
     </div>
 
     <div class="container__form--one">
