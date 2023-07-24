@@ -1,7 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule, NgIf } from '@angular/common';
 import { CategoriasService } from 'src/app/components/services/categorias.service';
-import { take } from 'rxjs';
 import { Category } from 'src/app/components/models/category';
 
 @Component({
@@ -11,30 +10,26 @@ import { Category } from 'src/app/components/models/category';
   templateUrl: './dialog-edit.component.html',
   styleUrls: ['./dialog-edit.component.scss'],
 })
-export class DialogEditComponent implements OnInit{
-  @Output() public close = new EventEmitter();
+export class DialogEditComponent {
+  @Output() public Close = new EventEmitter();
   @Output() public delet = new EventEmitter();
   public toogleModal = false;
-  public categories: Category[]= [];
-  
-  constructor(private categoriasService: CategoriasService) {}
+  public categories: Category[] = [];
 
-  public ngOnInit(): void {
-    
-  }
+  constructor(private categoriasService: CategoriasService) {}
 
   public openDialog(): void {
     this.toogleModal = true;
   }
 
   public closeModal(): void {
-    this.close.emit();
+    this.Close.emit();
   }
 
   public deleteCategory(): void {
     this.delet.emit();
     this.toogleModal = false;
-    this.close.emit();
+    this.Close.emit();
   }
 
   public getCategorys(): void {
@@ -42,5 +37,4 @@ export class DialogEditComponent implements OnInit{
       this.categories = data;
     });
   }
-
 }
