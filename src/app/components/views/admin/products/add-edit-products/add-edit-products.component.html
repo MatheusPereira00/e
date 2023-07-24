@@ -18,16 +18,22 @@
     <div class="container__form--one">
       <label>Nome do produto:</label>
       <input type="text" placeholder="PRODUTO" formControlName="name" />
+      <app-custom-validation-message
+        [controlContainer]="form.get('name')!"></app-custom-validation-message>
     </div>
 
     <div class="container__form--one">
       <label>SKU</label>
       <input type="text" placeholder="SKU" formControlName="sku" />
+      <app-custom-validation-message
+        [controlContainer]="form.get('sku')!"></app-custom-validation-message>
     </div>
 
     <div class="container__form--one">
       <label>Preço unitario</label>
       <input type="text" placeholder="PRICE" formControlName="price" />
+      <app-custom-validation-message
+        [controlContainer]="form.get('price')!"></app-custom-validation-message>
     </div>
   </div>
 
@@ -37,6 +43,8 @@
       <select formControlName="categoria">
         <option *ngFor="let category of categories">{{ category.name }}</option>
       </select>
+      <app-custom-validation-message
+        [controlContainer]="form.get('categoria')!"></app-custom-validation-message>
     </div>
 
     <div class="container__form--one">
@@ -46,6 +54,8 @@
           {{ subCategory.nameSubCategory }}
         </option>
       </select>
+      <app-custom-validation-message
+        [controlContainer]="form.get('subCategoria')!"></app-custom-validation-message>
     </div>
 
     <div class="container__form--one">
@@ -54,11 +64,15 @@
         <option>true</option>
         <option>false</option>
       </select>
+      <app-custom-validation-message
+        [controlContainer]="form.get('status')!"></app-custom-validation-message>
     </div>
 
     <div class="container__form--one">
       <label>Estoque Produto</label>
       <input type="text" placeholder="ESTOQUE" formControlName="estoque" />
+      <app-custom-validation-message
+        [controlContainer]="form.get('estoque')!"></app-custom-validation-message>
     </div>
   </div>
 
@@ -66,6 +80,8 @@
     <div class="container__two--two">
       <label>Imagem do Produto</label>
       <input type="text" placeholder="INSERIR URL" formControlName="urlImagem" />
+      <app-custom-validation-message
+        [controlContainer]="form.get('urlImagem')!"></app-custom-validation-message>
     </div>
 
     <div class="container__two--tww">

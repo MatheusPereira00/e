@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import {
   FormBuilder,
   FormControl,
@@ -14,13 +13,20 @@ import { CategoriasService } from 'src/app/components/services/categorias.servic
 import { Category } from 'src/app/components/models/category';
 import { subCategory } from 'src/app/components/models/subcategory';
 import { SubcategoriasService } from 'src/app/components/services/subcategorias.service';
+import { CustomValidationMessageComponent } from '../../../custom-validation-message/custom-validation-message.component';
 
 @Component({
   selector: 'app-add-edit-products',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, FormsModule, RouterLink],
   templateUrl: './add-edit-products.component.html',
   styleUrls: ['./add-edit-products.component.scss'],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
+    RouterLink,
+    CustomValidationMessageComponent,
+  ],
 })
 export class AddEditProductsComponent implements OnInit {
   public categories: Category[] = [];
