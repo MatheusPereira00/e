@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule, NgIf } from '@angular/common';
-import { CartService } from 'src/app/components/services/cart.service';
+import { CategoriasService } from 'src/app/components/services/categorias.service';
+import { Category } from 'src/app/components/models/category';
 
 @Component({
   selector: 'app-dialog-edit',
@@ -11,10 +12,11 @@ import { CartService } from 'src/app/components/services/cart.service';
 })
 export class DialogEditComponent {
   @Output() public Close = new EventEmitter();
-
+  @Output() public delet = new EventEmitter();
   public toogleModal = false;
+  public categories: Category[] = [];
 
-  constructor(private cartService: CartService) {}
+  constructor(private categoriasService: CategoriasService) {}
 
   public openDialog(): void {
     this.toogleModal = true;
@@ -22,5 +24,17 @@ export class DialogEditComponent {
 
   public closeModal(): void {
     this.Close.emit();
+  }
+
+  public deleteCategory(): void {
+    this.delet.emit();
+    this.toogleModal = false;
+    this.Close.emit();
+  }
+
+  public getCategorys(): void {
+    this.categoriasService.getCategorys().subscribe(data => {
+      this.categories = data;
+    });
   }
 }
