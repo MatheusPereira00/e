@@ -14,6 +14,9 @@ import { Category } from 'src/app/components/models/category';
 import { subCategory } from 'src/app/components/models/subcategory';
 import { SubcategoriasService } from 'src/app/components/services/subcategorias.service';
 import { CustomValidationMessageComponent } from '../../../custom-validation-message/custom-validation-message.component';
+import { take } from 'rxjs';
+import { ProductService } from 'src/app/components/services/product.service';
+import { Product } from 'src/app/components/models/product-interface';
 
 @Component({
   selector: 'app-add-edit-products',
@@ -31,11 +34,16 @@ import { CustomValidationMessageComponent } from '../../../custom-validation-mes
 export class AddEditProductsComponent implements OnInit {
   public categories: Category[] = [];
   public subCategories: subCategory[] = [];
+  public products: Product[] = [];
+  public id!: string | null;
+  public isEditMode = false;
+
   constructor(
     private router: Router,
     private fb: FormBuilder,
     private categoriasService: CategoriasService,
-    private subCategoriasService: SubcategoriasService
+    private subCategoriasService: SubcategoriasService,
+    private productsServie: ProductService
   ) {}
 
   public form: FormGroup = new FormGroup({});
@@ -93,7 +101,24 @@ export class AddEditProductsComponent implements OnInit {
       this.subCategories = data;
     });
   }
+  public getProducts(): void {
+    this.productsServie.getProduct().subscribe(data => {
+      this.products = data;
+    });
+  }
+
   public onSubmit(): void {
-    console.log(this.form.value);
+    if (this.isEditMode) {
+      const formData = this.form.getRawValue();
+      this.productsServie
+        .updateProducts(Number(this.id!), formData)
+        .pipe(take(1))
+        .subscribe();
+    }
+    if (!this.isEditMode) {
+      const formData = this.form.getRawValue();
+      this.productsServie.postProducts(formData).pipe(take(1)).subscribe();
+    }
+    this.router.navigate(['adm/products']);
   }
 }

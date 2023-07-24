@@ -91,7 +91,6 @@
         placeholder="INSERIR BREVE DESCRIÇÃO AQUI"
         formControlName="descrição" />
     </div>
-
-    <button>Salvar edição</button>
+    <button type="submit" [disabled]="form.invalid">Salvar edição</button>
   </div>
 </form>
