@@ -1,7 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductService } from 'src/app/components/services/product.service';
-import { take } from 'rxjs';
 import { Product } from 'src/app/components/models/product-interface';
 
 @Component({
@@ -13,8 +12,8 @@ import { Product } from 'src/app/components/models/product-interface';
 })
 export class DialogProductsComponent implements OnInit {
   public products: Product[] = [];
-  @Output() public Close = new EventEmitter();
   public toogleModal = false;
+  @Output() public Close = new EventEmitter();
 
   constructor(private productService: ProductService) {}
 
@@ -33,12 +32,6 @@ export class DialogProductsComponent implements OnInit {
   }
 
   public closeModal(): void {
-    this.Close.emit();
     this.toogleModal = false;
-  }
-
-  public deleteProducts(id: number): void {
-    this.productService.deleteProducts(id).pipe(take(1)).subscribe();
-    this.getProduct();
   }
 }
