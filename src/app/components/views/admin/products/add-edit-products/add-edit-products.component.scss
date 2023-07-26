@@ -59,15 +59,15 @@
                 width: 20rem;
                 height: 3rem;
                 padding: 1rem;
-                border-radius: 8px;
-                border: 1px solid #ACAAAF;
+                border-radius: 0.8rem;
+                border: 1px solid var(--input-color);
             }
 
             select {
                 width: 20rem;
                 height: 3rem;
-                border-radius: 8px;
-                border: 1px solid #ACAAAF;
+                border-radius: 0.8rem;
+                border: 1px solid var(--input-color);
             }
         }
     }
@@ -93,8 +93,8 @@
                 width: 20rem;
                 height: 3rem;
                 padding-left: 1rem;
-                border-radius: 8px;
-                border: 1px solid #ACAAAF;
+                border-radius: 0.8rem;
+                border: 1px solid var(--input-color);
             }
 
         }
@@ -110,8 +110,8 @@
                 width: 40rem;
                 height: 23rem;
                 padding-left: 1rem;
-                border-radius: 8px;
-                border: 1px solid #ACAAAF;
+                border-radius: 0.8rem;
+                border: 1px solid var(--input-color);
             }
         }
 
@@ -119,7 +119,7 @@
             width: 22rem;
             height: 3rem;
             border: none;
-            border-radius: 8px;
+            border-radius: 0.8rem;
             background-color: var(--primary-color);
             color: var(--white);
         }

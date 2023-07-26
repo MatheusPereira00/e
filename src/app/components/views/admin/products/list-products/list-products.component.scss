@@ -8,7 +8,7 @@
     font-size: 0.9em;
     border-radius: 8px;
     border-collapse: collapse;
-    box-shadow: 8px 8px 20px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0.3rem 0.3rem 1.20rem 0.120rem var(--shadow-color-3);
   }
   
   .table thead tr {
@@ -43,18 +43,18 @@
     background: var(--primary-color);
     color: var(--white);
   
-    border-radius: 8px;
+    border-radius: 0.5rem;
     border: none;
   }
   
   .btn-2 {
-    width: 50px;
-    height: 38px;
+    width: 5rem;
+    height: 3.8rem;
   
     background: var(--danger-color);
     color: var(--white);
   
-    border-radius: 8px;
+    border-radius: 0.5rem;
     border: none;
   }
   
@@ -66,7 +66,7 @@
     margin-top: 1rem;
   
     color: var(--white);
-    border-radius: 8px;
+    border-radius: 0.5rem;
     background: var(--primary-color);
     border: none;
   }
