@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductService } from 'src/app/components/services/product.service';
 
 import { RouterLink } from '@angular/router';
 import { Product } from 'src/app/components/models/product-interface';
 import { DialogProductsComponent } from '../dialog-products/dialog-products.component';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-list-products',
@@ -13,35 +14,42 @@ import { DialogProductsComponent } from '../dialog-products/dialog-products.comp
   styleUrls: ['./list-products.component.scss'],
   imports: [CommonModule, RouterLink, DialogProductsComponent],
 })
-export class ListProductsComponent implements OnInit {
+export class ListProductsComponent implements OnInit, OnDestroy {
   public products: Product[] = [];
   public id!: number;
+  public subscription!: Subscription;
+  public subscriptionDelet!: Subscription;
 
   constructor(private productsServie: ProductService) {}
 
   @ViewChild(DialogProductsComponent)
-  public DialogProductsComponent!: DialogProductsComponent;
+  public dialogProductsComponent!: DialogProductsComponent;
 
   public ngOnInit(): void {
     this.getProduct();
   }
 
   public getProduct(): void {
-    this.productsServie.getProduct().subscribe(data => {
+    this.subscription = this.productsServie.getProduct().subscribe(data => {
       this.products = data;
     });
   }
 
   public openModal(id: number): void {
     this.id = id;
-    this.DialogProductsComponent.toogleModal = true;
+    this.dialogProductsComponent.toogleModal = true;
   }
 
   public close(): void {
-    this.DialogProductsComponent.toogleModal = false;
+    this.dialogProductsComponent.toogleModal = false;
   }
 
   public delet(): void {
-    this.productsServie.deleteProducts(this.id).subscribe();
+    this.subscriptionDelet = this.productsServie.deleteProduct(this.id).subscribe();
+  }
+
+  public ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
+    this.subscriptionDelet?.unsubscribe();
   }
 }

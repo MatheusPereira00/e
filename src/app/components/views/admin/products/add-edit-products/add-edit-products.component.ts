@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   FormBuilder,
@@ -14,7 +14,7 @@ import { Category } from 'src/app/components/models/category';
 import { subCategory } from 'src/app/components/models/subcategory';
 import { SubcategoriasService } from 'src/app/components/services/subcategorias.service';
 import { CustomValidationMessageComponent } from '../../../custom-validation-message/custom-validation-message.component';
-import { take } from 'rxjs';
+import { Subscription, take } from 'rxjs';
 import { ProductService } from 'src/app/components/services/product.service';
 import { Product } from 'src/app/components/models/product-interface';
 
@@ -31,12 +31,16 @@ import { Product } from 'src/app/components/models/product-interface';
     CustomValidationMessageComponent,
   ],
 })
-export class AddEditProductsComponent implements OnInit {
+export class AddEditProductsComponent implements OnInit, OnDestroy {
   public categories: Category[] = [];
   public subCategories: subCategory[] = [];
   public products: Product[] = [];
   public id!: string | null;
   public isEditMode = false;
+  public subscription!: Subscription;
+  public subscriptionSub!: Subscription;
+  public subscriptionCate!: Subscription;
+  public subscriptionProd!: Subscription;
 
   constructor(
     private router: Router,
@@ -94,7 +98,7 @@ export class AddEditProductsComponent implements OnInit {
     if (this.id) {
       this.isEditMode = true;
       this.productsServie
-        .getProductsById(Number(this.id))
+        .getProductById(Number(this.id))
         .pipe(take(1))
         .subscribe(products => {
           this.form.patchValue({
@@ -113,17 +117,18 @@ export class AddEditProductsComponent implements OnInit {
   }
 
   public getCategorys(): void {
-    this.categoriasService.getCategorys().subscribe(data => {
+    this.subscriptionCate = this.categoriasService.getCategorys().subscribe(data => {
       this.categories = data;
     });
   }
+
   public getsubCategorys(): void {
-    this.subCategoriasService.getSubCategorys().subscribe(data => {
+    this.subscriptionSub = this.subCategoriasService.getSubCategorys().subscribe(data => {
       this.subCategories = data;
     });
   }
   public getProducts(): void {
-    this.productsServie.getProduct().subscribe(data => {
+    this.subscriptionProd = this.productsServie.getProduct().subscribe(data => {
       this.products = data;
     });
   }
@@ -132,14 +137,21 @@ export class AddEditProductsComponent implements OnInit {
     if (this.isEditMode) {
       const formData = this.form.getRawValue();
       this.productsServie
-        .updateProducts(Number(this.id!), formData)
+        .updateProduct(Number(this.id!), formData)
         .pipe(take(1))
         .subscribe();
     }
     if (!this.isEditMode) {
       const formData = this.form.getRawValue();
-      this.productsServie.postProducts(formData).pipe(take(1)).subscribe();
+      this.productsServie.postProduct(formData).pipe(take(1)).subscribe();
     }
     this.router.navigate(['adm/products']);
+  }
+
+  public ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
+    this.subscriptionSub?.unsubscribe();
+    this.subscriptionCate?.unsubscribe();
+    this.subscriptionProd?.unsubscribe();
   }
 }
