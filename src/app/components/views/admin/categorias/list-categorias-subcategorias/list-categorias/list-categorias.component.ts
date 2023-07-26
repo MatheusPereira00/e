@@ -13,13 +13,18 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./list-categorias.component.scss'],
   imports: [CommonModule, DialogEditComponent, RouterLink],
 })
-export class ListCategoriasComponent implements OnInit, OnDestroy {
+export class ListCategoriasComponent implements OnInit {
+
   public categories: Category[] = [];
   public id!: number;
   public subscription!: Subscription;
   public subscriptionGet!: Subscription;
 
   constructor(private categoriasService: CategoriasService) {}
+
+  @ViewChild(DialogEditComponent)
+  public dialogEditComponent!: DialogEditComponent;
+
 
   public ngOnInit(): void {
     this.getCategorys();

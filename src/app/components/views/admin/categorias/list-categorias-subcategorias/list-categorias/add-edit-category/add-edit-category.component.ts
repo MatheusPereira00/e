@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   FormBuilder,
@@ -18,7 +18,7 @@ import { take } from 'rxjs';
   templateUrl: './add-edit-category.component.html',
   styleUrls: ['./add-edit-category.component.scss'],
 })
-export class AddEditCategoryComponent {
+export class AddEditCategoryComponent implements OnInit {
   public form: FormGroup = new FormGroup({});
   public id!: string | null;
   public isEditMode = false;

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { SubcategoriasService } from 'src/app/components/services/subcategorias.service';
@@ -13,7 +13,10 @@ import { DialogEditComponent } from '../list-categorias/dialog-edit/dialog-edit.
   styleUrls: ['./list-subcategorias.component.scss'],
   imports: [CommonModule, RouterLink, DialogEditComponent],
 })
-export class ListSubcategoriasComponent implements OnInit, OnDestroy {
+
+export class ListSubcategoriasComponent implements OnInit {
+  constructor(private subcategoriaService: SubcategoriasService) {}
+
   public subCategories: subCategory[] = [];
   public id!: number;
   private subscription!: Subscription;

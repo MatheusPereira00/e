@@ -23,7 +23,8 @@ export class DialogComponent {
     this.toogleModal = true;
   }
 
-  public closeModal(): void {
+  public fecharModal(): void {
+
     this.close.emit();
   }
 
