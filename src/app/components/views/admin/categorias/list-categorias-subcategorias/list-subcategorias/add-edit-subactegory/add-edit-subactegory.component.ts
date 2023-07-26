@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -20,7 +20,7 @@ import { SubcategoriasService } from 'src/app/components/services/subcategorias.
   templateUrl: './add-edit-subactegory.component.html',
   styleUrls: ['./add-edit-subactegory.component.scss'],
 })
-export class AddEditSubactegoryComponent {
+export class AddEditSubactegoryComponent implements OnInit {
   public form: FormGroup = new FormGroup({});
   public id!: string | null;
   public isEditMode = false;
