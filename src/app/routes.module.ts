@@ -78,11 +78,11 @@ export const adminRoutes: Routes = [
     component: ListProductsComponent,
   },
   {
-    path: 'products/add',
+    path: 'product/add',
     component: AddEditProductsComponent,
   },
   {
-    path: 'products/edit/:id',
+    path: 'product/edit/:id',
     component: AddEditProductsComponent,
   },
 ];

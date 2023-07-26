@@ -12,7 +12,7 @@ import { CartService } from '../../services/cart.service';
 })
 export class DialogComponent {
   @Input() public image = '';
-  @Output() public Close = new EventEmitter();
+  @Output() public close = new EventEmitter();
 
   public toogleModal = false;
   public currentProduct!: Product;
@@ -24,7 +24,7 @@ export class DialogComponent {
   }
 
   public fecharModal(): void {
-    this.Close.emit();
+    this.close.emit();
   }
 
   public confirmar(): void {
@@ -32,6 +32,6 @@ export class DialogComponent {
     this.cartService.addToCart(this.currentProduct);
 
     this.toogleModal = false;
-    this.Close.emit();
+    this.close.emit();
   }
 }

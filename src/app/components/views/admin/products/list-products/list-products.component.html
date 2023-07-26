@@ -1,6 +1,6 @@
 <table class="table">
   <thead>
-    <button class="btn-create" routerLink="add">novo produto</button>
+    <button class="btn-create" routerLink="/adm/product/add">novo produto</button>
     <tr>
       <th>Nome do produto</th>
       <th>id</th>
@@ -14,10 +14,12 @@
       <td>{{ products.id }}</td>
 
       <td class="td-btn">
-        <button class="btn-1" [routerLink]="['edit', products.id]">Editar</button>
+        <button class="btn-1" [routerLink]="['/adm/product/edit', products.id]">
+          Editar
+        </button>
         <button class="btn-2" (click)="openModal(products.id)">Excluir</button>
       </td>
     </tr>
   </tbody>
-  <app-dialog-products (Close)="close()" (delet)="delet()"></app-dialog-products>
+  <app-dialog-products (close)="close()" (delet)="delet()"></app-dialog-products>
 </table>

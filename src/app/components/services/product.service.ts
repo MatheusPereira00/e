@@ -15,23 +15,23 @@ export class ProductService {
     return this.http.get<Product[]>(this.productUrl);
   }
 
-  public getProductsById(id: number): Observable<Product[]> {
+  public getProductById(id: number): Observable<Product[]> {
     let url = this.productUrl;
     url += `?id=${id}`;
     return this.http.get<Product[]>(url);
   }
 
-  public postProducts(newProducts: { name: string }): Observable<Product> {
-    return this.http.post<Product>(this.productUrl, newProducts);
+  public postProduct(newProduct: { name: string }): Observable<Product> {
+    return this.http.post<Product>(this.productUrl, newProduct);
   }
 
-  public updateProducts(id: number, newProducts: { name: string }): Observable<Product> {
+  public updateProduct(id: number, newProduct: { name: string }): Observable<Product> {
     let url = this.productUrl;
     url += `/${id}`;
-    return this.http.patch<Product>(url, newProducts);
+    return this.http.patch<Product>(url, newProduct);
   }
 
-  public deleteProducts(id: number): Observable<Product> {
+  public deleteProduct(id: number): Observable<Product> {
     let url = this.productUrl;
     url += `/${id}`;
     return this.http.delete<Product>(url);
