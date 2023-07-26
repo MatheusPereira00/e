@@ -1,6 +1,21 @@
+<div class="container">
+  <div class="container__p">
+    <svg class="icon icon-reply" routerLink="/adm/categories">
+      <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-reply"></use>
+    </svg>
+    <p>Voltar para administar categorias e subacategorias</p>
+  </div>
+
+  <div class="container__h1">
+    <svg class="icon icon-price-tag">
+      <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-price-tag"></use>
+    </svg>
+    <h1>Voce esta criando uma nova categoria</h1>
+  </div>
+</div>
+
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <label>Nome category</label>
-  <!-- <input type="text" formControlName="nameCategory" /> -->
   <select formControlName="nameCategory">
     <option *ngFor="let category of categories">{{ category.name }}</option>
   </select>
@@ -8,5 +23,3 @@
   <input type="text" formControlName="nameSubCategory" />
   <button type="submit">Salvar</button>
 </form>
-
-<!-- usar ngfor no option para mostrar as opcoes de categorias -->

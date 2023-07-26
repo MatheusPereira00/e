@@ -1,10 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CategoriasService } from 'src/app/components/services/categorias.service';
 import { DialogEditComponent } from './dialog-edit/dialog-edit.component';
 import { RouterLink } from '@angular/router';
-import { take } from 'rxjs';
 import { Category } from 'src/app/components/models/category';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-list-categorias',
@@ -14,16 +14,24 @@ import { Category } from 'src/app/components/models/category';
   imports: [CommonModule, DialogEditComponent, RouterLink],
 })
 export class ListCategoriasComponent implements OnInit {
+
   public categories: Category[] = [];
+  public id!: number;
+  public subscription!: Subscription;
+  public subscriptionGet!: Subscription;
 
   constructor(private categoriasService: CategoriasService) {}
 
   @ViewChild(DialogEditComponent)
   public dialogEditComponent!: DialogEditComponent;
 
+
   public ngOnInit(): void {
     this.getCategorys();
   }
+
+  @ViewChild(DialogEditComponent)
+  public dialogEditComponent!: DialogEditComponent;
 
   public getCategorys(): void {
     this.categoriasService.getCategorys().subscribe(data => {
@@ -31,7 +39,8 @@ export class ListCategoriasComponent implements OnInit {
     });
   }
 
-  public openModal(): void {
+  public openModal(id: number): void {
+    this.id = id;
     this.dialogEditComponent.toogleModal = true;
   }
 
@@ -39,8 +48,16 @@ export class ListCategoriasComponent implements OnInit {
     this.dialogEditComponent.toogleModal = false;
   }
 
-  public deleteCategory(id: number): void {
-    this.categoriasService.deleteCategory(id).pipe(take(1)).subscribe();
-    this.getCategorys();
+  public delet(): void {
+    this.subscription = this.categoriasService.deleteCategory(this.id).subscribe();
+
+    this.subscriptionGet = this.categoriasService.getCategorys().subscribe(data => {
+      this.categories = data;
+    });
+  }
+
+  public ngOnDestroy(): void {
+    if (this.subscription) this.subscription.unsubscribe();
+    if (this.subscriptionGet) this.subscriptionGet.unsubscribe();
   }
 }

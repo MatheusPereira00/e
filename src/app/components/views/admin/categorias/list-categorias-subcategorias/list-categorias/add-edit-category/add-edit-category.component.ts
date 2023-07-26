@@ -7,14 +7,14 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CategoriasService } from 'src/app/components/services/categorias.service';
 import { take } from 'rxjs';
 
 @Component({
   selector: 'app-add-edit-category',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, FormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, RouterLink],
   templateUrl: './add-edit-category.component.html',
   styleUrls: ['./add-edit-category.component.scss'],
 })

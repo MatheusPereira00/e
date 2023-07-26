@@ -24,6 +24,7 @@ export class DialogComponent {
   }
 
   public fecharModal(): void {
+
     this.close.emit();
   }
 

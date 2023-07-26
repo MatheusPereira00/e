@@ -4,6 +4,7 @@ import { CategoriasService } from 'src/app/components/services/categorias.servic
 import { Category } from 'src/app/components/models/category';
 import { Subscription } from 'rxjs';
 
+
 @Component({
   selector: 'app-dialog-edit',
   standalone: true,
@@ -11,6 +12,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './dialog-edit.component.html',
   styleUrls: ['./dialog-edit.component.scss'],
 })
+
 export class DialogEditComponent implements OnDestroy {
   @Output() public close = new EventEmitter();
   @Output() public delet = new EventEmitter();
@@ -42,5 +44,17 @@ export class DialogEditComponent implements OnDestroy {
 
   public ngOnDestroy(): void {
     this.subscription?.unsubscribe();
+  }
+
+  public deleteCategory(): void {
+    this.delet.emit();
+    this.toogleModal = false;
+    this.Close.emit();
+  }
+
+  public getCategorys(): void {
+    this.categoriasService.getCategorys().subscribe(data => {
+      this.categories = data;
+    });
   }
 }
