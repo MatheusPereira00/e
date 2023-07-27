@@ -1,4 +1,17 @@
 {
+  "usuario": [
+    {
+      "nome": "matheus gabriel pereira",
+      "nomeSocial": "matheus pereira",
+      "cpf": "51691889865",
+      "dataNascimento": "2003-02-01",
+      "email": "matheus@gmail.com",
+      "telefone": "11961568913",
+      "senha": "123456",
+      "Confirmar": "123456",
+      "id": 1
+    }
+  ],
   "categorys": [
     {
       "name": "mouse-pads",

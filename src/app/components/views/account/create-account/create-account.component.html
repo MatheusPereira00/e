@@ -5,7 +5,7 @@
     </svg>
     <h1>Faça seu cadastro</h1>
   </div>
-  <form class="container__form" [formGroup]="formCreate" (ngSubmit)="(onSubmit)">
+  <form class="container__form" [formGroup]="formCreate" onsubmit="postUsuario()">
     <div class="container__form--left">
       <label>Nome completo</label>
       <input type="text" placeholder="insira seu nome aqui" formControlName="nome" />
@@ -23,9 +23,9 @@
         class="validators"></app-custom-validation-message>
 
       <label>CPF</label>
-      <input type="text" placeholder="insira seu cpf aqui" formControlName="Cpf" />
+      <input type="text" placeholder="insira seu cpf aqui" formControlName="cpf" />
       <app-custom-validation-message
-        [controlContainer]="formCreate.get('Cpf')!"
+        [controlContainer]="formCreate.get('cpf')!"
         class="validators"></app-custom-validation-message>
 
       <label>Data de nascimento</label>
@@ -70,5 +70,5 @@
         class="validators"></app-custom-validation-message>
     </div>
   </form>
-  <button (click)="onSubmit()">Finalizar cadastro</button>
+  <button (click)="postUsuario()">Finalizar cadastro</button>
 </div>

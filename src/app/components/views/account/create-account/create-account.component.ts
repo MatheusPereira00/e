@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { CustomValidationMessageComponent } from '../../custom-validation-message/custom-validation-message.component';
+import { UsuarioService } from 'src/app/components/services/usuario.service';
+import { newUsuario } from 'src/app/components/models/usuario';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-create-account',
@@ -9,10 +12,12 @@ import { CustomValidationMessageComponent } from '../../custom-validation-messag
   styleUrls: ['./create-account.component.scss'],
   standalone: true,
   providers: [],
-  imports: [ReactiveFormsModule, CustomValidationMessageComponent, RouterLink],
+  imports: [ReactiveFormsModule, CustomValidationMessageComponent, RouterLink, NgIf],
 })
 export class CreateAccountComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private usuarioService: UsuarioService) {}
+
+  public usuario: newUsuario[] = [];
 
   public formCreate = new FormGroup({
     nome: new FormControl('', {
@@ -23,7 +28,7 @@ export class CreateAccountComponent {
       nonNullable: true,
       validators: [Validators.required],
     }),
-    Cpf: new FormControl('', {
+    cpf: new FormControl('', {
       nonNullable: true,
       validators: [Validators.required],
     }),
@@ -49,7 +54,14 @@ export class CreateAccountComponent {
     }),
   });
 
-  public onSubmit(): void {
-    console.log(this.formCreate.value);
+  public postUsuario(): void {
+    if (this.formCreate.valid) {
+      const newUsuario = this.formCreate.getRawValue();
+      this.usuarioService.postUsuario(newUsuario).subscribe({
+        next: () => {
+          this.postUsuario;
+        },
+      });
+    }
   }
 }
