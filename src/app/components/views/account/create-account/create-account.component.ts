@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { CustomValidationMessageComponent } from "../../custom-validation-message/custom-validation-message.component";
+import { CustomValidationMessageComponent } from '../../custom-validation-message/custom-validation-message.component';
 
 @Component({
   selector: 'app-create-account',
@@ -9,39 +9,47 @@ import { CustomValidationMessageComponent } from "../../custom-validation-messag
   styleUrls: ['./create-account.component.scss'],
   standalone: true,
   providers: [],
-  imports: [ReactiveFormsModule, CustomValidationMessageComponent, RouterLink]
+  imports: [ReactiveFormsModule, CustomValidationMessageComponent, RouterLink],
 })
 export class CreateAccountComponent {
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  formCreate = new FormGroup({
+  public formCreate = new FormGroup({
     nome: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     nomeSocial: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     Cpf: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
-    dataNasciemnto: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+    dataNascimento: new FormControl('', {
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     email: new FormControl('', {
-      nonNullable: true, validators: [Validators.required, Validators.email],
+      nonNullable: true,
+      validators: [Validators.required, Validators.email],
     }),
     telefone: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     senha: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
     Confirmar: new FormControl('', {
-      nonNullable: true, validators: [Validators.required],
+      nonNullable: true,
+      validators: [Validators.required],
     }),
-  })
+  });
 
-  onSubmit() {
+  public onSubmit(): void {
     console.log(this.formCreate.value);
   }
 }

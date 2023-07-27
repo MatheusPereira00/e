@@ -23,15 +23,12 @@ export class DialogComponent {
     this.toogleModal = true;
   }
 
-  public fecharModal(): void {
-
+  public closeModal(): void {
     this.close.emit();
   }
 
   public confirmar(): void {
-    console.log(this.currentProduct);
     this.cartService.addToCart(this.currentProduct);
-
     this.toogleModal = false;
     this.close.emit();
   }
