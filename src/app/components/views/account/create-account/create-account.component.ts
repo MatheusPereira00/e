@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { CustomValidationMessageComponent } from '../../custom-validation-message/custom-validation-message.component';
 import { UsuarioService } from 'src/app/components/services/usuario.service';
 import { newUsuario } from 'src/app/components/models/usuario';
 import { NgIf } from '@angular/common';
+import { PopupComponent } from '../../../shared/popup/popup.component';
 
 @Component({
   selector: 'app-create-account',
@@ -12,12 +13,21 @@ import { NgIf } from '@angular/common';
   styleUrls: ['./create-account.component.scss'],
   standalone: true,
   providers: [],
-  imports: [ReactiveFormsModule, CustomValidationMessageComponent, RouterLink, NgIf],
+  imports: [
+    ReactiveFormsModule,
+    CustomValidationMessageComponent,
+    RouterLink,
+    NgIf,
+    PopupComponent,
+  ],
 })
 export class CreateAccountComponent {
+  public usuario: newUsuario[] = [];
+
   constructor(private router: Router, private usuarioService: UsuarioService) {}
 
-  public usuario: newUsuario[] = [];
+  @ViewChild(PopupComponent)
+  public popupComponent!: PopupComponent;
 
   public formCreate = new FormGroup({
     nome: new FormControl('', {
@@ -63,5 +73,9 @@ export class CreateAccountComponent {
         },
       });
     }
+  }
+
+  public tooglePopup(): void {
+    this.popupComponent.tooglePopup = true;
   }
 }
