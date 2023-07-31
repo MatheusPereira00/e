@@ -10,12 +10,20 @@ import { CommonModule } from '@angular/common';
 })
 export class PopupComponent {
   public tooglePopup = true;
+  public toogleError = false;
 
-  public OpenPopup(): void {
+  public openPopup(): void {
     this.tooglePopup = true;
   }
 
   public closePopup(): void {
     this.tooglePopup = false;
+  }
+
+  public openError(): void {
+    this.toogleError = true;
+  }
+  public closeError(): void {
+    this.toogleError = false;
   }
 }

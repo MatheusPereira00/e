@@ -70,12 +70,11 @@ export class CreateAccountComponent {
       this.usuarioService.postUsuario(newUsuario).subscribe({
         next: () => {
           this.postUsuario;
+          this.popupComponent.tooglePopup = true;
         },
       });
+    } else {
+      this.popupComponent.toogleError = true;
     }
-  }
-
-  public tooglePopup(): void {
-    this.popupComponent.tooglePopup = true;
   }
 }

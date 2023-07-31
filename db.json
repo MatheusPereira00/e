@@ -1,15 +1,26 @@
 {
   "usuario": [
     {
-      "nome": "matheus gabriel pereira",
-      "nomeSocial": "matheus pereira",
-      "cpf": "51691889865",
+      "nome": "teste",
+      "nomeSocial": "teste",
+      "cpf": "01",
       "dataNascimento": "2003-02-01",
-      "email": "matheus@gmail.com",
+      "email": "teste@gmail.com",
       "telefone": "11961568913",
-      "senha": "123456",
-      "Confirmar": "123456",
+      "senha": "teste",
+      "Confirmar": "teste",
       "id": 1
+    },
+    {
+      "nome": "teste02",
+      "nomeSocial": "teste02",
+      "cpf": "02",
+      "dataNascimento": "2003-02-01",
+      "email": "teste02@gmail.com",
+      "telefone": "11961568913",
+      "senha": "teste02",
+      "Confirmar": "teste02",
+      "id": 2
     }
   ],
   "categorys": [
