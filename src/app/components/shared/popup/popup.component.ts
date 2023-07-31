@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./popup.component.scss'],
 })
 export class PopupComponent {
-  public tooglePopup = true;
+  public tooglePopup = false;
   public toogleError = false;
 
   public openPopup(): void {
