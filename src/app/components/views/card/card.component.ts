@@ -4,6 +4,7 @@ import { DialogComponent } from 'src/app/components/shared/dialog/dialog.compone
 import { NgFor, NgIf } from '@angular/common';
 import { CartService } from 'src/app/components/services/cart.service';
 
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
