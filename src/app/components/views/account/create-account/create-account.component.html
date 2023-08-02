@@ -5,7 +5,7 @@
     </svg>
     <h1>Faça seu cadastro</h1>
   </div>
-  <form class="container__form" [formGroup]="formCreate" onsubmit="postUsuario()">
+  <form class="container__form" [formGroup]="formCreate" onsubmit="postUser()">
     <div class="container__form--left">
       <label>Nome completo</label>
       <input type="text" placeholder="insira seu nome aqui" formControlName="nome" />
@@ -64,12 +64,12 @@
       <input
         type="text"
         placeholder="confirme sua senha aqui"
-        formControlName="Confirmar" />
+        formControlName="confirmar" />
       <app-custom-validation-message
-        [controlContainer]="formCreate.get('Confirmar')!"
+        [controlContainer]="formCreate.get('confirmar')!"
         class="validators"></app-custom-validation-message>
     </div>
   </form>
-  <button (click)="postUsuario()">Finalizar cadastro</button>
+  <button (click)="postUser()">Finalizar cadastro</button>
   <app-popup></app-popup>
 </div>

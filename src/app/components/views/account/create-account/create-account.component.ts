@@ -2,8 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { CustomValidationMessageComponent } from '../../custom-validation-message/custom-validation-message.component';
-import { UsuarioService } from 'src/app/components/services/usuario.service';
-import { newUsuario } from 'src/app/components/models/usuario';
+import { UserService } from 'src/app/components/services/user.service';
+import { newUser } from 'src/app/components/models/user';
 import { NgIf } from '@angular/common';
 import { PopupComponent } from '../../../shared/popup/popup.component';
 
@@ -22,9 +22,9 @@ import { PopupComponent } from '../../../shared/popup/popup.component';
   ],
 })
 export class CreateAccountComponent {
-  public usuario: newUsuario[] = [];
+  public usuario: newUser[] = [];
 
-  constructor(private router: Router, private usuarioService: UsuarioService) {}
+  constructor(private router: Router, private userService: UserService) {}
 
   @ViewChild(PopupComponent)
   public popupComponent!: PopupComponent;
@@ -58,18 +58,18 @@ export class CreateAccountComponent {
       nonNullable: true,
       validators: [Validators.required],
     }),
-    Confirmar: new FormControl('', {
+    confirmar: new FormControl('', {
       nonNullable: true,
       validators: [Validators.required],
     }),
   });
 
-  public postUsuario(): void {
+  public postUser(): void {
     if (this.formCreate.valid) {
-      const newUsuario = this.formCreate.getRawValue();
-      this.usuarioService.postUsuario(newUsuario).subscribe({
+      const newUser = this.formCreate.getRawValue();
+      this.userService.postUser(newUser).subscribe({
         next: () => {
-          this.postUsuario;
+          this.postUser;
           this.popupComponent.tooglePopup = true;
         },
       });

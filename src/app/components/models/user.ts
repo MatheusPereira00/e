@@ -1,4 +1,4 @@
-export interface newUsuario {
+export interface newUser {
   nome: string;
   nomeSocial: string;
   cpf: string | undefined;
@@ -6,5 +6,5 @@ export interface newUsuario {
   email: string;
   telefone: string;
   senha: string;
-  Confirmar: string;
+  confirmar: string;
 }
