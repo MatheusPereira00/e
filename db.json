@@ -1,4 +1,28 @@
 {
+  "usuario": [
+    {
+      "nome": "teste",
+      "nomeSocial": "teste",
+      "cpf": "01",
+      "dataNascimento": "2003-02-01",
+      "email": "teste@gmail.com",
+      "telefone": "11961568913",
+      "senha": "teste",
+      "Confirmar": "teste",
+      "id": 1
+    },
+    {
+      "nome": "teste02",
+      "nomeSocial": "teste02",
+      "cpf": "02",
+      "dataNascimento": "2003-02-01",
+      "email": "teste02@gmail.com",
+      "telefone": "11961568913",
+      "senha": "teste02",
+      "Confirmar": "teste02",
+      "id": 2
+    }
+  ],
   "categorys": [
     {
       "name": "mouse-pads",

@@ -1,7 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { CustomValidationMessageComponent } from '../../custom-validation-message/custom-validation-message.component';
+import { UserService } from 'src/app/components/services/user.service';
+import { newUser } from 'src/app/components/models/user';
+import { NgIf } from '@angular/common';
+import { PopupComponent } from '../../../shared/popup/popup.component';
 
 @Component({
   selector: 'app-create-account',
@@ -9,10 +13,21 @@ import { CustomValidationMessageComponent } from '../../custom-validation-messag
   styleUrls: ['./create-account.component.scss'],
   standalone: true,
   providers: [],
-  imports: [ReactiveFormsModule, CustomValidationMessageComponent, RouterLink],
+  imports: [
+    ReactiveFormsModule,
+    CustomValidationMessageComponent,
+    RouterLink,
+    NgIf,
+    PopupComponent,
+  ],
 })
 export class CreateAccountComponent {
-  constructor(private router: Router) {}
+  public usuario: newUser[] = [];
+
+  constructor(private router: Router, private userService: UserService) {}
+
+  @ViewChild(PopupComponent)
+  public popupComponent!: PopupComponent;
 
   public formCreate = new FormGroup({
     nome: new FormControl('', {
@@ -23,7 +38,7 @@ export class CreateAccountComponent {
       nonNullable: true,
       validators: [Validators.required],
     }),
-    Cpf: new FormControl('', {
+    cpf: new FormControl('', {
       nonNullable: true,
       validators: [Validators.required],
     }),
@@ -43,13 +58,23 @@ export class CreateAccountComponent {
       nonNullable: true,
       validators: [Validators.required],
     }),
-    Confirmar: new FormControl('', {
+    confirmar: new FormControl('', {
       nonNullable: true,
       validators: [Validators.required],
     }),
   });
 
-  public onSubmit(): void {
-    console.log(this.formCreate.value);
+  public postUser(): void {
+    if (this.formCreate.valid) {
+      const newUser = this.formCreate.getRawValue();
+      this.userService.postUser(newUser).subscribe({
+        next: () => {
+          this.postUser;
+          this.popupComponent.tooglePopup = true;
+        },
+      });
+    } else {
+      this.popupComponent.toogleError = true;
+    }
   }
 }
