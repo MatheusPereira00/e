@@ -31,16 +31,12 @@ import { Product } from 'src/app/components/models/product-interface';
     CustomValidationMessageComponent,
   ],
 })
-export class AddEditProductsComponent implements OnInit, OnDestroy {
+export class AddEditProductsComponent implements OnInit {
   public categories: Category[] = [];
   public subCategories: subCategory[] = [];
   public products: Product[] = [];
   public id!: string | null;
   public isEditMode = false;
-  public subscription!: Subscription;
-  public subscriptionSub!: Subscription;
-  public subscriptionCate!: Subscription;
-  public subscriptionProd!: Subscription;
 
   constructor(
     private router: Router,
@@ -117,18 +113,18 @@ export class AddEditProductsComponent implements OnInit, OnDestroy {
   }
 
   public getCategorys(): void {
-    this.subscriptionCate = this.categoriasService.getCategorys().subscribe(data => {
+    this.categoriasService.getCategorys().pipe(take(1)).subscribe(data => {
       this.categories = data;
     });
   }
 
   public getsubCategorys(): void {
-    this.subscriptionSub = this.subCategoriasService.getSubCategorys().subscribe(data => {
+    this.subCategoriasService.getSubCategorys().pipe(take(1)).subscribe(data => {
       this.subCategories = data;
     });
   }
   public getProducts(): void {
-    this.subscriptionProd = this.productsServie.getProduct().subscribe(data => {
+    this.productsServie.getProduct().pipe(take(1)).subscribe(data => {
       this.products = data;
     });
   }
@@ -146,12 +142,5 @@ export class AddEditProductsComponent implements OnInit, OnDestroy {
       this.productsServie.postProduct(formData).pipe(take(1)).subscribe();
     }
     this.router.navigate(['adm/products']);
-  }
-
-  public ngOnDestroy(): void {
-    this.subscription?.unsubscribe();
-    this.subscriptionSub?.unsubscribe();
-    this.subscriptionCate?.unsubscribe();
-    this.subscriptionProd?.unsubscribe();
   }
 }
