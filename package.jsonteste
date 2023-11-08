@@ -1,5 +1,5 @@
 {
-  "name": "ibm-shop",
+  "name": "mp-shop",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
